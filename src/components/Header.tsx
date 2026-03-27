@@ -27,18 +27,10 @@ const servicesMenu: MegaColumn[] = [
       { label: "eCommerce App", href: "/ecommerce-app-development" },
       { label: "visionOS App", href: "/visionos-development" },
       { label: "Enterprise App", href: "/enterprise-app-development" },
-      { label: "Low Code No Code App", href: "/low-code-no-code-app-development" },
-      { label: "Progressive Web App", href: "/progressive-web-app-development" },
-      { label: "Web3 App Development", href: "/web3-app-development" },
-      { label: "OnDemand App", href: "/on-demand-app-development" },
-    ],
-  },
-  {
-    heading: "Cross Platform App",
-    links: [
       { label: "Flutter App", href: "/flutter-app-development-services" },
       { label: "React Native", href: "/react-native-app-development" },
       { label: "Ionic App", href: "/ionic-app-development" },
+      { label: "OnDemand App", href: "/on-demand-app-development" },
     ],
   },
   {
@@ -77,16 +69,16 @@ const servicesMenu: MegaColumn[] = [
   {
     heading: "Game Development",
     links: [
-      { label: "Mobile Game Development", href: "/mobile-game-development" },
-      { label: "Unity Game Development", href: "/unity-game-development" },
-      { label: "Unreal Game Development", href: "/unreal-game-development" },
-      { label: "Blockchain Game Development", href: "/blockchain-game-development" },
-      { label: "2D Game Development", href: "/2d-game-development" },
-      { label: "3D Game Development", href: "/3d-game-development" },
-      { label: "Web3 Game Development", href: "/web3-game-development" },
-      { label: "Multiplayer Game Development", href: "/multiplayer-game-development" },
+      { label: "Mobile Game", href: "/mobile-game-development" },
+      { label: "Unity Game", href: "/unity-game-development" },
+      { label: "Unreal Game", href: "/unreal-game-development" },
+      { label: "Blockchain Game", href: "/blockchain-game-development" },
+      { label: "2D Game", href: "/2d-game-development" },
+      { label: "3D Game", href: "/3d-game-development" },
+      { label: "Web3 Game", href: "/web3-game-development" },
+      { label: "Multiplayer Game", href: "/multiplayer-game-development" },
       { label: "Game Testing", href: "/game-testing-services" },
-      { label: "See All Games Services", href: "/game-development", green: true },
+      { label: "See All Games", href: "/game-development", green: true },
     ],
   },
   {
@@ -294,7 +286,7 @@ function CloseIcon() {
 
 function DropdownSidebar({ title, children }: { title: string; children?: React.ReactNode }) {
   return (
-    <div className="w-[200px] flex-shrink-0 border-r border-gray-200 pr-6">
+    <div className="w-[160px] flex-shrink-0 border-r border-gray-200 pr-4">
       <div className="flex items-center gap-2 mb-4">
         <h3 className="text-lg font-bold text-[#0B0C0D]">{title}</h3>
         <GreenArrowIcon />
@@ -348,15 +340,15 @@ export default function Header() {
   /* ---- renderers ---- */
 
   const renderServicesMega = () => (
-    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-xl z-50">
-      <div className="max-w-7xl mx-auto px-6 py-8 flex gap-8">
+    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-xl z-50 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 py-6 flex gap-6">
         {/* Left Sidebar */}
         <DropdownSidebar title="Services">
-          <div className="mt-6">
-            <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Technologies</h4>
-            <div className="flex flex-wrap gap-2">
+          <div className="mt-4">
+            <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Technologies</h4>
+            <div className="flex flex-wrap gap-1.5">
               {technologiesList.map((tech) => (
-                <span key={tech} className="text-xs text-gray-500 bg-gray-100 rounded px-2 py-1">
+                <span key={tech} className="text-[11px] text-gray-500 bg-gray-100 rounded px-1.5 py-0.5">
                   {tech}
                 </span>
               ))}
@@ -365,10 +357,10 @@ export default function Header() {
         </DropdownSidebar>
 
         {/* Columns */}
-        <div className="flex-1 grid grid-cols-5 gap-6">
+        <div className="flex-1 grid grid-cols-5 gap-4">
           {servicesMenu.map((col) => (
             <div key={col.heading}>
-              <h4 className="font-bold text-[#0B0C0D] text-sm mb-3">
+              <h4 className="font-bold text-[#0B0C0D] text-xs mb-2">
                 {col.heading}
               </h4>
               <ul className="space-y-2">
@@ -376,7 +368,7 @@ export default function Header() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className={`text-sm transition-colors duration-200 ${
+                      className={`text-[12px] leading-snug transition-colors duration-200 ${
                         link.green
                           ? "text-[#2ED06E] hover:text-[#25a85a]"
                           : "text-gray-500 hover:text-[#0B0C0D]"
@@ -448,7 +440,7 @@ export default function Header() {
         <div className="flex-1 flex gap-16">
           {companyMenu.map((section) => (
             <div key={section.heading}>
-              <h4 className="font-bold text-[#0B0C0D] text-sm mb-3">{section.heading}</h4>
+              <h4 className="font-bold text-[#0B0C0D] text-xs mb-2">{section.heading}</h4>
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.href} className="flex items-center gap-2">
