@@ -63,7 +63,7 @@ export default function CaseStudies() {
             observer.disconnect();
           }
         },
-        { threshold: 0.2 }
+        { threshold: 0.01, rootMargin: '100px' }
       );
       observer.observe(ref);
       observers.push(observer);

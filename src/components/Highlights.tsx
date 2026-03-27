@@ -29,7 +29,7 @@ export default function Highlights() {
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.01, rootMargin: '100px' }
     );
 
     if (sectionRef.current) {

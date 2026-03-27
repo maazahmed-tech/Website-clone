@@ -95,7 +95,7 @@ export default function Industries() {
             observer.disconnect();
           }
         },
-        { threshold: 0.15 }
+        { threshold: 0.01, rootMargin: '100px' }
       );
       observer.observe(ref);
       observers.push(observer);
