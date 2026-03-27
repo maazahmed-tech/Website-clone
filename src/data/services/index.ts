@@ -1737,6 +1737,518 @@ const services: ServicePageData[] = [
       { question: 'How do you prevent cheating?', answer: 'We implement server-authoritative game logic, input validation, anti-cheat detection systems, and behavioral analysis to maintain fair play in multiplayer environments.' }
     ],
     relatedServices: ['game-development', 'unity-game-development', 'unreal-game-development', 'mobile-game-development']
+  },
+  {
+    slug: 'on-demand-app-development',
+    title: 'On-Demand App Development',
+    metaTitle: 'On-Demand App Development Services | Cubix',
+    metaDescription: 'Cubix builds on-demand mobile apps for delivery, ride-sharing, and service marketplaces. Launch your on-demand platform with our expert team.',
+    heroHeading: 'On-Demand App Development Services',
+    heroDescription: 'We build feature-rich on-demand applications that connect service providers with customers in real time. From food delivery to ride-hailing, we create platforms that scale.',
+    overviewTitle: 'About Our On-Demand App Development Services',
+    overviewDescription: 'Cubix delivers end-to-end on-demand app development, building platforms that handle real-time matching, GPS tracking, payments, and ratings. Our solutions power businesses across delivery, transportation, healthcare, and home services.',
+    overviewPoints: [
+      'Real-time matching and dispatch systems',
+      'GPS tracking and route optimization',
+      'Integrated payment gateways',
+      'Rating and review systems',
+      'Admin dashboards and analytics'
+    ],
+    features: [
+      { title: 'Real-Time Matching', description: 'Intelligent algorithms that match customers with the nearest available service providers for fast, efficient fulfillment.' },
+      { title: 'Live Tracking', description: 'GPS-powered live tracking with ETA calculations, route visualization, and real-time status updates for customers and providers.' },
+      { title: 'Payment Integration', description: 'Secure multi-gateway payment processing with digital wallets, split payments, and automated provider payouts.' },
+      { title: 'Admin Dashboard', description: 'Comprehensive admin panels with real-time analytics, user management, dispute resolution, and business intelligence tools.' }
+    ],
+    technologies: ['React Native', 'Node.js', 'MongoDB', 'Redis', 'Socket.io', 'Google Maps API'],
+    process: [
+      { step: '01', title: 'Market Analysis', description: 'Analyze your target market, competitors, and user needs to define the optimal feature set for your on-demand platform.' },
+      { step: '02', title: 'Platform Design', description: 'Design intuitive interfaces for customers, service providers, and administrators with seamless user flows.' },
+      { step: '03', title: 'Development & Integration', description: 'Build the platform with real-time features, payment processing, mapping, and push notifications.' },
+      { step: '04', title: 'Launch & Scale', description: 'Deploy the platform, onboard initial users, and implement growth strategies with analytics-driven optimization.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'What types of on-demand apps do you build?', answer: 'We build on-demand apps for food delivery, ride-hailing, home services, healthcare, logistics, laundry, beauty services, and custom marketplace platforms.' },
+      { question: 'How long does it take to build an on-demand app?', answer: 'A basic on-demand app takes 4-6 months. Complex platforms with multiple user roles, advanced matching, and admin tools can take 6-10 months.' },
+      { question: 'Can you build both customer and provider apps?', answer: 'Yes, we build complete ecosystems including customer apps, provider apps, and admin dashboards, all integrated into a unified backend system.' }
+    ],
+    relatedServices: ['mobile-app-development', 'ecommerce-app-development', 'react-native-app-development']
+  },
+  {
+    slug: 'system-integration-services',
+    title: 'System Integration Services',
+    metaTitle: 'System Integration Services | Cubix',
+    metaDescription: 'Cubix provides system integration services to connect your software, data, and workflows. Streamline operations with seamless integrations.',
+    heroHeading: 'System Integration Services',
+    heroDescription: 'We connect your disparate systems, applications, and data sources into a unified ecosystem. Our integration solutions eliminate silos, automate workflows, and provide a single source of truth for your organization.',
+    overviewTitle: 'About Our System Integration Services',
+    overviewDescription: 'Cubix specializes in enterprise system integration, connecting CRMs, ERPs, databases, third-party APIs, and legacy systems into cohesive platforms. We ensure data flows seamlessly across your technology stack.',
+    overviewPoints: [
+      'Enterprise application integration (EAI)',
+      'API development and management',
+      'Data migration and synchronization',
+      'Legacy system connectivity',
+      'Cloud and hybrid integrations'
+    ],
+    features: [
+      { title: 'API Integration', description: 'Build robust REST and GraphQL APIs that connect your applications with third-party services and internal systems securely.' },
+      { title: 'Data Synchronization', description: 'Real-time and batch data synchronization across systems ensuring consistency, accuracy, and up-to-date information everywhere.' },
+      { title: 'Legacy Connectivity', description: 'Bridge legacy systems with modern platforms through middleware, adapters, and custom connectors without disrupting operations.' },
+      { title: 'Workflow Automation', description: 'Automate cross-system business processes with event-driven integrations, triggers, and orchestration engines.' }
+    ],
+    technologies: ['MuleSoft', 'Apache Kafka', 'REST APIs', 'GraphQL', 'Node.js', 'AWS Lambda'],
+    process: [
+      { step: '01', title: 'Systems Audit', description: 'Map your existing technology landscape, data flows, and integration points to identify gaps and opportunities.' },
+      { step: '02', title: 'Integration Architecture', description: 'Design a scalable integration architecture with appropriate patterns, middleware, and data transformation strategies.' },
+      { step: '03', title: 'Implementation', description: 'Build integrations iteratively with thorough testing of data flows, error handling, and failover mechanisms.' },
+      { step: '04', title: 'Monitoring & Support', description: 'Deploy monitoring dashboards, alerting systems, and provide ongoing support for integration health and performance.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'What systems can you integrate?', answer: 'We integrate CRMs, ERPs, databases, payment systems, shipping providers, marketing platforms, accounting software, and custom applications using APIs and middleware.' },
+      { question: 'Can you integrate legacy systems?', answer: 'Yes, we specialize in connecting legacy systems with modern platforms through custom adapters, middleware, and API wrappers without requiring legacy system modifications.' },
+      { question: 'How do you handle data security during integration?', answer: 'We implement encryption in transit and at rest, token-based authentication, role-based access controls, and audit logging for all integration data flows.' }
+    ],
+    relatedServices: ['software-development', 'custom-api-development-services', 'enterprise-app-development']
+  },
+  {
+    slug: 'software-design-services',
+    title: 'Software Design Services',
+    metaTitle: 'Software Design Services | Cubix',
+    metaDescription: 'Cubix offers software design services including UI/UX design, system architecture, and prototyping. Create software that users love.',
+    heroHeading: 'Software Design Services',
+    heroDescription: 'We design software that is intuitive, beautiful, and built for performance. From user experience research to system architecture, our design-first approach ensures your software delights users and meets business goals.',
+    overviewTitle: 'About Our Software Design Services',
+    overviewDescription: 'Cubix combines user-centered design thinking with technical architecture expertise to create software products that are both visually compelling and technically sound. Our designers and architects work together from day one.',
+    overviewPoints: [
+      'User experience (UX) research and design',
+      'User interface (UI) design systems',
+      'Software architecture and design patterns',
+      'Interactive prototyping and validation',
+      'Design system documentation'
+    ],
+    features: [
+      { title: 'UX Research', description: 'Conduct user interviews, usability testing, and journey mapping to understand user needs and inform design decisions.' },
+      { title: 'UI Design Systems', description: 'Create comprehensive design systems with reusable components, style guides, and interaction patterns for consistency.' },
+      { title: 'System Architecture', description: 'Design scalable, maintainable software architectures using proven patterns, microservices, and cloud-native approaches.' },
+      { title: 'Prototyping', description: 'Build interactive prototypes that validate concepts with real users before committing to full development investment.' }
+    ],
+    technologies: ['Figma', 'Sketch', 'Adobe XD', 'InVision', 'Storybook', 'Miro'],
+    process: [
+      { step: '01', title: 'Discovery & Research', description: 'Understand business goals, user needs, and technical constraints through stakeholder interviews and user research.' },
+      { step: '02', title: 'Information Architecture', description: 'Define the structure, navigation, and content hierarchy that makes your software intuitive and efficient.' },
+      { step: '03', title: 'Visual Design & Prototyping', description: 'Create high-fidelity designs and interactive prototypes that bring the user experience to life for validation.' },
+      { step: '04', title: 'Design Handoff', description: 'Deliver developer-ready design specs, assets, and documentation for seamless implementation.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'What is included in software design services?', answer: 'Our software design services include UX research, wireframing, UI design, prototyping, design systems, and system architecture design, covering both the user-facing and technical aspects.' },
+      { question: 'Do you design for both web and mobile?', answer: 'Yes, we design responsive web applications, native mobile apps, and cross-platform interfaces with consistent design language across all platforms.' },
+      { question: 'How do you validate designs before development?', answer: 'We use interactive prototypes for usability testing with real users, gather feedback through structured sessions, and iterate on designs before development begins.' }
+    ],
+    relatedServices: ['ux-design-services', 'ui-design-services', 'product-design-services']
+  },
+  {
+    slug: 'software-maintenance-support',
+    title: 'Software Maintenance & Support',
+    metaTitle: 'Software Maintenance & Support Services | Cubix',
+    metaDescription: 'Cubix provides ongoing software maintenance and support services. Keep your applications secure, updated, and performing at their best.',
+    heroHeading: 'Software Maintenance & Support Services',
+    heroDescription: 'We keep your software running smoothly with proactive maintenance, bug fixes, performance optimization, and security updates. Our dedicated support teams ensure your applications stay reliable and current.',
+    overviewTitle: 'About Our Software Maintenance & Support',
+    overviewDescription: 'Cubix offers comprehensive software maintenance and support services that protect your technology investment. Our team monitors, updates, and optimizes your applications to ensure consistent performance and security.',
+    overviewPoints: [
+      'Proactive monitoring and alerting',
+      'Bug fixes and issue resolution',
+      'Security patches and updates',
+      'Performance optimization',
+      'Feature enhancements and upgrades'
+    ],
+    features: [
+      { title: 'Proactive Monitoring', description: 'Round-the-clock monitoring of application health, performance metrics, and security threats with automated alerting.' },
+      { title: 'Bug Fixing', description: 'Rapid identification and resolution of bugs with root cause analysis to prevent recurrence and maintain software reliability.' },
+      { title: 'Security Updates', description: 'Regular security audits, vulnerability patching, and compliance updates to protect your application and user data.' },
+      { title: 'Performance Tuning', description: 'Ongoing optimization of database queries, caching strategies, and infrastructure to maintain peak application performance.' }
+    ],
+    technologies: ['Datadog', 'New Relic', 'PagerDuty', 'Jira', 'GitHub', 'Jenkins'],
+    process: [
+      { step: '01', title: 'Assessment', description: 'Evaluate your current software, infrastructure, and support needs to create a tailored maintenance plan.' },
+      { step: '02', title: 'Onboarding', description: 'Set up monitoring tools, documentation, and communication channels for efficient support delivery.' },
+      { step: '03', title: 'Ongoing Maintenance', description: 'Execute regular maintenance tasks including updates, backups, security patches, and performance reviews.' },
+      { step: '04', title: 'Reporting & Review', description: 'Provide regular reports on system health, resolved issues, and recommendations for improvements and upgrades.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'What does software maintenance include?', answer: 'Our maintenance services include bug fixes, security updates, performance optimization, compatibility updates, backup management, and proactive monitoring of your applications.' },
+      { question: 'Can you maintain software built by another team?', answer: 'Yes, we regularly take over maintenance of applications built by other teams. We start with a thorough code audit and documentation review before assuming support responsibilities.' },
+      { question: 'What are your response times?', answer: 'Response times depend on your service level agreement. We offer tiers from standard business-hours support to 24/7 critical incident response with guaranteed resolution times.' }
+    ],
+    relatedServices: ['software-development', 'software-testing-services', 'software-consulting-services']
+  },
+  {
+    slug: 'software-product-development',
+    title: 'Software Product Development',
+    metaTitle: 'Software Product Development Services | Cubix',
+    metaDescription: 'Cubix builds software products from concept to market launch. Full-cycle product development with strategy, design, engineering, and growth support.',
+    heroHeading: 'Software Product Development Services',
+    heroDescription: 'We transform your product vision into market-ready software. From initial concept validation through architecture, development, and launch, we provide full-cycle product development services.',
+    overviewTitle: 'About Our Software Product Development',
+    overviewDescription: 'Cubix partners with startups and enterprises to build software products that succeed in the market. Our product development teams combine strategic thinking, design expertise, and engineering excellence to deliver products users love.',
+    overviewPoints: [
+      'Product strategy and market validation',
+      'MVP development and iteration',
+      'Full-scale product engineering',
+      'Growth engineering and optimization',
+      'Product analytics and data-driven decisions'
+    ],
+    features: [
+      { title: 'Product Strategy', description: 'Define your product vision, market positioning, and feature roadmap based on user research and competitive analysis.' },
+      { title: 'MVP Development', description: 'Build minimum viable products quickly to validate your concept, gather user feedback, and iterate toward product-market fit.' },
+      { title: 'Scalable Architecture', description: 'Engineer your product with scalable architecture that grows with your user base without requiring costly rebuilds.' },
+      { title: 'Growth Engineering', description: 'Implement analytics, A/B testing, and performance optimization to drive user acquisition, engagement, and retention.' }
+    ],
+    technologies: ['React', 'Node.js', 'Python', 'AWS', 'PostgreSQL', 'Docker'],
+    process: [
+      { step: '01', title: 'Ideation & Validation', description: 'Validate your product concept through market research, user interviews, and competitive analysis to define a winning strategy.' },
+      { step: '02', title: 'MVP Build', description: 'Design and develop a minimum viable product with core features to test market demand and gather early user feedback.' },
+      { step: '03', title: 'Iterate & Scale', description: 'Refine the product based on user data, expand features, and scale infrastructure to support growing demand.' },
+      { step: '04', title: 'Launch & Grow', description: 'Execute go-to-market strategy, implement growth features, and optimize the product for acquisition and retention.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'What is full-cycle product development?', answer: 'Full-cycle product development covers everything from concept validation and design through engineering, testing, launch, and ongoing iteration based on market feedback and analytics.' },
+      { question: 'How do you approach MVP development?', answer: 'We identify the core value proposition, define the minimum feature set to test it, build rapidly with quality engineering practices, and establish metrics to measure product-market fit.' },
+      { question: 'Do you work with startups?', answer: 'Yes, we work with startups at all stages from pre-seed to growth. We offer flexible engagement models including equity partnerships for promising early-stage ventures.' }
+    ],
+    relatedServices: ['software-development', 'mvp-software-development', 'product-design-services']
+  },
+  {
+    slug: 'blockchain-protocol-development',
+    title: 'Blockchain Protocol Development',
+    metaTitle: 'Blockchain Protocol Development Services | Cubix',
+    metaDescription: 'Cubix develops custom blockchain protocols, consensus mechanisms, and Layer 1/Layer 2 solutions. Build your own blockchain network with our experts.',
+    heroHeading: 'Blockchain Protocol Development Services',
+    heroDescription: 'We design and build custom blockchain protocols with tailored consensus mechanisms, governance models, and network architectures. Create scalable, secure decentralized networks for your ecosystem.',
+    overviewTitle: 'About Our Blockchain Protocol Development',
+    overviewDescription: 'Cubix builds custom blockchain protocols from the ground up, including consensus engines, networking layers, and virtual machines. Our protocol engineers deliver secure, high-throughput blockchain networks.',
+    overviewPoints: [
+      'Custom consensus mechanism design',
+      'Layer 1 and Layer 2 protocol development',
+      'Network node implementation',
+      'Tokenomics and governance design'
+    ],
+    features: [
+      { title: 'Consensus Mechanisms', description: 'Design and implement custom consensus algorithms including PoS, DPoS, BFT variants, and hybrid models for your network.' },
+      { title: 'Layer 2 Solutions', description: 'Build rollups, state channels, and sidechains to scale existing blockchains with faster transactions and lower fees.' },
+      { title: 'Network Architecture', description: 'Design peer-to-peer networking layers with node discovery, transaction propagation, and block synchronization.' },
+      { title: 'Governance Systems', description: 'Implement on-chain governance with proposal submission, voting mechanisms, and automated execution of approved changes.' }
+    ],
+    technologies: ['Rust', 'Go', 'Substrate', 'Cosmos SDK', 'Solidity', 'Tendermint'],
+    process: [
+      { step: '01', title: 'Protocol Design', description: 'Define the protocol specifications including consensus, block structure, transaction format, and network parameters.' },
+      { step: '02', title: 'Core Development', description: 'Build the blockchain core including the consensus engine, state machine, networking layer, and RPC interfaces.' },
+      { step: '03', title: 'Testnet Launch', description: 'Deploy a testnet for community testing, security audits, and performance benchmarking before mainnet launch.' },
+      { step: '04', title: 'Mainnet & Ecosystem', description: 'Launch the mainnet, deploy block explorers, wallets, and developer tools to grow the ecosystem.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'Should I build a new blockchain or use an existing one?', answer: 'Building a custom blockchain is ideal when you need specific consensus rules, governance, or performance characteristics. For most applications, building on existing chains is more practical and cost-effective.' },
+      { question: 'What consensus mechanism do you recommend?', answer: 'The choice depends on your network requirements. Proof of Stake variants offer energy efficiency, BFT provides finality, and hybrid models can balance throughput with decentralization.' },
+      { question: 'How long does protocol development take?', answer: 'A custom blockchain protocol typically takes 8-18 months depending on complexity, consensus design, and ecosystem tooling requirements.' }
+    ],
+    relatedServices: ['blockchain-development', 'smart-contract-development', 'web3-development']
+  },
+  {
+    slug: 'crypto-bank-development',
+    title: 'Crypto Bank Development',
+    metaTitle: 'Crypto Bank Development Services | Cubix',
+    metaDescription: 'Cubix builds crypto banking platforms with digital asset custody, lending, staking, and fiat on-ramps. Launch your crypto bank with our fintech experts.',
+    heroHeading: 'Crypto Bank Development Services',
+    heroDescription: 'We build comprehensive crypto banking platforms that bridge traditional finance with digital assets. Our solutions include custody, lending, trading, and compliance features for regulated crypto banking.',
+    overviewTitle: 'About Our Crypto Bank Development',
+    overviewDescription: 'Cubix develops secure, compliant crypto banking platforms that enable institutions and fintechs to offer digital asset services. We combine blockchain expertise with financial software engineering.',
+    overviewPoints: [
+      'Digital asset custody solutions',
+      'Crypto lending and borrowing platforms',
+      'Fiat-to-crypto on-ramps and off-ramps',
+      'Regulatory compliance and KYC/AML'
+    ],
+    features: [
+      { title: 'Digital Custody', description: 'Institutional-grade custody solutions with multi-signature wallets, cold storage, and key management for secure asset storage.' },
+      { title: 'Lending Platform', description: 'Build lending and borrowing platforms with collateral management, interest rate algorithms, and liquidation mechanisms.' },
+      { title: 'Fiat Integration', description: 'Integrate fiat on-ramps and off-ramps with banking APIs, payment processors, and compliance verification systems.' },
+      { title: 'Compliance Engine', description: 'Automated KYC/AML verification, transaction monitoring, and regulatory reporting for jurisdictional compliance.' }
+    ],
+    technologies: ['Node.js', 'Python', 'Solidity', 'PostgreSQL', 'AWS', 'Chainalysis'],
+    process: [
+      { step: '01', title: 'Regulatory Planning', description: 'Analyze regulatory requirements across target jurisdictions and design compliance-ready platform architecture.' },
+      { step: '02', title: 'Platform Architecture', description: 'Design secure infrastructure with custody solutions, trading engines, and banking integrations.' },
+      { step: '03', title: 'Development & Security', description: 'Build the platform with multiple security layers, penetration testing, and smart contract audits.' },
+      { step: '04', title: 'Compliance & Launch', description: 'Implement KYC/AML systems, obtain necessary approvals, and launch with regulatory compliance.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'What compliance features do you include?', answer: 'We implement KYC identity verification, AML transaction monitoring, sanctions screening, suspicious activity reporting, and audit trails for regulatory compliance across jurisdictions.' },
+      { question: 'How do you handle security for crypto banking?', answer: 'We use multi-signature wallets, hardware security modules, cold storage, role-based access controls, penetration testing, and real-time fraud detection to secure digital assets.' },
+      { question: 'Can you integrate with traditional banking systems?', answer: 'Yes, we integrate with traditional banking rails including SWIFT, ACH, SEPA, and payment processors to enable seamless fiat-to-crypto and crypto-to-fiat transactions.' }
+    ],
+    relatedServices: ['blockchain-development', 'smart-contract-development', 'dapp-development-service']
+  },
+  {
+    slug: 'crypto-wallet-development',
+    title: 'Crypto Wallet Development',
+    metaTitle: 'Crypto Wallet Development Services | Cubix',
+    metaDescription: 'Cubix develops secure crypto wallets for mobile, web, and hardware. Build custodial and non-custodial wallets with multi-chain support.',
+    heroHeading: 'Crypto Wallet Development Services',
+    heroDescription: 'We build secure, user-friendly cryptocurrency wallets for mobile and web platforms. Our wallets support multi-chain assets, DeFi integration, NFT storage, and seamless transaction experiences.',
+    overviewTitle: 'About Our Crypto Wallet Development',
+    overviewDescription: 'Cubix develops cryptocurrency wallets with enterprise-grade security and consumer-friendly interfaces. We build custodial and non-custodial solutions supporting multiple blockchains and token standards.',
+    overviewPoints: [
+      'Multi-chain wallet support',
+      'Custodial and non-custodial options',
+      'DeFi and dApp browser integration',
+      'NFT storage and display',
+      'Hardware wallet connectivity'
+    ],
+    features: [
+      { title: 'Multi-Chain Support', description: 'Support multiple blockchains including Ethereum, Bitcoin, Solana, Polygon, and custom chains with unified asset management.' },
+      { title: 'Security Architecture', description: 'Implement biometric authentication, encryption, secure enclaves, and recovery mechanisms to protect user assets.' },
+      { title: 'DeFi Integration', description: 'Built-in dApp browser and DeFi protocol integration for swapping, staking, and yield farming directly from the wallet.' },
+      { title: 'Transaction Management', description: 'Intuitive transaction history, gas estimation, speed controls, and real-time price feeds for informed transactions.' }
+    ],
+    technologies: ['React Native', 'Swift', 'Kotlin', 'Web3.js', 'Ethers.js', 'WalletConnect'],
+    process: [
+      { step: '01', title: 'Security Design', description: 'Define the security architecture including key management, encryption standards, and authentication mechanisms.' },
+      { step: '02', title: 'Core Development', description: 'Build the wallet core with blockchain connectivity, transaction signing, and key derivation across supported chains.' },
+      { step: '03', title: 'UI & Features', description: 'Develop the user interface with asset management, transaction flows, DeFi integration, and NFT support.' },
+      { step: '04', title: 'Audit & Launch', description: 'Conduct security audits, penetration testing, and code review before public launch and app store deployment.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'Custodial or non-custodial wallet?', answer: 'Custodial wallets manage keys on behalf of users for simpler UX. Non-custodial wallets give users full control of their private keys. We recommend the approach based on your target audience and regulatory requirements.' },
+      { question: 'Which blockchains do you support?', answer: 'We support all major blockchains including Ethereum, Bitcoin, Solana, Polygon, BNB Chain, Avalanche, and can add support for custom chains and token standards.' },
+      { question: 'How do you secure the wallet?', answer: 'We implement biometric authentication, secure enclave key storage, encrypted backups, seed phrase recovery, and optional multi-signature support for enhanced security.' }
+    ],
+    relatedServices: ['blockchain-development', 'smart-contract-development', 'dapp-development-service']
+  },
+  {
+    slug: 'defi-staking-platform',
+    title: 'DeFi Staking Platform',
+    metaTitle: 'DeFi Staking Platform Development | Cubix',
+    metaDescription: 'Cubix develops DeFi staking platforms with yield farming, liquidity pools, and reward distribution. Build your decentralized staking ecosystem.',
+    heroHeading: 'DeFi Staking Platform Development',
+    heroDescription: 'We build decentralized staking platforms that enable users to earn rewards by locking their digital assets. Our platforms feature flexible staking pools, automated reward distribution, and transparent on-chain governance.',
+    overviewTitle: 'About Our DeFi Staking Platform Development',
+    overviewDescription: 'Cubix develops DeFi staking solutions with smart contract-based reward mechanisms, liquidity provision, and governance features. We build secure, audited platforms that attract and retain stakers.',
+    overviewPoints: [
+      'Flexible staking pool creation',
+      'Automated reward distribution',
+      'Yield farming and liquidity mining',
+      'Governance token integration'
+    ],
+    features: [
+      { title: 'Staking Pools', description: 'Create flexible staking pools with customizable lock periods, reward rates, and tiered benefits for different staking amounts.' },
+      { title: 'Yield Farming', description: 'Build yield farming mechanisms with liquidity mining, farming rewards, and automated compounding strategies.' },
+      { title: 'Reward Distribution', description: 'Automated smart contract-based reward calculation and distribution with transparent on-chain verification.' },
+      { title: 'Governance', description: 'Integrate governance tokens with voting mechanisms for protocol parameter changes and treasury management.' }
+    ],
+    technologies: ['Solidity', 'Hardhat', 'React', 'Ethers.js', 'The Graph', 'OpenZeppelin'],
+    process: [
+      { step: '01', title: 'Tokenomics Design', description: 'Design the staking economics including reward rates, emission schedules, lock periods, and governance parameters.' },
+      { step: '02', title: 'Smart Contract Development', description: 'Build and test staking, reward distribution, and governance smart contracts with comprehensive test coverage.' },
+      { step: '03', title: 'Frontend & Integration', description: 'Develop the staking interface with wallet connectivity, real-time analytics, and portfolio tracking.' },
+      { step: '04', title: 'Audit & Deployment', description: 'Conduct professional smart contract audits, deploy to testnet for community testing, then launch on mainnet.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'What chains do you deploy staking platforms on?', answer: 'We deploy on Ethereum, BNB Chain, Polygon, Avalanche, Solana, and other EVM-compatible chains. Multi-chain deployments are also supported for broader reach.' },
+      { question: 'How do you ensure smart contract security?', answer: 'We follow security best practices, use audited libraries like OpenZeppelin, write comprehensive tests, and engage third-party auditors for professional security reviews before launch.' },
+      { question: 'Can you create custom reward mechanisms?', answer: 'Yes, we design custom reward algorithms including linear, exponential, and dynamic reward curves, as well as multi-token rewards and bonus multipliers for long-term stakers.' }
+    ],
+    relatedServices: ['blockchain-development', 'smart-contract-development', 'web3-development']
+  },
+  {
+    slug: 'decentralized-exchange-development',
+    title: 'Decentralized Exchange Development',
+    metaTitle: 'Decentralized Exchange (DEX) Development | Cubix',
+    metaDescription: 'Cubix develops decentralized exchanges with AMM, order books, and liquidity pools. Build your DEX platform with our blockchain experts.',
+    heroHeading: 'Decentralized Exchange Development',
+    heroDescription: 'We build decentralized exchanges that enable trustless, peer-to-peer trading of digital assets. Our DEX solutions feature automated market makers, liquidity pools, and cross-chain trading capabilities.',
+    overviewTitle: 'About Our DEX Development Services',
+    overviewDescription: 'Cubix develops decentralized exchange platforms using AMM protocols, on-chain order books, and hybrid models. We build secure, performant DEX solutions that provide deep liquidity and efficient price discovery.',
+    overviewPoints: [
+      'Automated market maker (AMM) protocols',
+      'Liquidity pool creation and management',
+      'Cross-chain swap capabilities',
+      'Advanced trading features'
+    ],
+    features: [
+      { title: 'AMM Protocol', description: 'Build automated market maker protocols with custom bonding curves, concentrated liquidity, and multi-token pool support.' },
+      { title: 'Liquidity Pools', description: 'Create incentivized liquidity pools with farming rewards, fee sharing, and impermanent loss protection mechanisms.' },
+      { title: 'Cross-Chain Swaps', description: 'Enable cross-chain asset trading through bridge integrations, atomic swaps, and multi-chain liquidity aggregation.' },
+      { title: 'Trading Interface', description: 'Develop professional trading interfaces with charts, order management, portfolio tracking, and advanced analytics.' }
+    ],
+    technologies: ['Solidity', 'Rust', 'React', 'The Graph', 'Uniswap SDK', 'Chainlink'],
+    process: [
+      { step: '01', title: 'Protocol Design', description: 'Design the DEX protocol including pricing algorithms, fee structures, and liquidity incentive mechanisms.' },
+      { step: '02', title: 'Smart Contract Development', description: 'Build factory, pool, router, and governance contracts with extensive testing and gas optimization.' },
+      { step: '03', title: 'Frontend Development', description: 'Create the trading interface with wallet integration, real-time price feeds, and transaction management.' },
+      { step: '04', title: 'Audit & Launch', description: 'Complete professional security audits, launch on testnet, seed initial liquidity, and deploy to mainnet.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'AMM or order book DEX?', answer: 'AMM-based DEXs are simpler and provide passive liquidity. Order book DEXs offer better price discovery for professional traders. We recommend the model based on your target market and chain capabilities.' },
+      { question: 'How do you bootstrap liquidity?', answer: 'We implement liquidity mining programs, farming incentives, and strategic liquidity seeding to attract initial liquidity providers and create a healthy trading environment.' },
+      { question: 'Can you build a cross-chain DEX?', answer: 'Yes, we build cross-chain DEX solutions using bridge protocols and liquidity aggregation to enable trading across multiple blockchains from a single interface.' }
+    ],
+    relatedServices: ['blockchain-development', 'smart-contract-development', 'web3-development']
+  },
+  {
+    slug: 'digital-assets-development',
+    title: 'Digital Assets Development',
+    metaTitle: 'Digital Assets Development Services | Cubix',
+    metaDescription: 'Cubix develops digital asset solutions including tokenization, asset management platforms, and digital securities. Build your digital asset infrastructure.',
+    heroHeading: 'Digital Assets Development Services',
+    heroDescription: 'We build digital asset platforms for tokenization, management, and trading. From security tokens to utility tokens, our solutions enable businesses to create, issue, and manage digital assets at scale.',
+    overviewTitle: 'About Our Digital Assets Development',
+    overviewDescription: 'Cubix develops comprehensive digital asset solutions including tokenization platforms, asset management systems, and compliance tools. We help businesses leverage blockchain to digitize and trade real-world assets.',
+    overviewPoints: [
+      'Asset tokenization platforms',
+      'Token creation and smart contracts',
+      'Digital asset management systems',
+      'Compliance and regulatory tools'
+    ],
+    features: [
+      { title: 'Asset Tokenization', description: 'Tokenize real estate, art, securities, and other assets with fractional ownership, compliance, and secondary market trading.' },
+      { title: 'Token Development', description: 'Create ERC-20, ERC-721, ERC-1155, and custom token standards with minting, burning, and governance capabilities.' },
+      { title: 'Asset Management', description: 'Build dashboards for managing digital asset portfolios, tracking performance, and executing automated investment strategies.' },
+      { title: 'Compliance Tools', description: 'Implement transfer restrictions, investor whitelisting, and regulatory reporting for compliant digital asset operations.' }
+    ],
+    technologies: ['Solidity', 'ERC Standards', 'Node.js', 'React', 'The Graph', 'Chainlink'],
+    process: [
+      { step: '01', title: 'Asset Analysis', description: 'Analyze the assets to be tokenized, define token economics, and establish regulatory compliance requirements.' },
+      { step: '02', title: 'Smart Contract Development', description: 'Design and build token contracts with compliance rules, access controls, and distribution mechanisms.' },
+      { step: '03', title: 'Platform Development', description: 'Build the management platform with issuance tools, investor portals, and secondary market capabilities.' },
+      { step: '04', title: 'Launch & Compliance', description: 'Deploy contracts, onboard investors with KYC verification, and implement ongoing compliance monitoring.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'What types of assets can be tokenized?', answer: 'Virtually any asset can be tokenized including real estate, art, commodities, intellectual property, securities, revenue streams, and physical goods with proper legal frameworks.' },
+      { question: 'How do you handle regulatory compliance?', answer: 'We implement on-chain compliance rules including investor accreditation, transfer restrictions, holding periods, and automated reporting aligned with securities regulations.' },
+      { question: 'What token standards do you support?', answer: 'We support ERC-20 for fungible tokens, ERC-721 and ERC-1155 for NFTs, ERC-1400 for security tokens, and custom standards for specialized requirements.' }
+    ],
+    relatedServices: ['blockchain-development', 'smart-contract-development', 'nft-development-services']
+  },
+  {
+    slug: 'stablecoin-development',
+    title: 'Stablecoin Development',
+    metaTitle: 'Stablecoin Development Services | Cubix',
+    metaDescription: 'Cubix develops custom stablecoins with fiat-backing, algorithmic, and crypto-collateralized models. Build your own stablecoin with our blockchain team.',
+    heroHeading: 'Stablecoin Development Services',
+    heroDescription: 'We design and develop custom stablecoins with robust peg mechanisms, reserve management, and regulatory compliance. Build fiat-backed, crypto-collateralized, or algorithmic stablecoins for your ecosystem.',
+    overviewTitle: 'About Our Stablecoin Development',
+    overviewDescription: 'Cubix develops stablecoin solutions with proven stability mechanisms and regulatory compliance. Our team has expertise in fiat-backed, over-collateralized, and algorithmic stablecoin models across multiple blockchains.',
+    overviewPoints: [
+      'Fiat-backed stablecoin development',
+      'Crypto-collateralized stablecoins',
+      'Algorithmic stability mechanisms',
+      'Reserve management and auditing'
+    ],
+    features: [
+      { title: 'Peg Mechanisms', description: 'Implement robust price stability through fiat reserves, over-collateralization, or algorithmic supply adjustment mechanisms.' },
+      { title: 'Reserve Management', description: 'Build transparent reserve tracking with proof-of-reserves, real-time auditing, and automated rebalancing systems.' },
+      { title: 'Multi-Chain Deployment', description: 'Deploy stablecoins across multiple blockchains with bridge contracts and consistent supply management across chains.' },
+      { title: 'Compliance Framework', description: 'Implement regulatory compliance with issuer controls, blacklisting capabilities, and transparent reserve reporting.' }
+    ],
+    technologies: ['Solidity', 'Chainlink Oracles', 'OpenZeppelin', 'Hardhat', 'React', 'Node.js'],
+    process: [
+      { step: '01', title: 'Model Design', description: 'Select and design the stability model, reserve structure, and governance framework for your stablecoin.' },
+      { step: '02', title: 'Smart Contract Development', description: 'Build minting, burning, reserve management, and governance contracts with rigorous testing and formal verification.' },
+      { step: '03', title: 'Integration & Testing', description: 'Integrate oracle price feeds, test stability under market stress scenarios, and validate reserve mechanisms.' },
+      { step: '04', title: 'Audit & Launch', description: 'Complete security audits, establish reserve custody, and launch with transparent proof-of-reserves reporting.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'Which stablecoin model is best?', answer: 'Fiat-backed stablecoins offer simplicity and trust but require reserves. Crypto-collateralized models are decentralized but capital-intensive. Algorithmic models are capital-efficient but carry higher risk. We advise based on your goals.' },
+      { question: 'What regulatory considerations exist?', answer: 'Stablecoin regulations vary by jurisdiction and cover reserve requirements, licensing, consumer protection, and reporting. We design with regulatory compliance in mind and work with legal advisors.' },
+      { question: 'How do you maintain the peg?', answer: 'We implement proven peg mechanisms including reserve-backed minting and burning, arbitrage incentives, and circuit breakers, combined with oracle price feeds and liquidation protocols.' }
+    ],
+    relatedServices: ['blockchain-development', 'smart-contract-development', 'web3-development']
+  },
+  {
+    slug: 'nft-marketplace-development',
+    title: 'NFT Marketplace Development',
+    metaTitle: 'NFT Marketplace Development Services | Cubix',
+    metaDescription: 'Cubix builds NFT marketplace platforms with minting, listing, auction, and trading features. Launch your own NFT marketplace with our team.',
+    heroHeading: 'NFT Marketplace Development Services',
+    heroDescription: 'We build feature-rich NFT marketplace platforms where creators can mint, list, and sell digital collectibles. Our marketplaces support auctions, fixed-price sales, and offer discovery tools for collectors.',
+    overviewTitle: 'About Our NFT Marketplace Development',
+    overviewDescription: 'Cubix develops NFT marketplace platforms with seamless minting, trading, and discovery experiences. We build marketplaces for art, gaming, music, real estate, and custom NFT use cases across multiple blockchains.',
+    overviewPoints: [
+      'Custom NFT marketplace development',
+      'Multi-chain NFT support',
+      'Auction and fixed-price sales',
+      'Creator tools and royalty enforcement',
+      'Collection curation and discovery'
+    ],
+    features: [
+      { title: 'Minting Engine', description: 'Easy-to-use minting tools supporting single and batch NFT creation with metadata, royalties, and collection management.' },
+      { title: 'Trading System', description: 'Flexible trading with English and Dutch auctions, fixed-price listings, make-offer functionality, and bundle sales.' },
+      { title: 'Discovery & Curation', description: 'Advanced search, filtering, trending collections, featured drops, and personalized recommendations for collectors.' },
+      { title: 'Creator Dashboard', description: 'Analytics, earnings tracking, royalty management, and promotional tools for NFT creators and collection owners.' }
+    ],
+    technologies: ['Solidity', 'IPFS', 'React', 'Next.js', 'The Graph', 'Arweave'],
+    process: [
+      { step: '01', title: 'Marketplace Design', description: 'Define marketplace categories, trading mechanisms, fee structures, and creator tools based on your target market.' },
+      { step: '02', title: 'Smart Contract Development', description: 'Build marketplace, auction, and royalty contracts with gas optimization and security best practices.' },
+      { step: '03', title: 'Platform Development', description: 'Develop the frontend with wallet integration, minting flows, trading interfaces, and collection management.' },
+      { step: '04', title: 'Launch & Community', description: 'Deploy the marketplace, onboard initial creators, launch featured collections, and build community engagement.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'Which blockchain should I launch my NFT marketplace on?', answer: 'Ethereum has the largest NFT ecosystem but higher gas fees. Polygon and Solana offer lower costs. We recommend based on your target audience, gas considerations, and ecosystem compatibility.' },
+      { question: 'How do you handle NFT metadata storage?', answer: 'We use decentralized storage solutions like IPFS and Arweave to ensure NFT metadata and media files are permanent, censorship-resistant, and always accessible.' },
+      { question: 'Can you enforce creator royalties?', answer: 'Yes, we implement on-chain royalty enforcement through smart contracts that automatically distribute royalty payments to creators on every secondary sale.' }
+    ],
+    relatedServices: ['nft-development-services', 'blockchain-development', 'smart-contract-development']
+  },
+  {
+    slug: 'web3-game-development',
+    title: 'Web3 Game Development',
+    metaTitle: 'Web3 Game Development Services | Cubix',
+    metaDescription: 'Cubix develops Web3 games with play-to-earn mechanics, NFT integration, and on-chain economies. Build blockchain-powered gaming experiences.',
+    heroHeading: 'Web3 Game Development Services',
+    heroDescription: 'We build Web3 games that combine engaging gameplay with blockchain-powered economies. Our games feature play-to-earn mechanics, NFT assets, token rewards, and decentralized player-owned economies.',
+    overviewTitle: 'About Our Web3 Game Development',
+    overviewDescription: 'Cubix develops Web3 games that bridge traditional gaming with blockchain technology. We create games with true digital ownership, player-driven economies, and sustainable tokenomics that reward engaged players.',
+    overviewPoints: [
+      'Play-to-earn game development',
+      'In-game NFT asset systems',
+      'Token economy design',
+      'Cross-game interoperability',
+      'Decentralized game governance'
+    ],
+    features: [
+      { title: 'Play-to-Earn', description: 'Design sustainable play-to-earn mechanics with token rewards, skill-based earning, and balanced economic models.' },
+      { title: 'NFT Game Assets', description: 'Create in-game items, characters, and land as NFTs with on-chain ownership, trading, and cross-game compatibility.' },
+      { title: 'Token Economy', description: 'Design and implement in-game token economies with earning, spending, staking, and governance utility.' },
+      { title: 'Game Infrastructure', description: 'Build scalable game servers, state channels for fast gameplay, and bridges for asset portability across chains.' }
+    ],
+    technologies: ['Unity', 'Unreal Engine', 'Solidity', 'Web3.js', 'Immutable X', 'Polygon'],
+    process: [
+      { step: '01', title: 'Game & Economy Design', description: 'Design the game concept, core loop, and token economy with sustainable play-to-earn mechanics and NFT utility.' },
+      { step: '02', title: 'Smart Contract Development', description: 'Build NFT contracts, token contracts, marketplace, and game logic smart contracts with thorough testing.' },
+      { step: '03', title: 'Game Development', description: 'Develop the game client with blockchain wallet integration, NFT rendering, and seamless on-chain interactions.' },
+      { step: '04', title: 'Launch & Live Ops', description: 'Launch the game with initial NFT drops, community events, and ongoing content updates to maintain player engagement.' }
+    ],
+    caseStudies: [],
+    faqs: [
+      { question: 'How do you make play-to-earn sustainable?', answer: 'We design balanced economies with multiple value sinks, skill-based earning curves, and utility-driven demand for tokens and NFTs, avoiding inflationary models that collapse over time.' },
+      { question: 'Which blockchain is best for Web3 games?', answer: 'Layer 2 solutions like Polygon and Immutable X offer the low gas fees and fast transactions needed for gaming. We select the chain based on game requirements, audience, and transaction volume.' },
+      { question: 'Can existing games be converted to Web3?', answer: 'Yes, we can integrate blockchain features into existing games by adding wallet connectivity, NFT items, token rewards, and marketplace features without rebuilding the entire game.' }
+    ],
+    relatedServices: ['game-development', 'blockchain-game-development', 'nft-development-services']
   }
 ];
 

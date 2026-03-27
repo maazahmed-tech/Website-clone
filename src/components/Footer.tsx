@@ -33,10 +33,15 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">Company</h4>
               <ul className="space-y-3">
-                {["Testimonials", "Process", "Contact"].map((item) => (
-                  <li key={item}>
-                    <Link href={`/${item.toLowerCase().replace(/ /g, "-")}/`} className="text-sm text-gray-500 hover:text-[#2ED06E] transition-colors">
-                      {item}
+                {[
+                  { label: "About Us", href: "/about" },
+                  { label: "Testimonials", href: "/about/testimonial" },
+                  { label: "Process", href: "/about/process" },
+                  { label: "Contact", href: "/contact" },
+                ].map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="text-sm text-gray-500 hover:text-[#2ED06E] transition-colors">
+                      {item.label}
                     </Link>
                   </li>
                 ))}
@@ -47,10 +52,15 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">Resources</h4>
               <ul className="space-y-3">
-                {["Events", "Press Release", "Work"].map((item) => (
-                  <li key={item}>
-                    <Link href={`/${item.toLowerCase().replace(/ /g, "-")}/`} className="text-sm text-gray-500 hover:text-[#2ED06E] transition-colors">
-                      {item}
+                {[
+                  { label: "Blog", href: "/blog" },
+                  { label: "Events", href: "/events" },
+                  { label: "Press Release", href: "/press-release" },
+                  { label: "Work", href: "/work" },
+                ].map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="text-sm text-gray-500 hover:text-[#2ED06E] transition-colors">
+                      {item.label}
                     </Link>
                   </li>
                 ))}
@@ -61,10 +71,15 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">Services</h4>
               <ul className="space-y-3">
-                {["Game Development", "Blockchain Development", "AI Development"].map((item) => (
-                  <li key={item}>
-                    <Link href={`/${item.toLowerCase().replace(/ /g, "-")}/`} className="text-sm text-gray-500 hover:text-[#2ED06E] transition-colors">
-                      {item}
+                {[
+                  { label: "Mobile App", href: "/mobile-app-development" },
+                  { label: "Game Development", href: "/game-development" },
+                  { label: "Blockchain Development", href: "/blockchain-development" },
+                  { label: "AI Development", href: "/artificial-intelligence" },
+                ].map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="text-sm text-gray-500 hover:text-[#2ED06E] transition-colors">
+                      {item.label}
                     </Link>
                   </li>
                 ))}
@@ -75,10 +90,15 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">Insights</h4>
               <ul className="space-y-3">
-                {["Careers", "Manifesto", "Culture Book"].map((item) => (
-                  <li key={item}>
-                    <Link href={`/${item.toLowerCase().replace(/ /g, "-")}/`} className="text-sm text-gray-500 hover:text-[#2ED06E] transition-colors">
-                      {item}
+                {[
+                  { label: "University", href: "/university" },
+                  { label: "Careers", href: "/careers" },
+                  { label: "Manifesto", href: "/about/manifesto" },
+                  { label: "Culture Book", href: "/about" },
+                ].map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="text-sm text-gray-500 hover:text-[#2ED06E] transition-colors">
+                      {item.label}
                     </Link>
                   </li>
                 ))}
