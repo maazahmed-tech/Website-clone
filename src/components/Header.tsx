@@ -1,0 +1,701 @@
+"use client";
+
+import { useState, useEffect, useCallback, useRef } from "react";
+import Link from "next/link";
+
+/* ------------------------------------------------------------------ */
+/*  DATA                                                               */
+/* ------------------------------------------------------------------ */
+
+interface NavLink {
+  label: string;
+  href: string;
+}
+
+interface MegaColumn {
+  heading: string;
+  links: NavLink[];
+}
+
+const servicesMenu: MegaColumn[] = [
+  {
+    heading: "Mobile App",
+    links: [
+      { label: "Mobile App", href: "/mobile-app-development" },
+      { label: "iOS App", href: "/iphone-app-development" },
+      { label: "Android App", href: "/android-app-development" },
+      { label: "eCommerce App", href: "/ecommerce-app-development" },
+      { label: "visionOS App", href: "/visionos-development" },
+      { label: "Enterprise App", href: "/enterprise-app-development" },
+    ],
+  },
+  {
+    heading: "Cross Platform",
+    links: [
+      { label: "Cross Platform App", href: "/cross-platform-app-development" },
+      { label: "Flutter App", href: "/flutter-app-development-services" },
+      { label: "React Native", href: "/react-native-app-development" },
+      { label: "Ionic App", href: "/ionic-app-development" },
+    ],
+  },
+  {
+    heading: "Emerging Tech",
+    links: [
+      { label: "AR App", href: "/augmented-reality" },
+      { label: "VR App", href: "/virtual-reality-development" },
+      { label: "Metaverse", href: "/metaverse-development" },
+      { label: "IoT App", href: "/iot-app-development" },
+      { label: "AI App", href: "/artificial-intelligence" },
+    ],
+  },
+  {
+    heading: "Software Development",
+    links: [
+      { label: "Software Development", href: "/software-development" },
+      { label: "Software Consulting", href: "/software-consulting-services" },
+      { label: "Software Testing", href: "/software-testing-services" },
+      { label: "Custom API", href: "/custom-api-development-services" },
+    ],
+  },
+  {
+    heading: "Web Development",
+    links: [
+      { label: "Web App Development", href: "/web-application-development" },
+      { label: "Web Development", href: "/web-development" },
+      { label: "Custom Web", href: "/custom-web-development-services" },
+    ],
+  },
+  {
+    heading: "eCommerce",
+    links: [
+      { label: "eCommerce", href: "/custom-ecommerce-development-company" },
+      { label: "Magento", href: "/magento-development-services" },
+      { label: "WooCommerce", href: "/woocommerce-development-services" },
+      { label: "Shopify", href: "/shopify-website-development-services" },
+    ],
+  },
+  {
+    heading: "Blockchain",
+    links: [
+      { label: "Blockchain Development", href: "/blockchain-development" },
+      { label: "Smart Contract", href: "/smart-contract-development" },
+      { label: "NFT Development", href: "/nft-development-services" },
+      { label: "Web3 Development", href: "/web3-development" },
+      { label: "DApp Development", href: "/dapp-development-service" },
+    ],
+  },
+  {
+    heading: "Product",
+    links: [
+      { label: "Product Design", href: "/product-design-services" },
+      { label: "MVP Development", href: "/mvp-software-development" },
+      { label: "UX Design", href: "/ux-design-services" },
+      { label: "UI Design", href: "/ui-design-services" },
+    ],
+  },
+  {
+    heading: "Game Development",
+    links: [
+      { label: "Game Development", href: "/game-development" },
+      { label: "Mobile Game", href: "/mobile-game-development" },
+      { label: "Unity Game", href: "/unity-game-development" },
+      { label: "Unreal Game", href: "/unreal-game-development" },
+      { label: "Blockchain Game", href: "/blockchain-game-development" },
+    ],
+  },
+  {
+    heading: "Cloud",
+    links: [
+      { label: "Cloud Strategy", href: "/cloud-software-development-services" },
+      { label: "AWS", href: "/aws-development-services" },
+      { label: "DevOps", href: "/devops-software-development-services" },
+    ],
+  },
+];
+
+const industriesMenu: NavLink[] = [
+  { label: "Automotive", href: "/industries/automotive-software-development" },
+  { label: "Healthcare", href: "/industries/healthcare-software-development" },
+  { label: "Education", href: "/industries/education-software-development" },
+  { label: "Ecommerce", href: "/industries/ecommerce-software-development" },
+  { label: "Finance", href: "/industries/finance-software-development" },
+  { label: "Real Estate", href: "/industries/real-estate-software-development" },
+  { label: "Hospitality", href: "/industries/hospitality-software-development" },
+  { label: "Logistics", href: "/industries/logistics-software-development" },
+  { label: "Manufacturing", href: "/industries/manufacturing-software-solutions" },
+  { label: "Fashion", href: "/industries/fashion-software-development" },
+  { label: "Food", href: "/industries/foodtech-software-development" },
+  { label: "Travel", href: "/industries/travel-software-development" },
+  { label: "Legal", href: "/industries/legal-software-development" },
+  { label: "Agriculture", href: "/industries/agriculture-software-development" },
+  { label: "B2B Software", href: "/industries/b2b-software-development" },
+  { label: "CRM Development", href: "/industries/crm-development-services" },
+];
+
+const companyMenu: NavLink[] = [
+  { label: "About", href: "/about" },
+  { label: "Process", href: "/about/process" },
+  { label: "Careers", href: "/careers" },
+  { label: "Clients", href: "/about/clients" },
+  { label: "Testimonials", href: "/about/testimonial" },
+  { label: "Manifesto", href: "/about/manifesto" },
+];
+
+const solutionsMenu: NavLink[] = [
+  { label: "Cubix HappyForce", href: "/solutions/cubix-happyforce" },
+  { label: "Cubix Hero", href: "/solutions/cubix-hero" },
+  { label: "Cubix Shop", href: "/solutions/cubix-shop" },
+  { label: "Messenger App", href: "/solutions/messenger-app" },
+  { label: "On-Demand Delivery", href: "/solutions/on-demand-delivery-platform" },
+  { label: "Chat Bot", href: "/solutions/chat-bot" },
+  { label: "Cubix Chain", href: "/solutions/cubix-chain" },
+  { label: "Social Platform", href: "/solutions/social-platform" },
+  { label: "Insight Machine", href: "/solutions/cubix-insight-machine" },
+  { label: "Event Platform", href: "/solutions/event-management-platform" },
+];
+
+type DropdownKey = "services" | "industries" | "company" | "solutions";
+
+/* ------------------------------------------------------------------ */
+/*  SVG ICONS                                                          */
+/* ------------------------------------------------------------------ */
+
+function CubixLogo() {
+  return (
+    <svg
+      width="120"
+      height="32"
+      viewBox="0 0 120 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Cubix"
+    >
+      <text
+        x="0"
+        y="26"
+        fill="#2ED06E"
+        fontFamily="Manrope, sans-serif"
+        fontWeight="800"
+        fontSize="28"
+        letterSpacing="-1"
+      >
+        cubix.
+      </text>
+    </svg>
+  );
+}
+
+function ChevronDown({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="10"
+      height="6"
+      viewBox="0 0 10 6"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 1L5 5L9 1"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function PhoneIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  );
+}
+
+function HamburgerIcon() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    >
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    >
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  COMPONENT                                                          */
+/* ------------------------------------------------------------------ */
+
+export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<DropdownKey | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileAccordion, setMobileAccordion] = useState<DropdownKey | null>(null);
+  const hideTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  /* scroll listener */
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  /* lock body scroll when mobile menu is open */
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  /* dropdown hover handlers with delay */
+  const showDropdown = useCallback((key: DropdownKey) => {
+    if (hideTimeout.current) clearTimeout(hideTimeout.current);
+    setActiveDropdown(key);
+  }, []);
+
+  const hideDropdown = useCallback(() => {
+    hideTimeout.current = setTimeout(() => setActiveDropdown(null), 150);
+  }, []);
+
+  const toggleMobileAccordion = (key: DropdownKey) => {
+    setMobileAccordion((prev) => (prev === key ? null : key));
+  };
+
+  /* ---- renderers ---- */
+
+  const renderServicesMega = () => (
+    <div className="absolute left-0 top-full w-screen bg-[#111] border-t border-white/10 shadow-2xl z-50">
+      <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-5 gap-6">
+        {servicesMenu.map((col) => (
+          <div key={col.heading}>
+            <h4 className="text-[#2ED06E] font-semibold text-sm mb-3 uppercase tracking-wider">
+              {col.heading}
+            </h4>
+            <ul className="space-y-2">
+              {col.links.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  const renderIndustriesMega = () => (
+    <div className="absolute left-0 top-full w-screen bg-[#111] border-t border-white/10 shadow-2xl z-50">
+      <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-4 gap-6">
+        {industriesMenu.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="text-gray-300 hover:text-white text-sm py-1.5 transition-colors duration-200"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+
+  const renderSimpleDropdown = (items: NavLink[]) => (
+    <div className="absolute left-0 top-full bg-[#111] border border-white/10 rounded-md shadow-2xl z-50 min-w-[200px]">
+      <div className="py-2">
+        {items.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="block px-5 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 text-sm transition-colors duration-200"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+
+  /* ---- mobile accordion renderers ---- */
+
+  const renderMobileServicesAccordion = () => (
+    <div className="pl-4 pb-4 space-y-4">
+      {servicesMenu.map((col) => (
+        <div key={col.heading}>
+          <h4 className="text-[#2ED06E] font-semibold text-xs mb-2 uppercase tracking-wider">
+            {col.heading}
+          </h4>
+          <ul className="space-y-1">
+            {col.links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block text-gray-300 hover:text-white text-sm py-1 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+
+  const renderMobileLinksAccordion = (items: NavLink[]) => (
+    <div className="pl-4 pb-3 space-y-1">
+      {items.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          onClick={() => setMobileOpen(false)}
+          className="block text-gray-300 hover:text-white text-sm py-1.5 transition-colors"
+        >
+          {link.label}
+        </Link>
+      ))}
+    </div>
+  );
+
+  /* ---- main render ---- */
+
+  return (
+    <>
+      <header
+        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 font-[Manrope,sans-serif] ${
+          scrolled
+            ? "bg-[#0d0d0d]/95 backdrop-blur-md shadow-lg"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-[72px]">
+            {/* Logo */}
+            <Link href="/" className="flex-shrink-0">
+              <CubixLogo />
+            </Link>
+
+            {/* Desktop Nav */}
+            <nav className="hidden lg:flex items-center gap-1">
+              {/* Services */}
+              <div
+                className="relative"
+                onMouseEnter={() => showDropdown("services")}
+                onMouseLeave={hideDropdown}
+              >
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium">
+                  Services
+                  <ChevronDown
+                    className={`transition-transform duration-200 ${
+                      activeDropdown === "services" ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {activeDropdown === "services" && renderServicesMega()}
+              </div>
+
+              {/* Industries */}
+              <div
+                className="relative"
+                onMouseEnter={() => showDropdown("industries")}
+                onMouseLeave={hideDropdown}
+              >
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium">
+                  Industries
+                  <ChevronDown
+                    className={`transition-transform duration-200 ${
+                      activeDropdown === "industries" ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {activeDropdown === "industries" && renderIndustriesMega()}
+              </div>
+
+              {/* Work */}
+              <Link
+                href="/work"
+                className="px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium"
+              >
+                Work
+              </Link>
+
+              {/* Company */}
+              <div
+                className="relative"
+                onMouseEnter={() => showDropdown("company")}
+                onMouseLeave={hideDropdown}
+              >
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium">
+                  Company
+                  <ChevronDown
+                    className={`transition-transform duration-200 ${
+                      activeDropdown === "company" ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {activeDropdown === "company" && renderSimpleDropdown(companyMenu)}
+              </div>
+
+              {/* Resources */}
+              <div
+                className="relative"
+                onMouseEnter={() => showDropdown("solutions")}
+                onMouseLeave={hideDropdown}
+              >
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium">
+                  Solutions
+                  <ChevronDown
+                    className={`transition-transform duration-200 ${
+                      activeDropdown === "solutions" ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {activeDropdown === "solutions" && renderSimpleDropdown(solutionsMenu)}
+              </div>
+
+              {/* Contact (nav link) */}
+              <Link
+                href="/contact"
+                className="px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium"
+              >
+                Contact
+              </Link>
+            </nav>
+
+            {/* Right side CTA area */}
+            <div className="hidden lg:flex items-center gap-4">
+              {/* Phone */}
+              <a
+                href="tel:8669782220"
+                className="flex items-center gap-2 text-white hover:text-[#2ED06E] transition-colors text-sm font-medium"
+              >
+                <PhoneIcon />
+                <span>866-978-2220</span>
+              </a>
+
+              {/* Contact Button */}
+              <Link
+                href="/contact"
+                className="inline-flex items-center border border-white text-white hover:bg-white hover:text-black rounded-md px-5 py-2 font-semibold text-sm transition-colors duration-200"
+              >
+                Get in Touch
+              </Link>
+            </div>
+
+            {/* Mobile hamburger */}
+            <button
+              className="lg:hidden text-white p-2"
+              onClick={() => setMobileOpen(true)}
+              aria-label="Open menu"
+            >
+              <HamburgerIcon />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* ---- Mobile Overlay ---- */}
+      {mobileOpen && (
+      <div
+        style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: 200,
+          backgroundColor: '#0d0d0d',
+        }}
+        className="font-[Manrope,sans-serif]"
+      >
+        {/* Mobile header */}
+        <div className="flex items-center justify-between px-4 h-[72px] border-b border-white/10">
+          <Link href="/" onClick={() => setMobileOpen(false)}>
+            <CubixLogo />
+          </Link>
+          <button
+            className="text-white p-2"
+            onClick={() => setMobileOpen(false)}
+            aria-label="Close menu"
+          >
+            <CloseIcon />
+          </button>
+        </div>
+
+        {/* Mobile nav */}
+        <nav className="overflow-y-auto h-[calc(100vh-72px)] px-4 py-6">
+          {/* Services accordion */}
+          <div className="border-b border-white/10 pb-2 mb-2">
+            <button
+              onClick={() => toggleMobileAccordion("services")}
+              className="flex items-center justify-between w-full py-3 text-white text-base font-medium"
+            >
+              Services
+              <ChevronDown
+                className={`transition-transform duration-200 ${
+                  mobileAccordion === "services" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                mobileAccordion === "services" ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
+              }`}
+            >
+              {renderMobileServicesAccordion()}
+            </div>
+          </div>
+
+          {/* Industries accordion */}
+          <div className="border-b border-white/10 pb-2 mb-2">
+            <button
+              onClick={() => toggleMobileAccordion("industries")}
+              className="flex items-center justify-between w-full py-3 text-white text-base font-medium"
+            >
+              Industries
+              <ChevronDown
+                className={`transition-transform duration-200 ${
+                  mobileAccordion === "industries" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                mobileAccordion === "industries" ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
+              }`}
+            >
+              {renderMobileLinksAccordion(industriesMenu)}
+            </div>
+          </div>
+
+          {/* Work */}
+          <div className="border-b border-white/10 pb-2 mb-2">
+            <Link
+              href="/work"
+              onClick={() => setMobileOpen(false)}
+              className="block py-3 text-white text-base font-medium"
+            >
+              Work
+            </Link>
+          </div>
+
+          {/* Company accordion */}
+          <div className="border-b border-white/10 pb-2 mb-2">
+            <button
+              onClick={() => toggleMobileAccordion("company")}
+              className="flex items-center justify-between w-full py-3 text-white text-base font-medium"
+            >
+              Company
+              <ChevronDown
+                className={`transition-transform duration-200 ${
+                  mobileAccordion === "company" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                mobileAccordion === "company" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+              }`}
+            >
+              {renderMobileLinksAccordion(companyMenu)}
+            </div>
+          </div>
+
+          {/* Resources accordion */}
+          <div className="border-b border-white/10 pb-2 mb-2">
+            <button
+              onClick={() => toggleMobileAccordion("solutions")}
+              className="flex items-center justify-between w-full py-3 text-white text-base font-medium"
+            >
+              Solutions
+              <ChevronDown
+                className={`transition-transform duration-200 ${
+                  mobileAccordion === "solutions" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                mobileAccordion === "solutions" ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
+              }`}
+            >
+              {renderMobileLinksAccordion(solutionsMenu)}
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div className="border-b border-white/10 pb-2 mb-2">
+            <Link
+              href="/contact"
+              onClick={() => setMobileOpen(false)}
+              className="block py-3 text-white text-base font-medium"
+            >
+              Contact
+            </Link>
+          </div>
+
+          {/* Mobile CTA area */}
+          <div className="mt-8 space-y-4">
+            <a
+              href="tel:8669782220"
+              className="flex items-center justify-center gap-2 text-white hover:text-[#2ED06E] transition-colors text-base font-medium"
+            >
+              <PhoneIcon />
+              <span>866-978-2220</span>
+            </a>
+
+            <Link
+              href="/contact"
+              onClick={() => setMobileOpen(false)}
+              className="block w-full text-center border border-white text-white hover:bg-white hover:text-black rounded-md px-5 py-3 font-semibold text-base transition-colors duration-200"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </nav>
+      </div>
+      )}
+    </>
+  );
+}
