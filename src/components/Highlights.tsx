@@ -44,9 +44,12 @@ export default function Highlights() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div
-          className={`text-center mb-14 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className="text-center mb-14"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'none' : 'translateY(40px)',
+            transition: 'opacity 0.7s ease, transform 0.7s ease',
+          }}
         >
           <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
             OUR HIGHLIGHTS
@@ -61,12 +64,13 @@ export default function Highlights() {
           {highlights.map((item, index) => (
             <div
               key={index}
-              className={`group cursor-pointer transition-all duration-700 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: isVisible ? `${index * 150}ms` : "0ms" }}
+              className="group cursor-pointer"
+              style={{
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'none' : 'translateY(40px)',
+                transition: 'opacity 0.7s ease, transform 0.7s ease',
+                transitionDelay: isVisible ? `${index * 150}ms` : '0ms',
+              }}
             >
               {/* Thumbnail with play button */}
               <div className="relative rounded-xl overflow-hidden aspect-video bg-gray-900 group-hover:scale-[1.03] group-hover:shadow-xl group-hover:shadow-black/40 transition-all duration-300">

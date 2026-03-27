@@ -168,9 +168,11 @@ export default function Process() {
                     />
 
                     <div
-                      className={`pb-12 lg:pb-16 transition-opacity duration-500 ${
-                        isActive ? "opacity-100" : "opacity-50"
-                      }`}
+                      className="pb-12 lg:pb-16"
+                      style={{
+                        opacity: isActive ? 1 : 0.5,
+                        transition: 'opacity 0.5s ease',
+                      }}
                     >
                       {/* Step counter */}
                       <span
@@ -202,11 +204,12 @@ export default function Process() {
                       {/* Mobile image — shown only on small screens below each step */}
                       <div className="lg:hidden mt-6">
                         <div
-                          className={`relative w-full aspect-square max-w-[320px] rounded-2xl overflow-hidden transition-all duration-500 ${
-                            isActive
-                              ? "opacity-100 scale-100"
-                              : "opacity-30 scale-95"
-                          }`}
+                          className="relative w-full aspect-square max-w-[320px] rounded-2xl overflow-hidden"
+                          style={{
+                            opacity: isActive ? 1 : 0.3,
+                            transform: isActive ? 'scale(1)' : 'scale(0.95)',
+                            transition: 'opacity 0.5s ease, transform 0.5s ease',
+                          }}
                         >
                           <Image
                             src={step.image}
@@ -231,11 +234,12 @@ export default function Process() {
                 {steps.map((step, index) => (
                   <div
                     key={step.number}
-                    className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                      activeStep === index
-                        ? "opacity-100 scale-100"
-                        : "opacity-0 scale-95"
-                    }`}
+                    className="absolute inset-0"
+                    style={{
+                      opacity: activeStep === index ? 1 : 0,
+                      transform: activeStep === index ? 'scale(1)' : 'scale(0.95)',
+                      transition: 'opacity 0.7s ease-in-out, transform 0.7s ease-in-out',
+                    }}
                   >
                     <Image
                       src={step.image}

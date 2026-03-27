@@ -130,12 +130,13 @@ export default function Industries() {
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className={`group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-[#2ED06E] transition-all duration-500 hover:shadow-xl hover:shadow-[#2ED06E]/5 hover:-translate-y-1 ${
-                visibleCards.has(index)
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-[#2ED06E] transition-all duration-500 hover:shadow-xl hover:shadow-[#2ED06E]/5 hover:-translate-y-1"
+              style={{
+                opacity: visibleCards.has(index) ? 1 : 0,
+                transform: visibleCards.has(index) ? 'none' : 'translateY(40px)',
+                transition: 'opacity 0.6s ease, transform 0.6s ease, box-shadow 0.5s ease, border-color 0.5s ease',
+                transitionDelay: `${index * 100}ms`,
+              }}
             >
               {/* Green top border on hover */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-[#2ED06E] rounded-t-2xl scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />

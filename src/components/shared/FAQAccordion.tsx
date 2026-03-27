@@ -48,9 +48,12 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
                   </span>
                 </button>
                 <div
-                  className={`transition-all duration-300 ${
-                    isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                  }`}
+                  style={{
+                    maxHeight: isOpen ? '24rem' : '0',
+                    opacity: isOpen ? 1 : 0,
+                    transition: 'max-height 0.3s ease, opacity 0.3s ease',
+                    overflow: 'hidden',
+                  }}
                 >
                   <p className="px-6 pb-5 leading-relaxed text-gray-400">
                     {faq.answer}

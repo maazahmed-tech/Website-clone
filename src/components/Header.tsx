@@ -579,9 +579,12 @@ export default function Header() {
               />
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ${
-                mobileAccordion === "services" ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
-              }`}
+              style={{
+                maxHeight: mobileAccordion === "services" ? '2000px' : '0',
+                opacity: mobileAccordion === "services" ? 1 : 0,
+                transition: 'max-height 0.3s ease, opacity 0.3s ease',
+                overflow: 'hidden',
+              }}
             >
               {renderMobileServicesAccordion()}
             </div>
@@ -601,9 +604,12 @@ export default function Header() {
               />
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ${
-                mobileAccordion === "industries" ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
-              }`}
+              style={{
+                maxHeight: mobileAccordion === "industries" ? '800px' : '0',
+                opacity: mobileAccordion === "industries" ? 1 : 0,
+                transition: 'max-height 0.3s ease, opacity 0.3s ease',
+                overflow: 'hidden',
+              }}
             >
               {renderMobileLinksAccordion(industriesMenu)}
             </div>
@@ -634,9 +640,12 @@ export default function Header() {
               />
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ${
-                mobileAccordion === "company" ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-              }`}
+              style={{
+                maxHeight: mobileAccordion === "company" ? '400px' : '0',
+                opacity: mobileAccordion === "company" ? 1 : 0,
+                transition: 'max-height 0.3s ease, opacity 0.3s ease',
+                overflow: 'hidden',
+              }}
             >
               {renderMobileLinksAccordion(companyMenu)}
             </div>
@@ -656,9 +665,12 @@ export default function Header() {
               />
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ${
-                mobileAccordion === "solutions" ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
-              }`}
+              style={{
+                maxHeight: mobileAccordion === "solutions" ? '300px' : '0',
+                opacity: mobileAccordion === "solutions" ? 1 : 0,
+                transition: 'max-height 0.3s ease, opacity 0.3s ease',
+                overflow: 'hidden',
+              }}
             >
               {renderMobileLinksAccordion(solutionsMenu)}
             </div>

@@ -96,10 +96,13 @@ export default function Blogs() {
           {blogPosts.map((post, index) => (
             <div
               key={post.slug}
-              className={`group transition-all duration-700 ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${index * 200}ms` }}
+              className="group"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? 'none' : 'translateY(40px)',
+                transition: 'opacity 0.7s ease, transform 0.7s ease',
+                transitionDelay: `${index * 200}ms`,
+              }}
             >
               <Link href={`/blog/${post.slug}/`} className="block">
                 {/* Image */}

@@ -23,19 +23,11 @@ export default function Hero() {
   return (
     <section className="relative w-full flex flex-col justify-center overflow-hidden" style={{ backgroundColor: '#0B0C0D', minHeight: '100vh' }}>
       {/* Main content */}
-      <div className="relative flex-1 flex items-center justify-center w-full px-4 sm:px-6 lg:px-8 pt-24 pb-12" style={{ zIndex: 10 }}>
-        <div
-          className="w-full max-w-5xl mx-auto text-center"
-          style={{
-            opacity: fadeIn ? 1 : 0,
-            transform: fadeIn ? 'translateY(0)' : 'translateY(40px)',
-            transition: 'opacity 1s ease, transform 1s ease',
-          }}
-        >
-          {/* Heading */}
-          <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 6rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
-            <span style={{ color: '#ffffff' }}>We are a</span>
-            <br />
+      <div className="relative flex-1 flex items-center w-full px-4 sm:px-6 lg:px-8 pt-24 pb-12" style={{ zIndex: 10 }}>
+        <div className="w-full max-w-7xl mx-auto">
+          {/* Heading — left aligned like original */}
+          <h1 style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+            <span style={{ color: '#ffffff' }}>We are a </span>
             <span style={{ color: '#2ED06E' }}>Software</span>
             <br />
             <span style={{ color: '#2ED06E' }}>Development</span>
@@ -45,13 +37,8 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p
-            className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl max-w-2xl mx-auto text-left leading-relaxed"
-            style={{
-              color: '#9ca3af',
-              opacity: fadeIn ? 1 : 0,
-              transform: fadeIn ? 'translateY(0)' : 'translateY(40px)',
-              transition: 'opacity 1s ease 0.3s, transform 1s ease 0.3s',
-            }}
+            className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl leading-relaxed"
+            style={{ color: '#9ca3af', maxWidth: '600px' }}
           >
             We are your trusted development partner with just one goal in focus
             to build products that generate a lasting, profitable impact.
@@ -63,10 +50,8 @@ export default function Hero() {
           href="/contact"
           className="absolute right-6 sm:right-10 md:right-16 lg:right-24 group"
           style={{
-            top: '50%',
-            transform: fadeIn ? 'translateY(-50%) scale(1)' : 'translateY(-50%) scale(0.75)',
+            bottom: '25%',
             zIndex: 20,
-            opacity: fadeIn ? 1 : 0,
             transition: 'opacity 1s ease 0.5s, transform 1s ease 0.5s',
           }}
           aria-label="Contact us"
@@ -98,9 +83,11 @@ export default function Hero() {
 
       {/* Scrolling logo marquee */}
       <div
-        className={`relative z-10 w-full overflow-hidden border-t border-white/10 py-6 sm:py-8 transition-all duration-1000 delay-700 ${
-          fadeIn ? "opacity-100" : "opacity-0"
-        }`}
+        className="relative z-10 w-full overflow-hidden border-t border-white/10 py-6 sm:py-8"
+        style={{
+          opacity: fadeIn ? 1 : 0,
+          transition: 'opacity 1s ease 0.7s',
+        }}
       >
         {/* Gradient fade edges */}
         <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-[#0B0C0D] to-transparent z-10 pointer-events-none" />

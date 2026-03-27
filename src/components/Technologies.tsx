@@ -128,9 +128,12 @@ export default function Technologies() {
   return (
     <section
       ref={sectionRef}
-      className={`py-20 lg:py-28 bg-white transition-all duration-700 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className="py-20 lg:py-28 bg-white"
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'none' : 'translateY(40px)',
+        transition: 'opacity 0.7s ease, transform 0.7s ease',
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

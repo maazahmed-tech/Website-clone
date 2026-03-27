@@ -93,12 +93,13 @@ export default function CaseStudies() {
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className={`group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 ${
-                visibleCards.has(index)
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              className="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+              style={{
+                opacity: visibleCards.has(index) ? 1 : 0,
+                transform: visibleCards.has(index) ? 'none' : 'translateY(40px)',
+                transition: 'opacity 0.6s ease, transform 0.6s ease, box-shadow 0.5s ease',
+                transitionDelay: `${index * 150}ms`,
+              }}
             >
               {/* Image area */}
               <div className="h-56 sm:h-64 relative overflow-hidden">
