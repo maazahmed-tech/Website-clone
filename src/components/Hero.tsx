@@ -25,8 +25,8 @@ export default function Hero() {
       {/* Main content */}
       <div className="relative flex-1 flex items-center w-full px-4 sm:px-6 lg:px-8 pt-24 pb-12" style={{ zIndex: 10 }}>
         <div className="w-full max-w-7xl mx-auto">
-          {/* Heading — left aligned like original */}
-          <h1 style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+          {/* Heading — centered on desktop like original */}
+          <h1 className="lg:text-center" style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
             <span style={{ color: '#ffffff' }}>We are a </span>
             <span style={{ color: '#2ED06E' }}>Software</span>
             <br />
@@ -37,7 +37,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p
-            className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl leading-relaxed"
+            className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl leading-relaxed lg:text-center lg:mx-auto"
             style={{ color: '#9ca3af', maxWidth: '600px' }}
           >
             We are your trusted development partner with just one goal in focus
@@ -45,12 +45,11 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* Green circle CTA - positioned on the right */}
+        {/* Green circle CTA - positioned on the right, vertically centered */}
         <Link
           href="/contact"
-          className="absolute right-6 sm:right-10 md:right-16 lg:right-24 group"
+          className="absolute right-6 sm:right-10 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 group"
           style={{
-            bottom: '25%',
             zIndex: 20,
             transition: 'opacity 1s ease 0.5s, transform 1s ease 0.5s',
           }}

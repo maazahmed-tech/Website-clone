@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { IndustryPageData } from '@/data/types';
-import PageHero from '@/components/shared/PageHero';
+import Breadcrumb from '@/components/shared/Breadcrumb';
+import ClutchBadge from '@/components/shared/ClutchBadge';
 import TechStack from '@/components/shared/TechStack';
 import FAQAccordion from '@/components/shared/FAQAccordion';
 import CTASection from '@/components/shared/CTASection';
@@ -12,16 +13,35 @@ interface IndustryTemplateProps {
 export default function IndustryTemplate({ data }: IndustryTemplateProps) {
   return (
     <>
-      {/* Hero */}
-      <PageHero
-        title={data.heroHeading}
-        description={data.heroDescription}
-        breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'Industries', href: '/industries' },
-          { label: data.title },
-        ]}
-      />
+      {/* Hero - Light background matching cubix.co industry pages */}
+      <section className="relative bg-[#fdf8f6] px-4 pb-16 pt-32 md:px-8 lg:px-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-6">
+            <Breadcrumb
+              items={[
+                { label: 'Home', href: '/' },
+                { label: 'Industries', href: '/industries' },
+                { label: data.title },
+              ]}
+            />
+          </div>
+          <div className="flex items-start justify-between gap-8">
+            <div className="max-w-3xl">
+              <h1 className="mb-6 text-4xl font-extrabold leading-tight text-[#0B0C0D] md:text-5xl lg:text-6xl">
+                {data.heroHeading}
+              </h1>
+              {data.heroDescription && (
+                <p className="text-lg leading-relaxed text-gray-500 md:text-xl">
+                  {data.heroDescription}
+                </p>
+              )}
+            </div>
+            <div className="hidden lg:block">
+              <ClutchBadge />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Overview */}
       <section className="py-20 bg-white">
