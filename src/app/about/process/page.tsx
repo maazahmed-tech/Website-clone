@@ -67,6 +67,7 @@ export default function ProcessPage() {
       <PageHero
         title="Our Development Process"
         description="A battle-tested methodology that balances speed with quality. Every step is designed to minimize risk, maximize transparency, and deliver products that exceed expectations."
+        bgColor="#fdf8f6"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'About', href: '/about' },

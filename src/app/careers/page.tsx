@@ -136,23 +136,25 @@ export default function CareersPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-[#0B0C0D] pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
+      <section className="bg-[#fdf8f6] pt-28 pb-16 px-4 md:px-8 lg:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
             <Link href="/" className="hover:text-[#2ED06E] transition-colors">
               Home
             </Link>
             <span>/</span>
-            <span className="text-white">Careers</span>
+            <span className="text-gray-900">Careers</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Join Our <span className="text-[#2ED06E]">Team</span>
-          </h1>
-          <p className="text-lg text-gray-300 max-w-2xl">
-            Build the future of technology with us. We&apos;re looking for
-            talented individuals who are passionate about creating world-class
-            digital products.
-          </p>
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-6 leading-tight">
+              Join Our <span className="text-[#2ED06E]">Team</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+              Build the future of technology with us. We&apos;re looking for
+              talented individuals who are passionate about creating world-class
+              digital products.
+            </p>
+          </div>
         </div>
       </section>
 

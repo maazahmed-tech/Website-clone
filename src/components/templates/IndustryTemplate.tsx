@@ -11,10 +11,41 @@ interface IndustryTemplateProps {
 }
 
 export default function IndustryTemplate({ data }: IndustryTemplateProps) {
+  /* Sub-nav anchors derived from page sections */
+  const subNavItems = [
+    { label: `${data.title} Services`, anchor: '#services' },
+    ...(data.caseStudies.length > 0
+      ? [{ label: 'Case Studies', anchor: '#case-studies' }]
+      : []),
+    ...(data.technologies.length > 0
+      ? [{ label: 'Technologies', anchor: '#technologies' }]
+      : []),
+    ...(data.faqs.length > 0
+      ? [{ label: 'FAQ', anchor: '#faq' }]
+      : []),
+  ];
+
   return (
     <>
+      {/* Sticky sub-navigation bar */}
+      <div className="sticky top-[72px] z-40 bg-white border-b border-gray-200 hidden lg:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav className="flex items-center gap-8 py-3 text-sm font-medium">
+            {subNavItems.map((item) => (
+              <a
+                key={item.anchor}
+                href={item.anchor}
+                className="text-gray-700 hover:text-[#0B0C0D] transition-colors whitespace-nowrap"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </div>
+
       {/* Hero - Light background matching cubix.co industry pages */}
-      <section className="relative bg-[#fdf8f6] px-4 pb-16 pt-32 md:px-8 lg:px-16">
+      <section className="relative bg-[#fdf8f6] px-4 pb-16 pt-28 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-6">
             <Breadcrumb
@@ -31,10 +62,16 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
                 {data.heroHeading}
               </h1>
               {data.heroDescription && (
-                <p className="text-lg leading-relaxed text-gray-500 md:text-xl">
+                <p className="text-lg leading-relaxed text-gray-500 md:text-xl mb-8">
                   {data.heroDescription}
                 </p>
               )}
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-[#0B0C0D] text-white font-semibold rounded-full hover:bg-[#1a1b1c] transition-colors text-sm"
+              >
+                Talk to the Team
+              </Link>
             </div>
             <div className="hidden lg:block">
               <ClutchBadge />
@@ -71,7 +108,7 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
+      <section id="services" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-4">
@@ -109,7 +146,7 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
 
       {/* Case Studies */}
       {data.caseStudies.length > 0 && (
-        <section className="py-20 bg-white">
+        <section id="case-studies" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-4">
@@ -162,7 +199,7 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
 
       {/* Technologies */}
       {data.technologies.length > 0 && (
-        <section className="py-20 bg-gray-50">
+        <section id="technologies" className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-4">
@@ -179,7 +216,7 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
 
       {/* FAQs */}
       {data.faqs.length > 0 && (
-        <section className="py-20 bg-white">
+        <section id="faq" className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-4">

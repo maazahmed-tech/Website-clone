@@ -96,6 +96,7 @@ export default function UniversityPage() {
       <PageHero
         title="Cubix University"
         description="Our flagship internship and training program that transforms ambitious students and early-career professionals into industry-ready engineers, designers, and product builders."
+        bgColor="#fdf8f6"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'University' },

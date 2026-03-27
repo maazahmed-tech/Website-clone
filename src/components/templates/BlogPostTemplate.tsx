@@ -40,47 +40,28 @@ export default function BlogPostTemplate({ data, relatedPosts = [] }: BlogPostTe
         </div>
       </div>
 
-      {/* Article Header */}
+      {/* Article Header — centered like original cubix.co */}
       <article className="bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
-          {/* Category Badge */}
-          <Link
-            href={`/blog?category=${encodeURIComponent(data.category)}`}
-            className="inline-block bg-[#2ED06E]/10 text-[#2ED06E] text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full hover:bg-[#2ED06E]/20 transition-colors mb-6"
-          >
-            {data.category}
-          </Link>
-
-          {/* Title */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B0C0D] leading-tight mb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 text-center">
+          {/* Title — large centered */}
+          <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-[#0B0C0D] leading-tight mb-8">
             {data.title}
           </h1>
 
-          {/* Author Card + Meta */}
-          <div className="flex flex-wrap items-center gap-4 pb-8 border-b border-gray-200">
+          {/* Author + Meta — centered */}
+          <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-gray-500 pb-8">
             <Link
               href={`/blog/author/${data.authorSlug}`}
-              className="flex items-center gap-3 group"
+              className="text-[#0B0C0D] font-semibold underline hover:text-[#2ED06E] transition-colors"
             >
-              <div className="w-12 h-12 bg-[#0B0C0D] rounded-full flex items-center justify-center text-white font-bold text-sm">
-                {data.author
-                  .split(' ')
-                  .map((n) => n[0])
-                  .join('')
-                  .slice(0, 2)}
-              </div>
-              <div>
-                <p className="text-[#0B0C0D] font-semibold group-hover:text-[#2ED06E] transition-colors">
-                  {data.author}
-                </p>
-              </div>
+              {data.author}
             </Link>
-            <div className="flex items-center gap-3 text-sm text-gray-500">
-              <span className="w-1 h-1 bg-gray-300 rounded-full" />
-              <time dateTime={data.publishDate}>{formattedDate}</time>
-              <span className="w-1 h-1 bg-gray-300 rounded-full" />
-              <span>{data.readingTime} min read</span>
-            </div>
+            <span className="mx-1">·</span>
+            <time dateTime={data.publishDate}>
+              {new Date(data.publishDate).toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' })}
+            </time>
+            <span className="mx-1">·</span>
+            <span>{data.readingTime} min read</span>
           </div>
         </div>
 

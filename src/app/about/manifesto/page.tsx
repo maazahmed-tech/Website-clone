@@ -74,6 +74,7 @@ export default function ManifestoPage() {
       <PageHero
         title="The Cubix Manifesto"
         description="These are the principles we live by. They shape how we build technology, how we treat our clients, and how we grow as a company. They are not aspirational statements — they are non-negotiable commitments."
+        bgColor="#fdf8f6"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'About', href: '/about' },

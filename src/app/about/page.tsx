@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ClutchBadge from "@/components/shared/ClutchBadge";
 
 export const metadata: Metadata = {
   title: "About Cubix | Full-Cycle Product Development Company",
@@ -69,22 +70,37 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-[#0B0C0D] pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
+      <section className="bg-[#fdf8f6] pt-28 pb-16 px-4 md:px-8 lg:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
             <Link href="/" className="hover:text-[#2ED06E] transition-colors">
               Home
             </Link>
             <span>/</span>
-            <span className="text-white">About</span>
+            <span className="text-gray-900">About</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            About <span className="text-[#2ED06E]">Cubix</span>
-          </h1>
-          <p className="text-lg text-gray-300 max-w-2xl">
-            We are a team of passionate innovators dedicated to building
-            world-class digital products that transform businesses.
-          </p>
+          <div className="flex items-start justify-between gap-8">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-6 leading-tight">
+                Brilliant Tech Minds, Together!
+              </h1>
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                We are a team of visionary leaders and problem-solvers utilizing our agile processes to build solutions for lasting value.
+              </p>
+            </div>
+            <div className="hidden lg:block">
+              <ClutchBadge rating={4.9} reviews={52} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Office/Team Photo */}
+      <section className="w-full">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+          <div className="w-full h-[300px] md:h-[450px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl overflow-hidden flex items-center justify-center">
+            <p className="text-gray-500 text-lg font-medium">Cubix Office / Team Photo</p>
+          </div>
         </div>
       </section>
 

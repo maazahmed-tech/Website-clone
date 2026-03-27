@@ -96,6 +96,7 @@ export default function TestimonialPage() {
       <PageHero
         title="What Our Clients Say"
         description="Hear directly from the founders, CTOs, and product leaders who trusted Cubix to build their most important digital products."
+        bgColor="#fdf8f6"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'About', href: '/about' },

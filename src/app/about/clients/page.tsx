@@ -79,6 +79,7 @@ export default function ClientsPage() {
       <PageHero
         title="Our Clients"
         description="From ambitious startups to Fortune 500 enterprises, we partner with organizations that believe technology can transform their business."
+        bgColor="#fdf8f6"
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'About', href: '/about' },

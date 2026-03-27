@@ -1,196 +1,274 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { caseStudies } from "@/data/case-studies";
 
-const categories = ["All", "Mobile Apps", "Web Apps", "Games", "Blockchain"];
+const serviceOptions = [
+  "All Services",
+  "Mobile App Development",
+  "Web Development",
+  "Game Development",
+  "Blockchain Development",
+  "AI & Machine Learning",
+  "IoT Solutions",
+];
 
-const projects = [
-  {
-    title: "Goobr",
-    category: "Mobile Apps",
-    description:
-      "A social networking platform designed for pet lovers to connect, share stories, and find services for their furry companions.",
-    gradient: "from-purple-600 to-pink-500",
-    tags: ["React Native", "Node.js", "MongoDB"],
-  },
-  {
-    title: "Tulsa Airport",
-    category: "Web Apps",
-    description:
-      "The official website and mobile app for Tulsa International Airport, providing real-time flight information and wayfinding.",
-    gradient: "from-blue-600 to-cyan-500",
-    tags: ["React", "AWS", "REST API"],
-  },
-  {
-    title: "PartyShark",
-    category: "Mobile Apps",
-    description:
-      "An event management application that simplifies party planning with features for invitations, RSVPs, and vendor coordination.",
-    gradient: "from-orange-500 to-red-500",
-    tags: ["Flutter", "Firebase", "Stripe"],
-  },
-  {
-    title: "WAGMI",
-    category: "Games",
-    description:
-      "A tower defense game built on blockchain technology featuring NFT characters, play-to-earn mechanics, and competitive gameplay.",
-    gradient: "from-green-500 to-emerald-600",
-    tags: ["Unity", "Solidity", "Web3"],
-  },
-  {
-    title: "Pauseitive",
-    category: "Mobile Apps",
-    description:
-      "A mental health application offering guided meditation, mood tracking, therapy resources, and community support features.",
-    gradient: "from-indigo-500 to-purple-600",
-    tags: ["Swift", "Kotlin", "AI/ML"],
-  },
-  {
-    title: "Oomco",
-    category: "Mobile Apps",
-    description:
-      "An on-demand fuel delivery application that brings fuel directly to your vehicle, featuring real-time tracking and scheduling.",
-    gradient: "from-yellow-500 to-orange-500",
-    tags: ["React Native", "Node.js", "Google Maps"],
-  },
+const categoryOptions = [
+  "All Categories",
+  "Healthcare & Wellness",
+  "Events & Entertainment",
+  "Logistics & Transportation",
+  "Food & Beverage",
+  "Environment & Sustainability",
+];
+
+const technologyOptions = [
+  "All Technologies",
+  "React Native",
+  "Flutter",
+  "Swift",
+  "Kotlin",
+  "Node.js",
+  "Python",
+  "AWS",
+  "Firebase",
+  "Unity",
 ];
 
 export default function WorkPage() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [serviceFilter, setServiceFilter] = useState("All Services");
+  const [categoryFilter, setCategoryFilter] = useState("All Categories");
+  const [technologyFilter, setTechnologyFilter] = useState("All Technologies");
 
-  const filtered =
-    activeCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
+  const filteredProjects = useMemo(() => {
+    let result = caseStudies;
+
+    if (categoryFilter !== "All Categories") {
+      result = result.filter((p) => p.category === categoryFilter);
+    }
+
+    if (technologyFilter !== "All Technologies") {
+      result = result.filter((p) =>
+        p.technologies.some((t) =>
+          t.toLowerCase().includes(technologyFilter.toLowerCase())
+        )
+      );
+    }
+
+    return result;
+  }, [serviceFilter, categoryFilter, technologyFilter]);
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-[#0B0C0D] pt-32 pb-20">
+      {/* Hero Section - Light Background */}
+      <section className="bg-[#fdf8f6] pt-28 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 text-sm text-gray-500 mb-8">
             <Link href="/" className="hover:text-[#2ED06E] transition-colors">
               Home
             </Link>
             <span>/</span>
-            <span className="text-white">Work</span>
+            <span className="text-gray-800">Work</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Our <span className="text-[#2ED06E]">Work</span>
+
+          {/* Title */}
+          <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-[#0B0C0D] leading-tight mb-6">
+            Case Studies
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl">
-            Explore our portfolio of innovative digital products that have
-            transformed businesses across industries.
+
+          {/* Subtitle */}
+          <p className="text-gray-600 text-lg max-w-3xl mb-12">
+            Discover how we help clients across industries achieve their goals
+            through innovative technology solutions and expert digital
+            craftsmanship.
           </p>
+
+          {/* Filter Dropdowns */}
+          <div className="flex flex-wrap gap-4">
+            {/* Services Dropdown */}
+            <div className="relative">
+              <select
+                value={serviceFilter}
+                onChange={(e) => setServiceFilter(e.target.value)}
+                className="appearance-none bg-white border border-gray-200 rounded-lg px-5 py-3 pr-10 text-sm text-gray-700 font-medium focus:outline-none focus:border-[#2ED06E] cursor-pointer min-w-[200px]"
+              >
+                {serviceOptions.map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+              <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            {/* Categories Dropdown */}
+            <div className="relative">
+              <select
+                value={categoryFilter}
+                onChange={(e) => setCategoryFilter(e.target.value)}
+                className="appearance-none bg-white border border-gray-200 rounded-lg px-5 py-3 pr-10 text-sm text-gray-700 font-medium focus:outline-none focus:border-[#2ED06E] cursor-pointer min-w-[200px]"
+              >
+                {categoryOptions.map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+              <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            {/* Technology Dropdown */}
+            <div className="relative">
+              <select
+                value={technologyFilter}
+                onChange={(e) => setTechnologyFilter(e.target.value)}
+                className="appearance-none bg-white border border-gray-200 rounded-lg px-5 py-3 pr-10 text-sm text-gray-700 font-medium focus:outline-none focus:border-[#2ED06E] cursor-pointer min-w-[200px]"
+              >
+                {technologyOptions.map((opt) => (
+                  <option key={opt} value={opt}>
+                    {opt}
+                  </option>
+                ))}
+              </select>
+              <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Filter & Portfolio */}
-      <section className="py-20 bg-white">
+      {/* Project Grid */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Filter Tabs */}
-          <div className="flex flex-wrap gap-3 mb-12">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-colors ${
-                  activeCategory === cat
-                    ? "bg-[#2ED06E] text-[#0B0C0D]"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
-          {/* Project Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filtered.map((project) => (
-              <div
-                key={project.title}
-                className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300"
-              >
-                {/* Image Placeholder */}
-                <div
-                  className={`h-52 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative`}
+          {filteredProjects.length > 0 ? (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProjects.map((project) => (
+                <Link
+                  key={project.slug}
+                  href={`/case-studies/${project.slug}`}
+                  className="group bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300"
                 >
-                  <span className="text-white/30 text-6xl font-bold">
-                    {project.title[0]}
-                  </span>
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
-                      {project.category}
+                  {/* Image Placeholder */}
+                  <div className="h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#2ED06E]/10 to-emerald-500/5" />
+                    <span className="text-gray-300 text-6xl font-bold">
+                      {project.title[0]}
                     </span>
-                  </div>
-                </div>
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#0B0C0D] mb-2 group-hover:text-[#2ED06E] transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="bg-gray-100 text-gray-600 text-xs px-2.5 py-1 rounded"
-                      >
-                        {tag}
+                    {/* Category overlay badge */}
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-white/90 backdrop-blur-sm text-gray-700 text-xs font-semibold px-3 py-1.5 rounded-full">
+                        {project.category}
                       </span>
-                    ))}
+                    </div>
                   </div>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center text-[#2ED06E] text-sm font-semibold hover:underline"
-                  >
-                    View Case Study
-                    <svg
-                      className="w-4 h-4 ml-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
 
-          {filtered.length === 0 && (
-            <div className="text-center py-16">
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-[#0B0C0D] mb-2 group-hover:text-[#2ED06E] transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3">
+                      {project.overview}
+                    </p>
+
+                    {/* Tech tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.slice(0, 4).map((tech) => (
+                        <span
+                          key={tech}
+                          className="bg-gray-50 text-gray-600 text-xs px-2.5 py-1 rounded-md border border-gray-100"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      {project.technologies.length > 4 && (
+                        <span className="text-gray-400 text-xs px-1 py-1">
+                          +{project.technologies.length - 4}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Results preview */}
+                    <div className="flex gap-4 pt-4 border-t border-gray-100">
+                      {project.results.slice(0, 2).map((r) => (
+                        <div key={r.metric}>
+                          <p className="text-[#2ED06E] font-bold text-lg">
+                            {r.value}
+                          </p>
+                          <p className="text-gray-400 text-xs">{r.metric}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-20">
               <p className="text-gray-500 text-lg">
-                No projects found in this category.
+                No projects found matching your filters.
               </p>
             </div>
           )}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-[#0B0C0D]">
+      {/* CTA Section */}
+      <section className="py-20 bg-[#fdf8f6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-4">
             Want to See Your Project Here?
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
             Let&apos;s build something remarkable together. Share your idea with
             us and we&apos;ll help you bring it to life.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#2ED06E] text-[#0B0C0D] px-8 py-4 rounded-lg font-bold hover:bg-[#25b35d] transition-colors"
+            className="inline-block bg-[#2ED06E] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#25b35d] transition-colors"
           >
             Start Your Project
           </Link>

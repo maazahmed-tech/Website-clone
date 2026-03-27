@@ -10,6 +10,7 @@ import Link from "next/link";
 interface NavLink {
   label: string;
   href: string;
+  green?: boolean; // for green-colored links
 }
 
 interface MegaColumn {
@@ -21,137 +22,158 @@ const servicesMenu: MegaColumn[] = [
   {
     heading: "Mobile App",
     links: [
-      { label: "Mobile App", href: "/mobile-app-development" },
       { label: "iOS App", href: "/iphone-app-development" },
       { label: "Android App", href: "/android-app-development" },
       { label: "eCommerce App", href: "/ecommerce-app-development" },
       { label: "visionOS App", href: "/visionos-development" },
       { label: "Enterprise App", href: "/enterprise-app-development" },
+      { label: "Low Code No Code App", href: "/low-code-no-code-app-development" },
+      { label: "Progressive Web App", href: "/progressive-web-app-development" },
+      { label: "Web3 App Development", href: "/web3-app-development" },
+      { label: "OnDemand App", href: "/on-demand-app-development" },
     ],
   },
   {
-    heading: "Cross Platform",
+    heading: "Cross Platform App",
     links: [
-      { label: "Cross Platform App", href: "/cross-platform-app-development" },
       { label: "Flutter App", href: "/flutter-app-development-services" },
       { label: "React Native", href: "/react-native-app-development" },
       { label: "Ionic App", href: "/ionic-app-development" },
     ],
   },
   {
-    heading: "Emerging Tech",
-    links: [
-      { label: "AR App", href: "/augmented-reality" },
-      { label: "VR App", href: "/virtual-reality-development" },
-      { label: "Metaverse", href: "/metaverse-development" },
-      { label: "IoT App", href: "/iot-app-development" },
-      { label: "AI App", href: "/artificial-intelligence" },
-    ],
-  },
-  {
     heading: "Software Development",
     links: [
-      { label: "Software Development", href: "/software-development" },
       { label: "Software Consulting", href: "/software-consulting-services" },
+      { label: "System Integration", href: "/system-integration-services" },
+      { label: "Software Design", href: "/software-design-services" },
       { label: "Software Testing", href: "/software-testing-services" },
-      { label: "Custom API", href: "/custom-api-development-services" },
-    ],
-  },
-  {
-    heading: "Web Development",
-    links: [
+      { label: "Software Maintenance & Support", href: "/software-maintenance-support" },
+      { label: "Software Product Development", href: "/software-product-development" },
+      { label: "Custom API Development", href: "/custom-api-development-services", green: true },
+      { label: "IoT Software Development", href: "/iot-app-development" },
       { label: "Web App Development", href: "/web-application-development" },
       { label: "Web Development", href: "/web-development" },
-      { label: "Custom Web", href: "/custom-web-development-services" },
+      { label: "Custom Web Development", href: "/custom-web-development-services" },
     ],
   },
   {
-    heading: "eCommerce",
+    heading: "Blockchain Development",
     links: [
-      { label: "eCommerce", href: "/custom-ecommerce-development-company" },
-      { label: "Magento", href: "/magento-development-services" },
-      { label: "WooCommerce", href: "/woocommerce-development-services" },
-      { label: "Shopify", href: "/shopify-website-development-services" },
-    ],
-  },
-  {
-    heading: "Blockchain",
-    links: [
-      { label: "Blockchain Development", href: "/blockchain-development" },
-      { label: "Smart Contract", href: "/smart-contract-development" },
-      { label: "NFT Development", href: "/nft-development-services" },
-      { label: "Web3 Development", href: "/web3-development" },
+      { label: "Blockchain Protocol", href: "/blockchain-protocol-development" },
+      { label: "Crypto Bank Development", href: "/crypto-bank-development" },
+      { label: "Crypto Wallet Development", href: "/crypto-wallet-development" },
+      { label: "Smart Contract Development", href: "/smart-contract-development" },
+      { label: "Defi Staking Platform", href: "/defi-staking-platform" },
+      { label: "Decentralized Exchange", href: "/decentralized-exchange-development" },
+      { label: "Digital Assets Development", href: "/digital-assets-development" },
+      { label: "Stablecoin Development", href: "/stablecoin-development" },
+      { label: "NFT Development Services", href: "/nft-development-services" },
+      { label: "NFT Marketplace Development", href: "/nft-marketplace-development" },
       { label: "DApp Development", href: "/dapp-development-service" },
-    ],
-  },
-  {
-    heading: "Product",
-    links: [
-      { label: "Product Design", href: "/product-design-services" },
-      { label: "MVP Development", href: "/mvp-software-development" },
-      { label: "UX Design", href: "/ux-design-services" },
-      { label: "UI Design", href: "/ui-design-services" },
+      { label: "Web3 Development", href: "/web3-development" },
     ],
   },
   {
     heading: "Game Development",
     links: [
-      { label: "Game Development", href: "/game-development" },
-      { label: "Mobile Game", href: "/mobile-game-development" },
-      { label: "Unity Game", href: "/unity-game-development" },
-      { label: "Unreal Game", href: "/unreal-game-development" },
-      { label: "Blockchain Game", href: "/blockchain-game-development" },
+      { label: "Mobile Game Development", href: "/mobile-game-development" },
+      { label: "Unity Game Development", href: "/unity-game-development" },
+      { label: "Unreal Game Development", href: "/unreal-game-development" },
+      { label: "Blockchain Game Development", href: "/blockchain-game-development" },
+      { label: "2D Game Development", href: "/2d-game-development" },
+      { label: "3D Game Development", href: "/3d-game-development" },
+      { label: "Web3 Game Development", href: "/web3-game-development" },
+      { label: "Multiplayer Game Development", href: "/multiplayer-game-development" },
+      { label: "Game Testing", href: "/game-testing-services" },
+      { label: "See All Games Services", href: "/game-development", green: true },
     ],
   },
   {
-    heading: "Cloud",
+    heading: "Cloud Strategy",
     links: [
-      { label: "Cloud Strategy", href: "/cloud-software-development-services" },
       { label: "AWS", href: "/aws-development-services" },
       { label: "DevOps", href: "/devops-software-development-services" },
     ],
   },
 ];
 
+const technologiesList = [
+  "React", "Angular", "Vue", "Node.js", "Python", "Swift", "Kotlin", "Flutter", "AWS", "Azure",
+];
+
 const industriesMenu: NavLink[] = [
   { label: "Automotive", href: "/industries/automotive-software-development" },
+  { label: "B2B Software", href: "/industries/b2b-software-development" },
   { label: "Healthcare", href: "/industries/healthcare-software-development" },
   { label: "Education", href: "/industries/education-software-development" },
   { label: "Ecommerce", href: "/industries/ecommerce-software-development" },
+  { label: "Food", href: "/industries/foodtech-software-development" },
+  { label: "Travel", href: "/industries/travel-software-development" },
+  { label: "Fashion and Apparel", href: "/industries/fashion-software-development" },
+  { label: "CRM Development", href: "/industries/crm-development-services" },
+  { label: "Logistics", href: "/industries/logistics-software-development" },
+  { label: "Manufacturing", href: "/industries/manufacturing-software-solutions" },
+  { label: "Legal", href: "/industries/legal-software-development" },
+  { label: "Agriculture", href: "/industries/agriculture-software-development" },
   { label: "Finance", href: "/industries/finance-software-development" },
   { label: "Real Estate", href: "/industries/real-estate-software-development" },
   { label: "Hospitality", href: "/industries/hospitality-software-development" },
-  { label: "Logistics", href: "/industries/logistics-software-development" },
-  { label: "Manufacturing", href: "/industries/manufacturing-software-solutions" },
-  { label: "Fashion", href: "/industries/fashion-software-development" },
-  { label: "Food", href: "/industries/foodtech-software-development" },
-  { label: "Travel", href: "/industries/travel-software-development" },
-  { label: "Legal", href: "/industries/legal-software-development" },
-  { label: "Agriculture", href: "/industries/agriculture-software-development" },
-  { label: "B2B Software", href: "/industries/b2b-software-development" },
-  { label: "CRM Development", href: "/industries/crm-development-services" },
 ];
 
-const companyMenu: NavLink[] = [
+interface CompanySection {
+  heading: string;
+  links: NavLink[];
+}
+
+const companyMenu: CompanySection[] = [
+  {
+    heading: "About",
+    links: [
+      { label: "Process", href: "/about/process" },
+      { label: "Careers", href: "/careers" },
+      { label: "Clients", href: "/about/clients" },
+      { label: "University", href: "/about/university" },
+      { label: "Testimonials", href: "/about/testimonial" },
+      { label: "Manifesto", href: "/about/manifesto" },
+    ],
+  },
+  {
+    heading: "Resources",
+    links: [
+      { label: "Blog", href: "/blog" },
+      { label: "News & Updates", href: "/news" },
+      { label: "Press Release", href: "/press-release" },
+      { label: "Events", href: "/events" },
+    ],
+  },
+];
+
+const companyMenuFlat: NavLink[] = [
   { label: "About", href: "/about" },
   { label: "Process", href: "/about/process" },
   { label: "Careers", href: "/careers" },
   { label: "Clients", href: "/about/clients" },
+  { label: "University", href: "/about/university" },
   { label: "Testimonials", href: "/about/testimonial" },
   { label: "Manifesto", href: "/about/manifesto" },
+  { label: "Blog", href: "/blog" },
+  { label: "News & Updates", href: "/news" },
+  { label: "Press Release", href: "/press-release" },
+  { label: "Events", href: "/events" },
 ];
 
 const solutionsMenu: NavLink[] = [
   { label: "Cubix HappyForce", href: "/solutions/cubix-happyforce" },
   { label: "Cubix Hero", href: "/solutions/cubix-hero" },
   { label: "Cubix Shop", href: "/solutions/cubix-shop" },
-  { label: "Messenger App", href: "/solutions/messenger-app" },
+  { label: "Cubix Messenger", href: "/solutions/messenger-app" },
   { label: "On-Demand Delivery", href: "/solutions/on-demand-delivery-platform" },
   { label: "Chat Bot", href: "/solutions/chat-bot" },
   { label: "Cubix Chain", href: "/solutions/cubix-chain" },
   { label: "Social Platform", href: "/solutions/social-platform" },
-  { label: "Insight Machine", href: "/solutions/cubix-insight-machine" },
-  { label: "Event Platform", href: "/solutions/event-management-platform" },
+  { label: "Cubix Insight Machine", href: "/solutions/cubix-insight-machine" },
+  { label: "Event Management", href: "/solutions/event-management-platform" },
 ];
 
 type DropdownKey = "services" | "industries" | "company" | "solutions";
@@ -202,6 +224,14 @@ function ChevronDown({ className = "" }: { className?: string }) {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
+    </svg>
+  );
+}
+
+function GreenArrowIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 10H15M15 10L10 5M15 10L10 15" stroke="#2ED06E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -259,6 +289,22 @@ function CloseIcon() {
 }
 
 /* ------------------------------------------------------------------ */
+/*  SIDEBAR COMPONENT for mega menus                                   */
+/* ------------------------------------------------------------------ */
+
+function DropdownSidebar({ title, children }: { title: string; children?: React.ReactNode }) {
+  return (
+    <div className="w-[200px] flex-shrink-0 border-r border-gray-200 pr-6">
+      <div className="flex items-center gap-2 mb-4">
+        <h3 className="text-lg font-bold text-[#0B0C0D]">{title}</h3>
+        <GreenArrowIcon />
+      </div>
+      {children}
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
 /*  COMPONENT                                                          */
 /* ------------------------------------------------------------------ */
 
@@ -302,59 +348,140 @@ export default function Header() {
   /* ---- renderers ---- */
 
   const renderServicesMega = () => (
-    <div className="absolute left-0 top-full w-screen bg-[#111] border-t border-white/10 shadow-2xl z-50">
-      <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-5 gap-6">
-        {servicesMenu.map((col) => (
-          <div key={col.heading}>
-            <h4 className="text-[#2ED06E] font-semibold text-sm mb-3 uppercase tracking-wider">
-              {col.heading}
-            </h4>
-            <ul className="space-y-2">
-              {col.links.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
+    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-xl z-50">
+      <div className="max-w-7xl mx-auto px-6 py-8 flex gap-8">
+        {/* Left Sidebar */}
+        <DropdownSidebar title="Services">
+          <div className="mt-6">
+            <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Technologies</h4>
+            <div className="flex flex-wrap gap-2">
+              {technologiesList.map((tech) => (
+                <span key={tech} className="text-xs text-gray-500 bg-gray-100 rounded px-2 py-1">
+                  {tech}
+                </span>
               ))}
-            </ul>
+            </div>
           </div>
-        ))}
+        </DropdownSidebar>
+
+        {/* Columns */}
+        <div className="flex-1 grid grid-cols-5 gap-6">
+          {servicesMenu.map((col) => (
+            <div key={col.heading}>
+              <h4 className="font-bold text-[#0B0C0D] text-sm mb-3">
+                {col.heading}
+              </h4>
+              <ul className="space-y-2">
+                {col.links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={`text-sm transition-colors duration-200 ${
+                        link.green
+                          ? "text-[#2ED06E] hover:text-[#25a85a]"
+                          : "text-gray-500 hover:text-[#0B0C0D]"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 
   const renderIndustriesMega = () => (
-    <div className="absolute left-0 top-full w-screen bg-[#111] border-t border-white/10 shadow-2xl z-50">
-      <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-4 gap-6">
-        {industriesMenu.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="text-gray-300 hover:text-white text-sm py-1.5 transition-colors duration-200"
-          >
-            {link.label}
-          </Link>
-        ))}
+    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-xl z-50">
+      <div className="max-w-7xl mx-auto px-6 py-8 flex gap-8">
+        {/* Left Sidebar */}
+        <DropdownSidebar title="Industries" />
+
+        {/* Columns */}
+        <div className="flex-1 grid grid-cols-4 gap-x-6 gap-y-3">
+          {industriesMenu.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-gray-500 hover:text-[#0B0C0D] text-sm py-1.5 transition-colors duration-200"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
 
-  const renderSimpleDropdown = (items: NavLink[]) => (
-    <div className="absolute left-0 top-full bg-[#111] border border-white/10 rounded-md shadow-2xl z-50 min-w-[200px]">
-      <div className="py-2">
-        {items.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="block px-5 py-2.5 text-gray-300 hover:text-white hover:bg-white/5 text-sm transition-colors duration-200"
-          >
-            {link.label}
-          </Link>
-        ))}
+  const renderSolutionsMega = () => (
+    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-xl z-50">
+      <div className="max-w-7xl mx-auto px-6 py-8 flex gap-8">
+        {/* Left Sidebar */}
+        <DropdownSidebar title="Solutions" />
+
+        {/* Columns */}
+        <div className="flex-1 grid grid-cols-4 gap-x-6 gap-y-3">
+          {solutionsMenu.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-gray-500 hover:text-[#0B0C0D] text-sm py-1.5 transition-colors duration-200"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderCompanyMega = () => (
+    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-xl z-50">
+      <div className="max-w-7xl mx-auto px-6 py-8 flex gap-8">
+        {/* Left Sidebar */}
+        <DropdownSidebar title="Company" />
+
+        {/* Columns with green dots */}
+        <div className="flex-1 flex gap-16">
+          {companyMenu.map((section) => (
+            <div key={section.heading}>
+              <h4 className="font-bold text-[#0B0C0D] text-sm mb-3">{section.heading}</h4>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.href} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#2ED06E] flex-shrink-0" />
+                    <Link
+                      href={link.href}
+                      className="text-gray-500 hover:text-[#0B0C0D] text-sm transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* Partner logos section */}
+          <div className="ml-auto max-w-[260px]">
+            <p className="text-sm text-gray-500 mb-4">
+              We partner with the world&apos;s technology leaders.
+            </p>
+            <div className="flex flex-wrap gap-4 items-center">
+              {["Google", "Adobe", "Amazon", "Microsoft"].map((partner) => (
+                <span
+                  key={partner}
+                  className="text-xs font-semibold text-gray-400 bg-gray-100 rounded px-3 py-1.5"
+                >
+                  {partner}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -477,10 +604,10 @@ export default function Header() {
                     }`}
                   />
                 </button>
-                {activeDropdown === "company" && renderSimpleDropdown(companyMenu)}
+                {activeDropdown === "company" && renderCompanyMega()}
               </div>
 
-              {/* Resources */}
+              {/* Solutions */}
               <div
                 className="relative"
                 onMouseEnter={() => showDropdown("solutions")}
@@ -494,7 +621,7 @@ export default function Header() {
                     }`}
                   />
                 </button>
-                {activeDropdown === "solutions" && renderSimpleDropdown(solutionsMenu)}
+                {activeDropdown === "solutions" && renderSolutionsMega()}
               </div>
 
               {/* Contact (nav link) */}
@@ -647,11 +774,11 @@ export default function Header() {
                 overflow: 'hidden',
               }}
             >
-              {renderMobileLinksAccordion(companyMenu)}
+              {renderMobileLinksAccordion(companyMenuFlat)}
             </div>
           </div>
 
-          {/* Resources accordion */}
+          {/* Solutions accordion */}
           <div className="border-b border-white/10 pb-2 mb-2">
             <button
               onClick={() => toggleMobileAccordion("solutions")}
