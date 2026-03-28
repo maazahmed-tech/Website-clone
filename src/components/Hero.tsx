@@ -28,11 +28,11 @@ export default function Hero() {
           {/* Heading — centered on desktop like original */}
           <h1 className="lg:text-center" style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
             <span style={{ color: '#ffffff' }}>We are a </span>
-            <span style={{ color: '#2ED06E' }}>Software</span>
+            <span style={{ color: '#1E6FD9' }}>Software</span>
             <br />
-            <span style={{ color: '#2ED06E' }}>Development</span>
+            <span style={{ color: '#1E6FD9' }}>Development</span>
             <br />
-            <span style={{ color: '#2ED06E' }}>Company</span>
+            <span style={{ color: '#1E6FD9' }}>Company</span>
           </h1>
 
           {/* Subtitle */}
@@ -55,7 +55,7 @@ export default function Hero() {
           }}
           aria-label="Contact us"
         >
-          <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-[#2ED06E] flex flex-col items-center justify-center gap-2 transition-all duration-300 group-hover:bg-[#25b35d] group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#2ED06E]/30">
+          <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-[#1E6FD9] flex flex-col items-center justify-center gap-2 transition-all duration-300 group-hover:bg-[#1859B3] group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#1E6FD9]/30">
             {/* Diagonal arrow SVG */}
             <svg
               width="24"

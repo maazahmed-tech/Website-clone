@@ -21,7 +21,7 @@ export default function TextUsButton() {
       }}
     >
       <div
-        className="bg-[#2ED06E] hover:bg-[#25b35d] text-white font-bold text-sm px-2 py-4 rounded-r-xl transition-all duration-200 hover:translate-x-1 cursor-pointer shadow-lg"
+        className="bg-[#1E6FD9] hover:bg-[#1859B3] text-white font-bold text-sm px-2 py-4 rounded-r-xl transition-all duration-200 hover:translate-x-1 cursor-pointer shadow-lg"
         style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
       >
         Text Us

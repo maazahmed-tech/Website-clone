@@ -140,15 +140,15 @@ export default function IndustriesPage() {
               <Link
                 key={industry.slug}
                 href={`/industries/${industry.slug}`}
-                className="group bg-white rounded-xl p-6 border border-gray-200 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300 flex flex-col"
+                className="group bg-white rounded-xl p-6 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300 flex flex-col"
               >
-                <h3 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#2ED06E] transition-colors">
+                <h3 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#1E6FD9] transition-colors">
                   {industry.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
                   {industry.description}
                 </p>
-                <div className="flex items-center gap-1 text-[#2ED06E] text-sm font-semibold group-hover:gap-2 transition-all">
+                <div className="flex items-center gap-1 text-[#1E6FD9] text-sm font-semibold group-hover:gap-2 transition-all">
                   Learn More
                   <svg
                     className="w-4 h-4"
@@ -182,7 +182,7 @@ export default function IndustriesPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#2ED06E] text-[#0B0C0D] px-8 py-4 rounded-lg font-bold hover:bg-[#25b35d] transition-colors"
+            className="inline-block bg-[#1E6FD9] text-[#0B0C0D] px-8 py-4 rounded-lg font-bold hover:bg-[#1859B3] transition-colors"
           >
             Talk to Us
           </Link>

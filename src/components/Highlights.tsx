@@ -51,7 +51,7 @@ export default function Highlights() {
             transition: 'opacity 0.7s ease, transform 0.7s ease',
           }}
         >
-          <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+          <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
             OUR HIGHLIGHTS
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold text-white">

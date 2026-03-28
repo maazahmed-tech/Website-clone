@@ -59,7 +59,7 @@ export default async function GeoPage({ params }: PageProps) {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               What We Offer
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
@@ -95,7 +95,7 @@ export default async function GeoPage({ params }: PageProps) {
             ].map((service) => (
               <div
                 key={service.title}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#2ED06E] hover:shadow-md transition-all"
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-md transition-all"
               >
                 <h3 className="text-lg font-bold text-[#0B0C0D] mb-3">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
@@ -125,9 +125,9 @@ export default async function GeoPage({ params }: PageProps) {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="text-center p-6 border border-white/10 rounded-xl hover:border-[#2ED06E]/50 transition-colors"
+                className="text-center p-6 border border-white/10 rounded-xl hover:border-[#1E6FD9]/50 transition-colors"
               >
-                <div className="text-4xl font-bold text-[#2ED06E] mb-2">{stat.value}</div>
+                <div className="text-4xl font-bold text-[#1E6FD9] mb-2">{stat.value}</div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
               </div>
             ))}

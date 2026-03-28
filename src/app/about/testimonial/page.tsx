@@ -111,7 +111,7 @@ export default function TestimonialPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {clutchStats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#2ED06E] mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-[#1E6FD9] mb-2">
                   {stat.value}
                 </div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -125,7 +125,7 @@ export default function TestimonialPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               Testimonials
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
@@ -137,7 +137,7 @@ export default function TestimonialPage() {
             {testimonials.map((t, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
               >
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
@@ -160,7 +160,7 @@ export default function TestimonialPage() {
 
                 {/* Author */}
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#0B0C0D] to-[#2ED06E]/30 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#0B0C0D] to-[#1E6FD9]/30 rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-lg">{t.name[0]}</span>
                   </div>
                   <div>
@@ -181,7 +181,7 @@ export default function TestimonialPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               Video Stories
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
@@ -195,11 +195,11 @@ export default function TestimonialPage() {
             {['Pauseitive', 'Oomco', 'Foodly'].map((name) => (
               <div
                 key={name}
-                className="group bg-gradient-to-br from-[#0B0C0D] to-[#1a1d20] rounded-2xl overflow-hidden aspect-video flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-[#2ED06E] transition-all"
+                className="group bg-gradient-to-br from-[#0B0C0D] to-[#1a1d20] rounded-2xl overflow-hidden aspect-video flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-[#1E6FD9] transition-all"
               >
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-[#2ED06E]/20 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-[#2ED06E]/30 transition-colors">
-                    <svg className="w-8 h-8 text-[#2ED06E] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-16 h-16 bg-[#1E6FD9]/20 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-[#1E6FD9]/30 transition-colors">
+                    <svg className="w-8 h-8 text-[#1E6FD9] ml-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>

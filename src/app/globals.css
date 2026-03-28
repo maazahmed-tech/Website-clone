@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #2ED06E;
+  --color-primary: #1E6FD9;
   --color-primary-dark: #25a858;
   --color-dark: #0B0C0D;
   --color-dark-bg: #050505;
@@ -113,7 +113,7 @@
 /* Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #111; }
-::-webkit-scrollbar-thumb { background: #2ED06E; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #1E6FD9; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #25a858; }
 
 /* Mega menu fade */
@@ -140,12 +140,12 @@
   right: -24px;
   width: 48px;
   height: 2px;
-  background: linear-gradient(90deg, #2ED06E, transparent);
+  background: linear-gradient(90deg, #1E6FD9, transparent);
 }
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #2ED06E 0%, #00ff88 50%, #2ED06E 100%);
+  background: linear-gradient(135deg, #1E6FD9 0%, #00ff88 50%, #1E6FD9 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -162,7 +162,7 @@
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, #2ED06E33, transparent, #2ED06E33);
+  background: linear-gradient(135deg, #1E6FD933, transparent, #1E6FD933);
   z-index: -1;
 }
 

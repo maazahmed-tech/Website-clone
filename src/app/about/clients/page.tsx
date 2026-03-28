@@ -93,7 +93,7 @@ export default function ClientsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#2ED06E] mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-[#1E6FD9] mb-2">
                   {stat.value}
                 </div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -107,7 +107,7 @@ export default function ClientsPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               Trusted By
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
@@ -125,9 +125,9 @@ export default function ClientsPage() {
                   {group.clients.map((client) => (
                     <div
                       key={client.name}
-                      className="flex flex-col items-center justify-center bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#2ED06E] hover:shadow-md transition-all min-h-[120px]"
+                      className="flex flex-col items-center justify-center bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#1E6FD9] hover:shadow-md transition-all min-h-[120px]"
                     >
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#0B0C0D]/5 to-[#2ED06E]/10 rounded-full flex items-center justify-center mb-3">
+                      <div className="w-16 h-16 bg-gradient-to-br from-[#0B0C0D]/5 to-[#1E6FD9]/10 rounded-full flex items-center justify-center mb-3">
                         <span className="text-[#0B0C0D] font-bold text-xl">
                           {client.name[0]}
                         </span>
@@ -149,7 +149,7 @@ export default function ClientsPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               Industries
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
@@ -163,7 +163,7 @@ export default function ClientsPage() {
             {industries.map((industry) => (
               <span
                 key={industry}
-                className="bg-white border border-gray-200 text-[#0B0C0D] px-5 py-2.5 rounded-full text-sm font-medium hover:border-[#2ED06E] hover:bg-[#2ED06E]/5 transition-all cursor-default"
+                className="bg-white border border-gray-200 text-[#0B0C0D] px-5 py-2.5 rounded-full text-sm font-medium hover:border-[#1E6FD9] hover:bg-[#1E6FD9]/5 transition-all cursor-default"
               >
                 {industry}
               </span>

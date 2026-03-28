@@ -125,7 +125,7 @@ const companyMenu: CompanySection[] = [
       { label: "Process", href: "/about/process" },
       { label: "Careers", href: "/careers" },
       { label: "Clients", href: "/about/clients" },
-      { label: "University", href: "/about/university" },
+      { label: "University", href: "/university" },
       { label: "Testimonials", href: "/about/testimonial" },
       { label: "Manifesto", href: "/about/manifesto" },
     ],
@@ -146,7 +146,7 @@ const companyMenuFlat: NavLink[] = [
   { label: "Process", href: "/about/process" },
   { label: "Careers", href: "/careers" },
   { label: "Clients", href: "/about/clients" },
-  { label: "University", href: "/about/university" },
+  { label: "University", href: "/university" },
   { label: "Testimonials", href: "/about/testimonial" },
   { label: "Manifesto", href: "/about/manifesto" },
   { label: "Blog", href: "/blog" },
@@ -208,7 +208,7 @@ function ChevronDown({ className = "" }: { className?: string }) {
 function GreenArrowIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5 10H15M15 10L10 5M15 10L10 15" stroke="#2ED06E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M5 10H15M15 10L10 5M15 10L10 15" stroke="#1E6FD9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -355,7 +355,7 @@ export default function Header() {
                       href={link.href}
                       className={`text-[12px] leading-snug transition-colors duration-200 ${
                         link.green
-                          ? "text-[#2ED06E] hover:text-[#25a85a]"
+                          ? "text-[#1E6FD9] hover:text-[#15509E]"
                           : "text-gray-500 hover:text-[#0B0C0D]"
                       }`}
                     >
@@ -429,7 +429,7 @@ export default function Header() {
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.href} className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2ED06E] flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1E6FD9] flex-shrink-0" />
                     <Link
                       href={link.href}
                       className="text-gray-500 hover:text-[#0B0C0D] text-sm transition-colors duration-200"
@@ -469,7 +469,7 @@ export default function Header() {
     <div className="pl-4 pb-4 space-y-4">
       {servicesMenu.map((col) => (
         <div key={col.heading}>
-          <h4 className="text-[#2ED06E] font-semibold text-xs mb-2 uppercase tracking-wider">
+          <h4 className="text-[#1E6FD9] font-semibold text-xs mb-2 uppercase tracking-wider">
             {col.heading}
           </h4>
           <ul className="space-y-1">
@@ -530,7 +530,7 @@ export default function Header() {
                 onMouseEnter={() => showDropdown("services")}
                 onMouseLeave={hideDropdown}
               >
-                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium">
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium">
                   Services
                   <ChevronDown
                     className={`transition-transform duration-200 ${
@@ -545,7 +545,7 @@ export default function Header() {
                 onMouseEnter={() => showDropdown("industries")}
                 onMouseLeave={hideDropdown}
               >
-                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium">
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium">
                   Industries
                   <ChevronDown
                     className={`transition-transform duration-200 ${
@@ -558,7 +558,7 @@ export default function Header() {
               {/* Work */}
               <Link
                 href="/work"
-                className="px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium"
+                className="px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium"
               >
                 Work
               </Link>
@@ -568,7 +568,7 @@ export default function Header() {
                 onMouseEnter={() => showDropdown("company")}
                 onMouseLeave={hideDropdown}
               >
-                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium">
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium">
                   Company
                   <ChevronDown
                     className={`transition-transform duration-200 ${
@@ -583,7 +583,7 @@ export default function Header() {
                 onMouseEnter={() => showDropdown("solutions")}
                 onMouseLeave={hideDropdown}
               >
-                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium">
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium">
                   Solutions
                   <ChevronDown
                     className={`transition-transform duration-200 ${
@@ -597,7 +597,7 @@ export default function Header() {
               {/* Contact (nav link) */}
               <Link
                 href="/contact"
-                className="px-3 py-2 text-sm text-white hover:text-[#2ED06E] transition-colors duration-200 font-medium"
+                className="px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium"
               >
                 Contact
               </Link>
@@ -608,7 +608,7 @@ export default function Header() {
               {/* Phone */}
               <a
                 href="tel:8669782220"
-                className="flex items-center gap-2 text-white hover:text-[#2ED06E] transition-colors text-sm font-medium"
+                className="flex items-center gap-2 text-white hover:text-[#1E6FD9] transition-colors text-sm font-medium"
               >
                 <PhoneIcon />
                 <span>866-978-2220</span>
@@ -810,7 +810,7 @@ export default function Header() {
           <div className="mt-8 space-y-4">
             <a
               href="tel:8669782220"
-              className="flex items-center justify-center gap-2 text-white hover:text-[#2ED06E] transition-colors text-base font-medium"
+              className="flex items-center justify-center gap-2 text-white hover:text-[#1E6FD9] transition-colors text-base font-medium"
             >
               <PhoneIcon />
               <span>866-978-2220</span>

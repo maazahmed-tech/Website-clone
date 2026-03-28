@@ -325,8 +325,8 @@ export default async function IndustryPage({
             </div>
             <div className="bg-gradient-to-br from-[#0B0C0D] to-[#1a1d20] rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
               <div className="text-center">
-                <div className="w-20 h-20 bg-[#2ED06E]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#2ED06E] text-3xl font-bold">
+                <div className="w-20 h-20 bg-[#1E6FD9]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#1E6FD9] text-3xl font-bold">
                     {data.title[0]}
                   </span>
                 </div>
@@ -356,10 +356,10 @@ export default async function IndustryPage({
             {data.services.map((service, index) => (
               <div
                 key={service.title}
-                className="bg-white rounded-xl p-8 border border-gray-200 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl p-8 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#2ED06E] rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#1E6FD9] rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0">
                     {index + 1}
                   </div>
                   <div>
@@ -390,13 +390,13 @@ export default async function IndustryPage({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-[#2ED06E] text-[#0B0C0D] px-8 py-4 rounded-lg font-bold hover:bg-[#25b35d] transition-colors"
+              className="bg-[#1E6FD9] text-[#0B0C0D] px-8 py-4 rounded-lg font-bold hover:bg-[#1859B3] transition-colors"
             >
               Get a Free Consultation
             </Link>
             <Link
               href="/services"
-              className="border border-gray-700 text-white px-8 py-4 rounded-lg font-bold hover:border-[#2ED06E] hover:text-[#2ED06E] transition-colors"
+              className="border border-gray-700 text-white px-8 py-4 rounded-lg font-bold hover:border-[#1E6FD9] hover:text-[#1E6FD9] transition-colors"
             >
               Explore Our Services
             </Link>

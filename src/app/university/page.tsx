@@ -109,7 +109,7 @@ export default function UniversityPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#2ED06E] mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-[#1E6FD9] mb-2">
                   {stat.value}
                 </div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -123,7 +123,7 @@ export default function UniversityPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               Program Tracks
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
@@ -138,11 +138,11 @@ export default function UniversityPage() {
             {tracks.map((track) => (
               <div
                 key={track.title}
-                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-[#0B0C0D]">{track.title}</h3>
-                  <span className="bg-[#2ED06E]/10 text-[#2ED06E] text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="bg-[#1E6FD9]/10 text-[#1E6FD9] text-xs font-semibold px-3 py-1 rounded-full">
                     {track.duration}
                   </span>
                 </div>
@@ -172,7 +172,7 @@ export default function UniversityPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               Why Join
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
@@ -184,7 +184,7 @@ export default function UniversityPage() {
             {programHighlights.map((item) => (
               <div
                 key={item.title}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#2ED06E] hover:shadow-md transition-all"
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-md transition-all"
               >
                 <h3 className="text-lg font-bold text-[#0B0C0D] mb-3">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{item.description}</p>
@@ -198,7 +198,7 @@ export default function UniversityPage() {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               How to Apply
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
@@ -211,7 +211,7 @@ export default function UniversityPage() {
               <div key={item.step} className="relative">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 bg-[#0B0C0D] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#2ED06E] font-bold text-sm">
+                    <span className="text-[#1E6FD9] font-bold text-sm">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                   </div>
@@ -241,9 +241,9 @@ export default function UniversityPage() {
                 key={item}
                 className="flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-200"
               >
-                <div className="flex-shrink-0 w-8 h-8 bg-[#2ED06E]/10 rounded-lg flex items-center justify-center mt-0.5">
+                <div className="flex-shrink-0 w-8 h-8 bg-[#1E6FD9]/10 rounded-lg flex items-center justify-center mt-0.5">
                   <svg
-                    className="w-4 h-4 text-[#2ED06E]"
+                    className="w-4 h-4 text-[#1E6FD9]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

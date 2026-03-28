@@ -13,11 +13,11 @@ export default function AuthorTemplate({ author, posts }: AuthorTemplateProps) {
       <section className="bg-[#0B0C0D] pt-32 pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-8">
-            <Link href="/" className="hover:text-[#2ED06E] transition-colors">
+            <Link href="/" className="hover:text-[#1E6FD9] transition-colors">
               Home
             </Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-[#2ED06E] transition-colors">
+            <Link href="/blog" className="hover:text-[#1E6FD9] transition-colors">
               Blog
             </Link>
             <span>/</span>
@@ -31,10 +31,10 @@ export default function AuthorTemplate({ author, posts }: AuthorTemplateProps) {
                 <img
                   src={author.avatar}
                   alt={author.name}
-                  className="w-28 h-28 rounded-full object-cover border-4 border-[#2ED06E]/30"
+                  className="w-28 h-28 rounded-full object-cover border-4 border-[#1E6FD9]/30"
                 />
               ) : (
-                <div className="w-28 h-28 bg-gradient-to-br from-[#2ED06E] to-[#25b35d] rounded-full flex items-center justify-center border-4 border-[#2ED06E]/30">
+                <div className="w-28 h-28 bg-gradient-to-br from-[#1E6FD9] to-[#1859B3] rounded-full flex items-center justify-center border-4 border-[#1E6FD9]/30">
                   <span className="text-white text-3xl font-bold">
                     {author.name
                       .split(' ')
@@ -51,7 +51,7 @@ export default function AuthorTemplate({ author, posts }: AuthorTemplateProps) {
               <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
                 {author.name}
               </h1>
-              <p className="text-[#2ED06E] font-semibold text-lg mb-4">
+              <p className="text-[#1E6FD9] font-semibold text-lg mb-4">
                 {author.role}
               </p>
               <p className="text-gray-400 leading-relaxed max-w-xl">
@@ -85,7 +85,7 @@ export default function AuthorTemplate({ author, posts }: AuthorTemplateProps) {
                   <Link
                     key={post.slug}
                     href={`/blog/${post.slug}`}
-                    className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300"
+                    className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
                   >
                     {/* Card Image */}
                     {post.featuredImage && (
@@ -101,12 +101,12 @@ export default function AuthorTemplate({ author, posts }: AuthorTemplateProps) {
                     {/* Card Content */}
                     <div className="p-6">
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="inline-block bg-[#2ED06E]/10 text-[#2ED06E] text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full">
+                        <span className="inline-block bg-[#1E6FD9]/10 text-[#1E6FD9] text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full">
                           {post.category}
                         </span>
                         <time className="text-gray-400 text-xs">{formattedDate}</time>
                       </div>
-                      <h3 className="text-lg font-bold text-[#0B0C0D] group-hover:text-[#2ED06E] transition-colors line-clamp-2 mb-2">
+                      <h3 className="text-lg font-bold text-[#0B0C0D] group-hover:text-[#1E6FD9] transition-colors line-clamp-2 mb-2">
                         {post.title}
                       </h3>
                       <p className="text-gray-500 text-sm line-clamp-2">

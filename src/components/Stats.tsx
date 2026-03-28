@@ -53,14 +53,14 @@ function StatCard({ stat, isVisible }: { stat: Stat; isVisible: boolean }) {
 
   return (
     <Link href={stat.href} className="group block text-center">
-      <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#2ED06E] mb-3 transition-transform duration-300 group-hover:scale-110">
+      <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#1E6FD9] mb-3 transition-transform duration-300 group-hover:scale-110">
         {count}
         {stat.suffix}
       </div>
       <div className="text-gray-400 text-lg sm:text-xl font-medium group-hover:text-white transition-colors duration-300">
         {stat.label}
       </div>
-      <div className="mt-3 w-12 h-0.5 bg-[#2ED06E]/30 mx-auto group-hover:w-20 group-hover:bg-[#2ED06E] transition-all duration-500" />
+      <div className="mt-3 w-12 h-0.5 bg-[#1E6FD9]/30 mx-auto group-hover:w-20 group-hover:bg-[#1E6FD9] transition-all duration-500" />
     </Link>
   );
 }
@@ -92,7 +92,7 @@ export default function Stats() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+          <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
             our journey
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">

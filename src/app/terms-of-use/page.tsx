@@ -14,14 +14,14 @@ export default function TermsOfUsePage() {
       <section className="bg-[#0B0C0D] pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-            <Link href="/" className="hover:text-[#2ED06E] transition-colors">
+            <Link href="/" className="hover:text-[#1E6FD9] transition-colors">
               Home
             </Link>
             <span>/</span>
             <span className="text-white">Terms of Use</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white">
-            Terms of <span className="text-[#2ED06E]">Use</span>
+            Terms of <span className="text-[#1E6FD9]">Use</span>
           </h1>
           <p className="text-gray-400 mt-4">Last updated: January 1, 2025</p>
         </div>

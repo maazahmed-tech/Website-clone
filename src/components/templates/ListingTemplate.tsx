@@ -61,7 +61,7 @@ export default function ListingTemplate({
                 onClick={() => handleCategoryChange('All')}
                 className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-300 ${
                   activeCategory === 'All'
-                    ? 'bg-[#2ED06E] text-white shadow-md shadow-[#2ED06E]/30'
+                    ? 'bg-[#1E6FD9] text-white shadow-md shadow-[#1E6FD9]/30'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
@@ -73,7 +73,7 @@ export default function ListingTemplate({
                   onClick={() => handleCategoryChange(category)}
                   className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-300 ${
                     activeCategory === category
-                      ? 'bg-[#2ED06E] text-white shadow-md shadow-[#2ED06E]/30'
+                      ? 'bg-[#1E6FD9] text-white shadow-md shadow-[#1E6FD9]/30'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -108,7 +108,7 @@ export default function ListingTemplate({
                   <Link
                     key={item.slug}
                     href={`${basePath}/${item.slug}`}
-                    className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300"
+                    className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
                   >
                     {/* Card Image */}
                     {item.image ? (
@@ -121,7 +121,7 @@ export default function ListingTemplate({
                       </div>
                     ) : (
                       <div className="aspect-video bg-gradient-to-br from-[#0B0C0D] to-[#1a1d20] flex items-center justify-center">
-                        <span className="text-[#2ED06E] text-4xl font-bold opacity-30">
+                        <span className="text-[#1E6FD9] text-4xl font-bold opacity-30">
                           {item.title[0]}
                         </span>
                       </div>
@@ -131,7 +131,7 @@ export default function ListingTemplate({
                     <div className="p-6">
                       <div className="flex items-center gap-3 mb-3">
                         {item.category && (
-                          <span className="inline-block bg-[#2ED06E]/10 text-[#2ED06E] text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full">
+                          <span className="inline-block bg-[#1E6FD9]/10 text-[#1E6FD9] text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full">
                             {item.category}
                           </span>
                         )}
@@ -139,7 +139,7 @@ export default function ListingTemplate({
                           <time className="text-gray-400 text-xs">{formattedDate}</time>
                         )}
                       </div>
-                      <h3 className="text-lg font-bold text-[#0B0C0D] group-hover:text-[#2ED06E] transition-colors line-clamp-2 mb-2">
+                      <h3 className="text-lg font-bold text-[#0B0C0D] group-hover:text-[#1E6FD9] transition-colors line-clamp-2 mb-2">
                         {item.title}
                       </h3>
                       {item.excerpt && (
@@ -164,7 +164,7 @@ export default function ListingTemplate({
               <button
                 onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                 disabled={currentPage === 1}
-                className="w-10 h-10 rounded-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:border-[#2ED06E] hover:text-[#2ED06E] disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                className="w-10 h-10 rounded-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:border-[#1E6FD9] hover:text-[#1E6FD9] disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -200,8 +200,8 @@ export default function ListingTemplate({
                     onClick={() => setCurrentPage(page)}
                     className={`w-10 h-10 rounded-lg font-semibold text-sm transition-colors ${
                       currentPage === page
-                        ? 'bg-[#2ED06E] text-white shadow-md shadow-[#2ED06E]/30'
-                        : 'border border-gray-200 text-gray-600 hover:border-[#2ED06E] hover:text-[#2ED06E]'
+                        ? 'bg-[#1E6FD9] text-white shadow-md shadow-[#1E6FD9]/30'
+                        : 'border border-gray-200 text-gray-600 hover:border-[#1E6FD9] hover:text-[#1E6FD9]'
                     }`}
                   >
                     {page}
@@ -212,7 +212,7 @@ export default function ListingTemplate({
               <button
                 onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                 disabled={currentPage === totalPages}
-                className="w-10 h-10 rounded-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:border-[#2ED06E] hover:text-[#2ED06E] disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                className="w-10 h-10 rounded-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:border-[#1E6FD9] hover:text-[#1E6FD9] disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

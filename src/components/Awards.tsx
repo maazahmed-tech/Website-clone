@@ -64,7 +64,7 @@ export default function Awards() {
         <div className="mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
             <span className="text-white">Our awards and </span>
-            <span className="text-[#2ED06E]">recognitions</span>
+            <span className="text-[#1E6FD9]">recognitions</span>
           </h2>
           <p className="mt-5 text-gray-400 text-lg leading-relaxed max-w-2xl">
             Recognized globally for our industry-leading development expertise
@@ -84,7 +84,7 @@ export default function Awards() {
           {awards.map((award, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[300px] sm:w-[340px] bg-[#151617] rounded-2xl p-7 snap-start border border-white/5 hover:border-[#2ED06E]/30 transition-all duration-300 group"
+              className="flex-shrink-0 w-[300px] sm:w-[340px] bg-[#151617] rounded-2xl p-7 snap-start border border-white/5 hover:border-[#1E6FD9]/30 transition-all duration-300 group"
             >
               {/* Top row: Platform name + rating */}
               <div className="flex items-start justify-between mb-6">

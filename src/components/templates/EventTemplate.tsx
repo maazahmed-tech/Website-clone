@@ -36,8 +36,8 @@ export default function EventTemplate({ data }: EventTemplateProps) {
           <div className="grid sm:grid-cols-2 gap-6 mb-12">
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-[#2ED06E]/10 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-[#2ED06E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-[#1E6FD9]/10 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-[#1E6FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -54,8 +54,8 @@ export default function EventTemplate({ data }: EventTemplateProps) {
             </div>
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-[#2ED06E]/10 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-[#2ED06E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-[#1E6FD9]/10 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-[#1E6FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"

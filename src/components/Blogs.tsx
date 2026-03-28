@@ -63,7 +63,7 @@ export default function Blogs() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-14 gap-4">
           <div>
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               insights
             </span>
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B0C0D]">
@@ -72,7 +72,7 @@ export default function Blogs() {
           </div>
           <Link
             href="/blog/"
-            className="inline-flex items-center gap-2 text-[#2ED06E] font-semibold hover:gap-3 transition-all duration-300"
+            className="inline-flex items-center gap-2 text-[#1E6FD9] font-semibold hover:gap-3 transition-all duration-300"
           >
             View All
             <svg
@@ -116,13 +116,13 @@ export default function Blogs() {
 
                 {/* Category + Date */}
                 <div className="flex items-center gap-3 text-sm text-gray-400 mb-3">
-                  <span className="text-[#2ED06E] font-medium">{post.category}</span>
+                  <span className="text-[#1E6FD9] font-medium">{post.category}</span>
                   <span className="w-1 h-1 rounded-full bg-gray-300" />
                   <span>{post.date}</span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[#0B0C0D] text-lg font-bold leading-snug group-hover:text-[#2ED06E] transition-colors duration-300">
+                <h3 className="text-[#0B0C0D] text-lg font-bold leading-snug group-hover:text-[#1E6FD9] transition-colors duration-300">
                   {post.title}
                 </h3>
               </Link>

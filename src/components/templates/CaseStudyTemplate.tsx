@@ -21,7 +21,7 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
           { label: data.title },
         ]}
       >
-        <span className="inline-block bg-[#2ED06E]/10 text-[#2ED06E] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+        <span className="inline-block bg-[#1E6FD9]/10 text-[#1E6FD9] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
           {data.category}
         </span>
       </PageHero>
@@ -30,7 +30,7 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-1 h-8 bg-[#2ED06E] rounded-full" />
+            <div className="w-1 h-8 bg-[#1E6FD9] rounded-full" />
             <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D]">
               Project Overview
             </h2>
@@ -74,7 +74,7 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-1 h-8 bg-[#2ED06E] rounded-full" />
+            <div className="w-1 h-8 bg-[#1E6FD9] rounded-full" />
             <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D]">
               Our Solution
             </h2>
@@ -101,9 +101,9 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
               {data.results.map((result, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:border-[#2ED06E]/50 transition-colors duration-300"
+                  className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:border-[#1E6FD9]/50 transition-colors duration-300"
                 >
-                  <p className="text-4xl md:text-5xl font-bold text-[#2ED06E] mb-2">
+                  <p className="text-4xl md:text-5xl font-bold text-[#1E6FD9] mb-2">
                     {result.value}
                   </p>
                   <p className="text-white font-semibold text-lg mb-2">
@@ -142,7 +142,7 @@ export default function CaseStudyTemplate({ data }: CaseStudyTemplateProps) {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-gradient-to-br from-[#0B0C0D] to-[#1a1d20] rounded-2xl p-10 md:p-14 text-center">
               <svg
-                className="w-12 h-12 text-[#2ED06E] mx-auto mb-6"
+                className="w-12 h-12 text-[#1E6FD9] mx-auto mb-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >

@@ -25,7 +25,7 @@ export default function SolutionTemplate({ data }: SolutionTemplateProps) {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               Features
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
@@ -44,7 +44,7 @@ export default function SolutionTemplate({ data }: SolutionTemplateProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+              <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
                 Benefits
               </span>
               <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-6">
@@ -59,11 +59,11 @@ export default function SolutionTemplate({ data }: SolutionTemplateProps) {
               {data.benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-200 hover:border-[#2ED06E] hover:shadow-md transition-all duration-300"
+                  className="flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-md transition-all duration-300"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 bg-[#2ED06E]/10 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-8 h-8 bg-[#1E6FD9]/10 rounded-lg flex items-center justify-center">
                     <svg
-                      className="w-4 h-4 text-[#2ED06E]"
+                      className="w-4 h-4 text-[#1E6FD9]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

@@ -94,8 +94,8 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
             </div>
             <div className="bg-gradient-to-br from-[#0B0C0D] to-[#1a1d20] rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
               <div className="text-center">
-                <div className="w-20 h-20 bg-[#2ED06E]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#2ED06E] text-3xl font-bold">
+                <div className="w-20 h-20 bg-[#1E6FD9]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#1E6FD9] text-3xl font-bold">
                     {data.title[0]}
                   </span>
                 </div>
@@ -123,10 +123,10 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
             {data.services.map((service, index) => (
               <div
                 key={service.title}
-                className="bg-white rounded-xl p-8 border border-gray-200 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl p-8 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#2ED06E] rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#1E6FD9] rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0">
                     {index + 1}
                   </div>
                   <div>
@@ -160,7 +160,7 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
               {data.caseStudies.map((study) => (
                 <div
                   key={study.title}
-                  className="group bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300"
+                  className="group bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
                 >
                   {study.image && (
                     <div className="aspect-video bg-gray-200 overflow-hidden">
@@ -172,7 +172,7 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
                     </div>
                   )}
                   <div className="p-6">
-                    <h3 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#2ED06E] transition-colors">
+                    <h3 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#1E6FD9] transition-colors">
                       {study.title}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
@@ -181,7 +181,7 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
                     {study.slug && (
                       <Link
                         href={`/work/${study.slug}`}
-                        className="inline-flex items-center gap-1 mt-4 text-[#2ED06E] text-sm font-semibold hover:gap-2 transition-all"
+                        className="inline-flex items-center gap-1 mt-4 text-[#1E6FD9] text-sm font-semibold hover:gap-2 transition-all"
                       >
                         View Case Study
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

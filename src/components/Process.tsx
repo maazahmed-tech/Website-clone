@@ -105,11 +105,11 @@ export default function Process() {
         <div className="mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white lowercase">
             our product{" "}
-            <span className="text-[#2ED06E]">development process</span>
+            <span className="text-[#1E6FD9]">development process</span>
           </h2>
           <Link
             href="/about/process/"
-            className="inline-flex items-center gap-2 mt-5 text-white text-sm font-medium hover:text-[#2ED06E] transition-colors duration-300 group"
+            className="inline-flex items-center gap-2 mt-5 text-white text-sm font-medium hover:text-[#1E6FD9] transition-colors duration-300 group"
           >
             View More
             <svg
@@ -149,9 +149,9 @@ export default function Process() {
                     <div
                       className={`absolute left-0 top-0 bottom-0 w-[2px] transition-colors duration-500 ${
                         isActive
-                          ? "bg-[#2ED06E]"
+                          ? "bg-[#1E6FD9]"
                           : isPast
-                          ? "bg-[#2ED06E]/40"
+                          ? "bg-[#1E6FD9]/40"
                           : "bg-white/10"
                       }`}
                     />
@@ -160,9 +160,9 @@ export default function Process() {
                     <div
                       className={`absolute left-[-5px] top-6 w-3 h-3 rounded-full border-2 transition-all duration-500 ${
                         isActive
-                          ? "bg-[#2ED06E] border-[#2ED06E] shadow-[0_0_10px_rgba(46,208,110,0.5)]"
+                          ? "bg-[#1E6FD9] border-[#1E6FD9] shadow-[0_0_10px_rgba(46,208,110,0.5)]"
                           : isPast
-                          ? "bg-[#2ED06E]/40 border-[#2ED06E]/40"
+                          ? "bg-[#1E6FD9]/40 border-[#1E6FD9]/40"
                           : "bg-transparent border-white/20"
                       }`}
                     />
@@ -186,7 +186,7 @@ export default function Process() {
                       {/* Step title */}
                       <h3
                         className={`text-2xl sm:text-3xl lg:text-4xl font-bold mt-2 mb-3 transition-colors duration-500 ${
-                          isActive ? "text-[#2ED06E]" : "text-[#2ED06E]/40"
+                          isActive ? "text-[#1E6FD9]" : "text-[#1E6FD9]/40"
                         }`}
                       >
                         {step.title}

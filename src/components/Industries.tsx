@@ -109,7 +109,7 @@ export default function Industries() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+          <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
             what we serve
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B0C0D]">
@@ -130,7 +130,7 @@ export default function Industries() {
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-[#2ED06E] transition-all duration-500 hover:shadow-xl hover:shadow-[#2ED06E]/5 hover:-translate-y-1"
+              className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-[#1E6FD9] transition-all duration-500 hover:shadow-xl hover:shadow-[#1E6FD9]/5 hover:-translate-y-1"
               style={{
                 opacity: visibleCards.has(index) ? 1 : 0,
                 transform: visibleCards.has(index) ? 'none' : 'translateY(40px)',
@@ -139,15 +139,15 @@ export default function Industries() {
               }}
             >
               {/* Green top border on hover */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#2ED06E] rounded-t-2xl scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-[#1E6FD9] rounded-t-2xl scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
               {/* Icon */}
-              <div className="w-16 h-16 rounded-xl bg-[#2ED06E]/10 text-[#2ED06E] flex items-center justify-center mb-6 group-hover:bg-[#2ED06E] group-hover:text-white transition-all duration-300">
+              <div className="w-16 h-16 rounded-xl bg-[#1E6FD9]/10 text-[#1E6FD9] flex items-center justify-center mb-6 group-hover:bg-[#1E6FD9] group-hover:text-white transition-all duration-300">
                 {industry.icon}
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-[#0B0C0D] mb-3 group-hover:text-[#2ED06E] transition-colors duration-300">
+              <h3 className="text-xl font-bold text-[#0B0C0D] mb-3 group-hover:text-[#1E6FD9] transition-colors duration-300">
                 {industry.title}
               </h3>
               <p className="text-gray-600 leading-relaxed text-sm mb-5">
@@ -157,7 +157,7 @@ export default function Industries() {
               {/* Link */}
               <Link
                 href={`/industries/${industry.slug}/`}
-                className="inline-flex items-center gap-2 text-[#2ED06E] font-semibold text-sm hover:gap-3 transition-all duration-300"
+                className="inline-flex items-center gap-2 text-[#1E6FD9] font-semibold text-sm hover:gap-3 transition-all duration-300"
               >
                 Learn More
                 <svg

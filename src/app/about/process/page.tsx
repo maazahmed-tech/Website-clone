@@ -88,7 +88,7 @@ export default function ProcessPage() {
                   {/* Step number */}
                   <div className="flex-shrink-0 relative z-10">
                     <div className="w-16 h-16 rounded-full bg-[#0B0C0D] flex items-center justify-center">
-                      <span className="text-[#2ED06E] font-bold text-lg">{step.number}</span>
+                      <span className="text-[#1E6FD9] font-bold text-lg">{step.number}</span>
                     </div>
                   </div>
 
@@ -105,7 +105,7 @@ export default function ProcessPage() {
                         {step.deliverables.map((d) => (
                           <span
                             key={d}
-                            className="bg-[#2ED06E]/10 text-[#0B0C0D] text-sm px-3 py-1.5 rounded-full font-medium"
+                            className="bg-[#1E6FD9]/10 text-[#0B0C0D] text-sm px-3 py-1.5 rounded-full font-medium"
                           >
                             {d}
                           </span>
@@ -124,7 +124,7 @@ export default function ProcessPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               Why It Works
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
@@ -143,7 +143,7 @@ export default function ProcessPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#2ED06E] hover:shadow-md transition-all"
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-md transition-all"
               >
                 <h3 className="text-xl font-bold text-[#0B0C0D] mb-3">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{item.description}</p>

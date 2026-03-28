@@ -138,7 +138,7 @@ export default function Technologies() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+          <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
             OUR TECH STACK
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B0C0D]">
@@ -155,8 +155,8 @@ export default function Technologies() {
                 onClick={() => handleTabChange(tab)}
                 className={`px-5 sm:px-8 py-3 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 whitespace-nowrap ${
                   activeTab === tab
-                    ? "bg-[#2ED06E] text-white shadow-md shadow-[#2ED06E]/30"
-                    : "text-gray-600 hover:text-[#2ED06E]"
+                    ? "bg-[#1E6FD9] text-white shadow-md shadow-[#1E6FD9]/30"
+                    : "text-gray-600 hover:text-[#1E6FD9]"
                 }`}
               >
                 {tab}
@@ -173,7 +173,7 @@ export default function Technologies() {
           {tabs[activeTab].map((tech, index) => (
             <div
               key={`${activeTab}-${tech.name}`}
-              className="group bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 flex items-center gap-3 hover:border-[#2ED06E] hover:shadow-md transition-all duration-300 animate-slideUp"
+              className="group bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 flex items-center gap-3 hover:border-[#1E6FD9] hover:shadow-md transition-all duration-300 animate-slideUp"
               style={{ animationDelay: `${index * 60}ms` }}
             >
               <div

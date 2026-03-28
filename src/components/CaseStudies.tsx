@@ -77,7 +77,7 @@ export default function CaseStudies() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="mb-14">
-          <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+          <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
             our success stories
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B0C0D]">
@@ -118,7 +118,7 @@ export default function CaseStudies() {
                 <h3 className="text-xl sm:text-2xl font-bold text-[#0B0C0D] mb-1">
                   {study.title}
                 </h3>
-                <p className="text-[#2ED06E] font-medium text-sm mb-3">
+                <p className="text-[#1E6FD9] font-medium text-sm mb-3">
                   {study.subtitle}
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-5">
@@ -126,7 +126,7 @@ export default function CaseStudies() {
                 </p>
                 <Link
                   href={`/work/${study.slug}/`}
-                  className="inline-flex items-center text-[#2ED06E] font-semibold text-sm group/link hover:gap-3 gap-2 transition-all duration-300"
+                  className="inline-flex items-center text-[#1E6FD9] font-semibold text-sm group/link hover:gap-3 gap-2 transition-all duration-300"
                 >
                   View Case Study
                   <svg
@@ -152,7 +152,7 @@ export default function CaseStudies() {
         <div className="mt-14 text-center">
           <Link
             href="/work/"
-            className="inline-flex items-center gap-2 text-[#0B0C0D] font-semibold text-lg hover:text-[#2ED06E] transition-colors duration-300 border-b-2 border-[#0B0C0D] hover:border-[#2ED06E] pb-1"
+            className="inline-flex items-center gap-2 text-[#0B0C0D] font-semibold text-lg hover:text-[#1E6FD9] transition-colors duration-300 border-b-2 border-[#0B0C0D] hover:border-[#1E6FD9] pb-1"
           >
             More case studies
             <svg

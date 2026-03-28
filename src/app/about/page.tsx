@@ -73,7 +73,7 @@ export default function AboutPage() {
       <section className="bg-[#fdf8f6] pt-28 pb-16 px-4 md:px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-            <Link href="/" className="hover:text-[#2ED06E] transition-colors">
+            <Link href="/" className="hover:text-[#1E6FD9] transition-colors">
               Home
             </Link>
             <span>/</span>
@@ -133,9 +133,9 @@ export default function AboutPage() {
             </div>
             <div className="bg-gradient-to-br from-[#0B0C0D] to-[#1a1d20] rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
               <div className="text-center">
-                <div className="w-24 h-24 bg-[#2ED06E]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-24 h-24 bg-[#1E6FD9]/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg
-                    className="w-12 h-12 text-[#2ED06E]"
+                    className="w-12 h-12 text-[#1E6FD9]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -175,9 +175,9 @@ export default function AboutPage() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="text-center p-6 rounded-xl border border-gray-800 hover:border-[#2ED06E]/50 transition-colors"
+                className="text-center p-6 rounded-xl border border-gray-800 hover:border-[#1E6FD9]/50 transition-colors"
               >
-                <div className="text-4xl md:text-5xl font-bold text-[#2ED06E] mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-[#1E6FD9] mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -205,7 +205,7 @@ export default function AboutPage() {
                 key={leader.name}
                 className="group text-center"
               >
-                <div className="w-48 h-48 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#2ED06E]/20 to-[#0B0C0D]/10 flex items-center justify-center overflow-hidden">
+                <div className="w-48 h-48 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#1E6FD9]/20 to-[#0B0C0D]/10 flex items-center justify-center overflow-hidden">
                   <svg
                     className="w-20 h-20 text-gray-400"
                     fill="none"
@@ -220,7 +220,7 @@ export default function AboutPage() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[#0B0C0D] group-hover:text-[#2ED06E] transition-colors">
+                <h3 className="text-xl font-bold text-[#0B0C0D] group-hover:text-[#1E6FD9] transition-colors">
                   {leader.name}
                 </h3>
                 <p className="text-gray-500 text-sm mt-1">{leader.role}</p>
@@ -248,9 +248,9 @@ export default function AboutPage() {
                 key={office.city}
                 className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
               >
-                <div className="w-12 h-12 bg-[#2ED06E]/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-[#1E6FD9]/10 rounded-lg flex items-center justify-center mb-4">
                   <svg
-                    className="w-6 h-6 text-[#2ED06E]"
+                    className="w-6 h-6 text-[#1E6FD9]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -272,7 +272,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-bold text-[#0B0C0D] mb-1">
                   {office.city}
                 </h3>
-                <p className="text-[#2ED06E] text-sm font-medium mb-3">
+                <p className="text-[#1E6FD9] text-sm font-medium mb-3">
                   {office.country}
                 </p>
                 <p className="text-gray-500 text-sm mb-2">{office.address}</p>
@@ -298,13 +298,13 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-[#2ED06E] text-[#0B0C0D] px-8 py-4 rounded-lg font-bold hover:bg-[#25b35d] transition-colors"
+              className="bg-[#1E6FD9] text-[#0B0C0D] px-8 py-4 rounded-lg font-bold hover:bg-[#1859B3] transition-colors"
             >
               Get in Touch
             </Link>
             <Link
               href="/work"
-              className="border border-gray-700 text-white px-8 py-4 rounded-lg font-bold hover:border-[#2ED06E] hover:text-[#2ED06E] transition-colors"
+              className="border border-gray-700 text-white px-8 py-4 rounded-lg font-bold hover:border-[#1E6FD9] hover:text-[#1E6FD9] transition-colors"
             >
               View Our Work
             </Link>

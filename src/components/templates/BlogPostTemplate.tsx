@@ -27,11 +27,11 @@ export default function BlogPostTemplate({ data, relatedPosts = [] }: BlogPostTe
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <nav className="flex items-center gap-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-[#2ED06E] transition-colors">
+            <Link href="/" className="hover:text-[#1E6FD9] transition-colors">
               Home
             </Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-[#2ED06E] transition-colors">
+            <Link href="/blog" className="hover:text-[#1E6FD9] transition-colors">
               Blog
             </Link>
             <span>/</span>
@@ -52,7 +52,7 @@ export default function BlogPostTemplate({ data, relatedPosts = [] }: BlogPostTe
           <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-gray-500 pb-8">
             <Link
               href={`/blog/author/${data.authorSlug}`}
-              className="text-[#0B0C0D] font-semibold underline hover:text-[#2ED06E] transition-colors"
+              className="text-[#0B0C0D] font-semibold underline hover:text-[#1E6FD9] transition-colors"
             >
               {data.author}
             </Link>
@@ -108,7 +108,7 @@ export default function BlogPostTemplate({ data, relatedPosts = [] }: BlogPostTe
                   <Link
                     key={post.slug}
                     href={`/blog/${post.slug}`}
-                    className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300"
+                    className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
                   >
                     {post.featuredImage && (
                       <div className="aspect-video bg-gray-100 overflow-hidden">
@@ -120,10 +120,10 @@ export default function BlogPostTemplate({ data, relatedPosts = [] }: BlogPostTe
                       </div>
                     )}
                     <div className="p-6">
-                      <span className="inline-block bg-[#2ED06E]/10 text-[#2ED06E] text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3">
+                      <span className="inline-block bg-[#1E6FD9]/10 text-[#1E6FD9] text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3">
                         {post.category}
                       </span>
-                      <h3 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#2ED06E] transition-colors line-clamp-2">
+                      <h3 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#1E6FD9] transition-colors line-clamp-2">
                         {post.title}
                       </h3>
                       <p className="text-gray-500 text-sm line-clamp-2 mb-3">

@@ -86,7 +86,7 @@ export default function ManifestoPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               Our Principles
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
@@ -98,7 +98,7 @@ export default function ManifestoPage() {
             {principles.map((p) => (
               <div key={p.number} className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <span className="text-5xl font-bold text-[#2ED06E]/20">{p.number}</span>
+                  <span className="text-5xl font-bold text-[#1E6FD9]/20">{p.number}</span>
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-[#0B0C0D] mb-3">{p.title}</h3>
@@ -114,7 +114,7 @@ export default function ManifestoPage() {
       <section className="py-20 bg-[#0B0C0D]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
               Core Values
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white">
@@ -126,7 +126,7 @@ export default function ManifestoPage() {
             {values.map((v) => (
               <div
                 key={v.title}
-                className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#2ED06E]/50 transition-colors"
+                className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#1E6FD9]/50 transition-colors"
               >
                 <h3 className="text-xl font-bold text-white mb-3">{v.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{v.description}</p>

@@ -142,7 +142,7 @@ export default function ServicesPage() {
               <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
                 <Link
                   href="/"
-                  className="hover:text-[#2ED06E] transition-colors"
+                  className="hover:text-[#1E6FD9] transition-colors"
                 >
                   Home
                 </Link>
@@ -152,8 +152,8 @@ export default function ServicesPage() {
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0B0C0D] mb-6 leading-tight">
                 Accelerated Digital{" "}
-                <span className="text-[#2ED06E]">Services</span> for Your{" "}
-                <span className="text-[#2ED06E]">Business</span>
+                <span className="text-[#1E6FD9]">Services</span> for Your{" "}
+                <span className="text-[#1E6FD9]">Business</span>
               </h1>
 
               <p className="text-lg text-gray-600 max-w-xl mb-8">
@@ -167,7 +167,7 @@ export default function ServicesPage() {
             <div className="flex flex-col items-center gap-8">
               {/* 3-D decorative shapes */}
               <div className="relative w-64 h-48 hidden lg:block">
-                <div className="absolute top-0 right-0 w-24 h-24 rounded-full bg-gradient-to-br from-[#2ED06E]/30 to-[#2ED06E]/10 blur-sm" />
+                <div className="absolute top-0 right-0 w-24 h-24 rounded-full bg-gradient-to-br from-[#1E6FD9]/30 to-[#1E6FD9]/10 blur-sm" />
                 <div className="absolute bottom-4 left-4 w-16 h-16 rounded-full bg-gradient-to-tr from-orange-300/40 to-yellow-200/20 blur-sm" />
                 <div className="absolute top-8 left-12 w-10 h-10 rounded-lg bg-gradient-to-br from-purple-300/30 to-indigo-200/20 rotate-12 blur-[2px]" />
               </div>
@@ -182,7 +182,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-4">
-            Services We <span className="text-[#2ED06E]">Provide</span>
+            Services We <span className="text-[#1E6FD9]">Provide</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mb-14">
             From concept to deployment and beyond — explore our full spectrum of
@@ -209,17 +209,17 @@ export default function ServicesPage() {
                       <Link
                         key={slug}
                         href={`/services/${slug}`}
-                        className="group flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300"
+                        className="group flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
                       >
                         <div>
-                          <h4 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#2ED06E] transition-colors">
+                          <h4 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#1E6FD9] transition-colors">
                             {svc.title}
                           </h4>
                           <p className="text-gray-500 text-sm leading-relaxed line-clamp-3">
                             {svc.heroDescription}
                           </p>
                         </div>
-                        <span className="inline-flex items-center text-[#2ED06E] text-sm font-semibold mt-4">
+                        <span className="inline-flex items-center text-[#1E6FD9] text-sm font-semibold mt-4">
                           Learn More
                           <svg
                             className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
@@ -259,17 +259,17 @@ export default function ServicesPage() {
                     <Link
                       key={slug}
                       href={`/services/${slug}`}
-                      className="group flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300"
+                      className="group flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
                     >
                       <div>
-                        <h4 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#2ED06E] transition-colors">
+                        <h4 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#1E6FD9] transition-colors">
                           {svc.title}
                         </h4>
                         <p className="text-gray-500 text-sm leading-relaxed line-clamp-3">
                           {svc.heroDescription}
                         </p>
                       </div>
-                      <span className="inline-flex items-center text-[#2ED06E] text-sm font-semibold mt-4">
+                      <span className="inline-flex items-center text-[#1E6FD9] text-sm font-semibold mt-4">
                         Learn More
                         <svg
                           className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
@@ -299,7 +299,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-4">
-              The DeepLearnHQ <span className="text-[#2ED06E]">Guarantee</span>
+              The DeepLearnHQ <span className="text-[#1E6FD9]">Guarantee</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We combine technical expertise with a deep understanding of
@@ -328,7 +328,7 @@ export default function ServicesPage() {
               <div key={item.title} className="text-center">
                 <div className="w-16 h-16 bg-[#0B0C0D] rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg
-                    className="w-8 h-8 text-[#2ED06E]"
+                    className="w-8 h-8 text-[#1E6FD9]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -355,7 +355,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-[#0B0C0D]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Pull the <span className="text-[#2ED06E]">Trigger!</span>
+            Pull the <span className="text-[#1E6FD9]">Trigger!</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
             Initiate a conversation and let DeepLearnHQ turn your ideas into reality.
@@ -364,7 +364,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#2ED06E] text-[#0B0C0D] px-8 py-4 rounded-lg font-bold hover:bg-[#25b35d] transition-colors text-lg"
+            className="inline-block bg-[#1E6FD9] text-[#0B0C0D] px-8 py-4 rounded-lg font-bold hover:bg-[#1859B3] transition-colors text-lg"
           >
             Let&apos;s Get Started
           </Link>

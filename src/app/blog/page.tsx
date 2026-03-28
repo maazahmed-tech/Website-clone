@@ -92,7 +92,7 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-            <Link href="/" className="hover:text-[#2ED06E] transition-colors">
+            <Link href="/" className="hover:text-[#1E6FD9] transition-colors">
               Home
             </Link>
             <span>/</span>
@@ -101,7 +101,7 @@ export default function BlogPage() {
 
           {/* Two-color title */}
           <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight mb-6">
-            <span className="text-[#2ED06E]">Fueling Growth through </span>
+            <span className="text-[#1E6FD9]">Fueling Growth through </span>
             <span className="text-[#0B0C0D]">Innovation and Creativity</span>
           </h1>
 
@@ -157,7 +157,7 @@ export default function BlogPage() {
                 onClick={() => handleCategoryChange(cat)}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-colors border ${
                   activeCategory === cat
-                    ? "bg-[#2ED06E] text-white border-[#2ED06E]"
+                    ? "bg-[#1E6FD9] text-white border-[#1E6FD9]"
                     : "bg-white text-gray-700 border-gray-200 hover:border-gray-400"
                 }`}
               >
@@ -181,7 +181,7 @@ export default function BlogPage() {
                 >
                   {/* Image Placeholder */}
                   <div className="h-52 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#2ED06E]/10 to-emerald-500/5" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#1E6FD9]/10 to-emerald-500/5" />
                     <svg
                       className="w-12 h-12 text-gray-300"
                       fill="none"
@@ -201,7 +201,7 @@ export default function BlogPage() {
                   <div className="p-6">
                     {/* Category badge + date */}
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="bg-[#2ED06E]/10 text-[#2ED06E] text-xs font-semibold px-3 py-1 rounded-full">
+                      <span className="bg-[#1E6FD9]/10 text-[#1E6FD9] text-xs font-semibold px-3 py-1 rounded-full">
                         {post.category}
                       </span>
                       <span className="text-gray-400 text-xs">
@@ -210,7 +210,7 @@ export default function BlogPage() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#2ED06E] transition-colors line-clamp-2">
+                    <h3 className="text-lg font-bold text-[#0B0C0D] mb-2 group-hover:text-[#1E6FD9] transition-colors line-clamp-2">
                       {post.title}
                     </h3>
 
@@ -220,7 +220,7 @@ export default function BlogPage() {
                     </p>
 
                     {/* Read More */}
-                    <span className="inline-flex items-center text-[#2ED06E] text-sm font-semibold group-hover:underline">
+                    <span className="inline-flex items-center text-[#1E6FD9] text-sm font-semibold group-hover:underline">
                       Read More
                       <svg
                         className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
@@ -288,7 +288,7 @@ export default function BlogPage() {
                     onClick={() => setCurrentPage(pageNum)}
                     className={`w-10 h-10 rounded-full text-sm font-medium transition-colors ${
                       currentPage === pageNum
-                        ? "bg-[#2ED06E] text-white"
+                        ? "bg-[#1E6FD9] text-white"
                         : "border border-gray-200 text-gray-600 hover:bg-gray-50"
                     }`}
                   >

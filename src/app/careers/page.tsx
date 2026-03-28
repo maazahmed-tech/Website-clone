@@ -139,7 +139,7 @@ export default function CareersPage() {
       <section className="bg-[#fdf8f6] pt-28 pb-16 px-4 md:px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-            <Link href="/" className="hover:text-[#2ED06E] transition-colors">
+            <Link href="/" className="hover:text-[#1E6FD9] transition-colors">
               Home
             </Link>
             <span>/</span>
@@ -147,7 +147,7 @@ export default function CareersPage() {
           </div>
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-6 leading-tight">
-              Join Our <span className="text-[#2ED06E]">Team</span>
+              Join Our <span className="text-[#1E6FD9]">Team</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
               Build the future of technology with us. We&apos;re looking for
@@ -174,9 +174,9 @@ export default function CareersPage() {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="p-6 rounded-xl border border-gray-200 hover:border-[#2ED06E] hover:shadow-lg transition-all duration-300"
+                className="p-6 rounded-xl border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-14 h-14 bg-[#2ED06E]/10 rounded-xl flex items-center justify-center text-[#2ED06E] mb-4">
+                <div className="w-14 h-14 bg-[#1E6FD9]/10 rounded-xl flex items-center justify-center text-[#1E6FD9] mb-4">
                   {benefit.icon}
                 </div>
                 <h3 className="text-lg font-bold text-[#0B0C0D] mb-2">
@@ -207,7 +207,7 @@ export default function CareersPage() {
             {openings.map((job) => (
               <div
                 key={job.title}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#2ED06E] hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-md transition-all duration-300 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
               >
                 <div>
                   <h3 className="text-lg font-bold text-[#0B0C0D]">
@@ -252,14 +252,14 @@ export default function CareersPage() {
                       </svg>
                       {job.location}
                     </span>
-                    <span className="bg-[#2ED06E]/10 text-[#2ED06E] text-xs font-semibold px-3 py-1 rounded-full">
+                    <span className="bg-[#1E6FD9]/10 text-[#1E6FD9] text-xs font-semibold px-3 py-1 rounded-full">
                       {job.type}
                     </span>
                   </div>
                 </div>
                 <Link
                   href="/contact"
-                  className="bg-[#0B0C0D] text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-[#2ED06E] hover:text-[#0B0C0D] transition-colors whitespace-nowrap"
+                  className="bg-[#0B0C0D] text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-[#1E6FD9] hover:text-[#0B0C0D] transition-colors whitespace-nowrap"
                 >
                   Apply Now
                 </Link>
@@ -287,7 +287,7 @@ export default function CareersPage() {
                 key={item.title}
                 className="flex gap-4"
               >
-                <div className="w-3 h-3 bg-[#2ED06E] rounded-full mt-2 flex-shrink-0" />
+                <div className="w-3 h-3 bg-[#1E6FD9] rounded-full mt-2 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-bold text-[#0B0C0D] mb-2">
                     {item.title}
@@ -314,7 +314,7 @@ export default function CareersPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#2ED06E] text-[#0B0C0D] px-8 py-4 rounded-lg font-bold hover:bg-[#25b35d] transition-colors"
+            className="inline-block bg-[#1E6FD9] text-[#0B0C0D] px-8 py-4 rounded-lg font-bold hover:bg-[#1859B3] transition-colors"
           >
             Send Your Resume
           </Link>

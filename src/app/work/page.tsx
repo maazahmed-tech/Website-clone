@@ -66,7 +66,7 @@ export default function WorkPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-            <Link href="/" className="hover:text-[#2ED06E] transition-colors">
+            <Link href="/" className="hover:text-[#1E6FD9] transition-colors">
               Home
             </Link>
             <span>/</span>
@@ -92,7 +92,7 @@ export default function WorkPage() {
               <select
                 value={serviceFilter}
                 onChange={(e) => setServiceFilter(e.target.value)}
-                className="appearance-none bg-white border border-gray-200 rounded-lg px-5 py-3 pr-10 text-sm text-gray-700 font-medium focus:outline-none focus:border-[#2ED06E] cursor-pointer min-w-[200px]"
+                className="appearance-none bg-white border border-gray-200 rounded-lg px-5 py-3 pr-10 text-sm text-gray-700 font-medium focus:outline-none focus:border-[#1E6FD9] cursor-pointer min-w-[200px]"
               >
                 {serviceOptions.map((opt) => (
                   <option key={opt} value={opt}>
@@ -122,7 +122,7 @@ export default function WorkPage() {
               <select
                 value={categoryFilter}
                 onChange={(e) => setCategoryFilter(e.target.value)}
-                className="appearance-none bg-white border border-gray-200 rounded-lg px-5 py-3 pr-10 text-sm text-gray-700 font-medium focus:outline-none focus:border-[#2ED06E] cursor-pointer min-w-[200px]"
+                className="appearance-none bg-white border border-gray-200 rounded-lg px-5 py-3 pr-10 text-sm text-gray-700 font-medium focus:outline-none focus:border-[#1E6FD9] cursor-pointer min-w-[200px]"
               >
                 {categoryOptions.map((opt) => (
                   <option key={opt} value={opt}>
@@ -152,7 +152,7 @@ export default function WorkPage() {
               <select
                 value={technologyFilter}
                 onChange={(e) => setTechnologyFilter(e.target.value)}
-                className="appearance-none bg-white border border-gray-200 rounded-lg px-5 py-3 pr-10 text-sm text-gray-700 font-medium focus:outline-none focus:border-[#2ED06E] cursor-pointer min-w-[200px]"
+                className="appearance-none bg-white border border-gray-200 rounded-lg px-5 py-3 pr-10 text-sm text-gray-700 font-medium focus:outline-none focus:border-[#1E6FD9] cursor-pointer min-w-[200px]"
               >
                 {technologyOptions.map((opt) => (
                   <option key={opt} value={opt}>
@@ -193,7 +193,7 @@ export default function WorkPage() {
                 >
                   {/* Image Placeholder */}
                   <div className="h-56 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#2ED06E]/10 to-emerald-500/5" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#1E6FD9]/10 to-emerald-500/5" />
                     <span className="text-gray-300 text-6xl font-bold">
                       {project.title[0]}
                     </span>
@@ -207,7 +207,7 @@ export default function WorkPage() {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-[#0B0C0D] mb-2 group-hover:text-[#2ED06E] transition-colors">
+                    <h3 className="text-xl font-bold text-[#0B0C0D] mb-2 group-hover:text-[#1E6FD9] transition-colors">
                       {project.title}
                     </h3>
                     <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3">
@@ -235,7 +235,7 @@ export default function WorkPage() {
                     <div className="flex gap-4 pt-4 border-t border-gray-100">
                       {project.results.slice(0, 2).map((r) => (
                         <div key={r.metric}>
-                          <p className="text-[#2ED06E] font-bold text-lg">
+                          <p className="text-[#1E6FD9] font-bold text-lg">
                             {r.value}
                           </p>
                           <p className="text-gray-400 text-xs">{r.metric}</p>
@@ -268,7 +268,7 @@ export default function WorkPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#2ED06E] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#25b35d] transition-colors"
+            className="inline-block bg-[#1E6FD9] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#1859B3] transition-colors"
           >
             Start Your Project
           </Link>

@@ -100,11 +100,11 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[#2ED06E] text-sm font-semibold uppercase tracking-widest">
+          <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
             testimonials
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            our clients simply love <span className="text-[#2ED06E]">what we do</span>
+            our clients simply love <span className="text-[#1E6FD9]">what we do</span>
           </h2>
           <p className="mt-5 text-gray-400 text-lg leading-relaxed">
             Proud to serve as the innovation partner for industry leaders who
@@ -156,11 +156,11 @@ export default function Testimonials() {
                   key={index}
                   className="w-full flex-shrink-0 px-4"
                 >
-                  <div className="bg-[#151617] border border-[#2ED06E]/20 rounded-2xl p-8 sm:p-12 text-center shadow-[0_0_30px_rgba(46,208,110,0.06)]">
+                  <div className="bg-[#151617] border border-[#1E6FD9]/20 rounded-2xl p-8 sm:p-12 text-center shadow-[0_0_30px_rgba(46,208,110,0.06)]">
                     {/* Quote icon */}
                     <div className="flex justify-center mb-6">
                       <svg
-                        className="w-12 h-12 text-[#2ED06E]/30"
+                        className="w-12 h-12 text-[#1E6FD9]/30"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -176,7 +176,7 @@ export default function Testimonials() {
                     {/* Author */}
                     <div className="flex flex-col items-center">
                       {/* Green circle avatar with initials */}
-                      <div className="w-12 h-12 rounded-full bg-[#2ED06E] flex items-center justify-center mb-3">
+                      <div className="w-12 h-12 rounded-full bg-[#1E6FD9] flex items-center justify-center mb-3">
                         <span className="text-white font-bold text-sm">
                           {testimonial.name
                             .split(" ")
@@ -205,7 +205,7 @@ export default function Testimonials() {
           <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center -mr-10">
             <div className="w-1 h-32 bg-white/10 rounded-full overflow-hidden">
               <div
-                className="w-full bg-[#2ED06E] rounded-full transition-all duration-700"
+                className="w-full bg-[#1E6FD9] rounded-full transition-all duration-700"
                 style={{
                   height: `${((current + 1) / testimonials.length) * 100}%`,
                 }}
@@ -221,7 +221,7 @@ export default function Testimonials() {
                 onClick={() => goTo(index)}
                 className={`transition-all duration-300 rounded-full ${
                   current === index
-                    ? "w-10 h-3 bg-[#2ED06E]"
+                    ? "w-10 h-3 bg-[#1E6FD9]"
                     : "w-3 h-3 bg-white/20 hover:bg-white/40"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
