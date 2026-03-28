@@ -86,8 +86,8 @@ export default function WorkPage() {
           {/* Subtitle */}
           <p className="text-gray-600 text-lg max-w-3xl mb-12">
             From award-winning iOS and Android app development to seamless web
-            development, discover how we help clients grow their businesses and
-            achieve their vision of digital innovation.
+            development, discover how we help clients achieve their goals and
+            bring their vision of digital innovation to life.
           </p>
 
           {/* Filter Dropdowns */}
@@ -256,27 +256,48 @@ export default function WorkPage() {
               <p className="text-gray-500 text-lg">
                 No projects found matching your filters.
               </p>
+              <button
+                onClick={() => {
+                  setServiceFilter("All Services");
+                  setCategoryFilter("All Categories");
+                  setTechnologyFilter("All Technologies");
+                }}
+                className="mt-4 text-[#1E6FD9] font-medium hover:underline"
+              >
+                Clear all filters
+              </button>
             </div>
           )}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#fdf8f6]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-4">
+      <section className="bg-[#1a1a1a] px-4 py-20 md:px-8 lg:px-16">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#00b67a]">
+            Pull the Trigger!
+          </p>
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
             Want to See Your Project Here?
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+          <p className="mb-8 text-lg text-gray-400">
             Let&apos;s build something remarkable together. Share your idea with
             us and we&apos;ll help you bring it to life.
           </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-[#1E6FD9] text-white px-8 py-4 rounded-lg font-bold hover:bg-[#1859B3] transition-colors"
-          >
-            Start Your Project
-          </Link>
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-block rounded-full bg-[#00b67a] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#00a06a]"
+            >
+              Start Your Project
+            </Link>
+            <Link
+              href="/about/testimonial"
+              className="inline-block rounded-full border-2 border-white/30 px-8 py-4 text-lg font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+            >
+              View Testimonials
+            </Link>
+          </div>
         </div>
       </section>
     </>

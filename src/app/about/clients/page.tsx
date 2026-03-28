@@ -1,195 +1,139 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import PageHero from '@/components/shared/PageHero';
-import CTASection from '@/components/shared/CTASection';
+import type { Metadata } from "next";
+import PageHero from "@/components/shared/PageHero";
+import CTASection from "@/components/shared/CTASection";
 
 export const metadata: Metadata = {
-  title: 'Our Clients | DeepLearnHQ',
+  title: "Our Clients | DeepLearnHQ",
   description:
-    'DeepLearnHQ has partnered with startups, enterprises, and Fortune 500 companies including Sony, Walmart, Canon, DreamWorks, Unilever, Estee Lauder, and more.',
+    "DeepLearnHQ has partnered with startups, enterprises, and Fortune 500 companies including Sony, Walmart, Canon, Emirates, Tissot, Politico, and more.",
 };
 
-const clientCategories = [
+const clients = [
   {
-    category: 'Fortune 500 & Global Brands',
-    clients: [
-      { name: 'Sony', industry: 'Electronics' },
-      { name: 'Walmart', industry: 'Retail' },
-      { name: 'Canon', industry: 'Technology' },
-      { name: 'Unilever', industry: 'Consumer Goods' },
-      { name: 'PayPal', industry: 'Fintech' },
-      { name: 'Estee Lauder', industry: 'Beauty' },
-    ],
+    name: "Politico",
+    description:
+      "Built a cutting-edge digital media platform enabling real-time political news delivery, interactive data visualizations, and audience engagement tools for millions of readers worldwide.",
   },
   {
-    category: 'Entertainment & Media',
-    clients: [
-      { name: 'DreamWorks', industry: 'Animation' },
-      { name: 'Politico', industry: 'Digital Media' },
-      { name: 'Nintendo', industry: 'Gaming' },
-    ],
+    name: "Walmart",
+    description:
+      "Developed scalable e-commerce solutions and inventory management systems powering seamless omnichannel retail experiences for one of the world's largest retailers.",
   },
   {
-    category: 'Luxury & Fashion',
-    clients: [
-      { name: 'Tissot', industry: 'Luxury Watches' },
-      { name: 'Swatch Group', industry: 'Luxury Watches' },
-      { name: 'Ray-Ban', industry: 'Eyewear' },
-      { name: 'Clinique', industry: 'Beauty' },
-    ],
+    name: "Tissot",
+    description:
+      "Crafted a premium digital experience for the Swiss watchmaker, including an interactive product showcase, virtual try-on features, and global e-commerce integration.",
   },
   {
-    category: 'Consulting & Enterprise',
-    clients: [
-      { name: 'Sapient', industry: 'Consulting' },
-      { name: 'Engro Corporation', industry: 'Conglomerate' },
-      { name: 'Suzuki', industry: 'Automotive' },
-      { name: 'Quaker', industry: 'Food & Beverage' },
-    ],
+    name: "Sony",
+    description:
+      "Delivered innovative entertainment and gaming solutions, building immersive digital experiences and cross-platform applications for Sony's global consumer electronics ecosystem.",
   },
   {
-    category: 'Startups & Scale-Ups',
-    clients: [
-      { name: 'Pauseitive', industry: 'Mental Wellness' },
-      { name: 'PartyShark', industry: 'Events' },
-      { name: 'Foodly', industry: 'Food Delivery' },
-      { name: 'Goobr', industry: 'Social Networking' },
-      { name: 'WAGMI', industry: 'Blockchain Gaming' },
-      { name: 'OOMCO', industry: 'Energy & Fuel' },
-    ],
+    name: "Canon",
+    description:
+      "Engineered advanced imaging and workflow solutions, creating professional-grade applications that streamline content creation and digital asset management.",
   },
-];
-
-const industries = [
-  'Healthcare',
-  'Fintech',
-  'E-Commerce',
-  'Logistics',
-  'Education',
-  'Real Estate',
-  'Entertainment',
-  'Oil & Gas',
-  'Government',
-  'Social Media',
-  'Food & Beverage',
-  'Travel & Hospitality',
-  'Blockchain & Web3',
-  'Gaming',
-  'Beauty & Fashion',
-  'Automotive',
-];
-
-const stats = [
-  { value: '600+', label: 'Companies Transformed' },
-  { value: '500+', label: 'Projects Delivered' },
-  { value: '35+', label: 'Countries Served' },
-  { value: '17+', label: 'Years of Experience' },
+  {
+    name: "Emirates",
+    description:
+      "Designed and developed premium travel technology solutions, enhancing the digital booking experience and in-flight entertainment platforms for a world-class airline.",
+  },
+  {
+    name: "Unilever",
+    description:
+      "Created data-driven marketing platforms and supply chain optimization tools, empowering one of the largest consumer goods companies to accelerate digital transformation.",
+  },
+  {
+    name: "PayPal",
+    description:
+      "Built secure fintech integrations and payment workflow solutions, enhancing transaction processing and user experiences across digital payment platforms.",
+  },
+  {
+    name: "Estee Lauder",
+    description:
+      "Developed immersive beauty-tech experiences including AR-powered virtual try-on tools, personalized skincare recommendation engines, and global e-commerce platforms.",
+  },
+  {
+    name: "DreamWorks",
+    description:
+      "Partnered on interactive entertainment projects, creating engaging digital experiences and gaming applications inspired by iconic animated franchises.",
+  },
+  {
+    name: "Nintendo",
+    description:
+      "Collaborated on gaming platform integrations and companion app development, delivering seamless cross-device experiences for one of gaming's most iconic brands.",
+  },
+  {
+    name: "Suzuki",
+    description:
+      "Developed connected vehicle solutions and digital dealership platforms, modernizing the automotive customer journey from discovery to purchase.",
+  },
+  {
+    name: "Ray-Ban",
+    description:
+      "Built interactive product customization tools and augmented reality experiences, enabling customers to virtually try on and personalize eyewear collections.",
+  },
+  {
+    name: "Swatch Group",
+    description:
+      "Created multi-brand digital commerce solutions and product visualization tools for the world's largest watchmaking group, spanning luxury and lifestyle segments.",
+  },
+  {
+    name: "Sapient",
+    description:
+      "Delivered enterprise consulting solutions and custom software platforms, supporting digital transformation initiatives for major global organizations.",
+  },
 ];
 
 export default function ClientsPage() {
   return (
     <>
+      {/* Hero Section */}
       <PageHero
-        title="Our Clients"
-        description="We take pride in our rich portfolio of working with global brands and turning hundreds of ideas into advanced solutions. From ambitious startups to Fortune 500 enterprises."
+        title="Clients"
+        description="We take pride in our rich portfolio of working with global brands and turning hundreds of ideas into advanced solutions. Over 600+ companies have trusted DeepLearnHQ to build their most critical digital products."
         bgColor="#fdf8f6"
         breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'About', href: '/about' },
-          { label: 'Clients' },
+          { label: "Home", href: "/" },
+          { label: "About", href: "/about" },
+          { label: "Clients" },
         ]}
       />
 
-      {/* Stats */}
-      <section className="py-16 bg-[#0B0C0D]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#1E6FD9] mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-400 text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Client Logos by Category */}
+      {/* Client Cards Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
-              Trusted By
-            </span>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
-              Companies That Choose DeepLearnHQ
-            </h2>
-          </div>
-
-          <div className="space-y-16">
-            {clientCategories.map((group) => (
-              <div key={group.category}>
-                <h3 className="text-xl font-bold text-[#0B0C0D] mb-6 border-b border-gray-200 pb-3">
-                  {group.category}
-                </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-                  {group.clients.map((client) => (
-                    <div
-                      key={client.name}
-                      className="flex flex-col items-center justify-center bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-[#1E6FD9] hover:shadow-md transition-all min-h-[120px]"
-                    >
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#0B0C0D]/5 to-[#1E6FD9]/10 rounded-full flex items-center justify-center mb-3">
-                        <span className="text-[#0B0C0D] font-bold text-xl">
-                          {client.name[0]}
-                        </span>
-                      </div>
-                      <span className="text-sm font-semibold text-[#0B0C0D] text-center">
-                        {client.name}
-                      </span>
-                      <span className="text-xs text-gray-400 mt-1">{client.industry}</span>
-                    </div>
-                  ))}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {clients.map((client) => (
+              <div
+                key={client.name}
+                className="p-8 rounded-2xl border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300 group"
+              >
+                {/* Logo placeholder */}
+                <div className="w-14 h-14 bg-gradient-to-br from-[#0B0C0D]/5 to-[#1E6FD9]/10 rounded-xl flex items-center justify-center mb-5">
+                  <span className="text-[#1E6FD9] font-bold text-2xl">
+                    {client.name[0]}
+                  </span>
                 </div>
+                <h3 className="text-xl font-bold text-[#0B0C0D] mb-3 group-hover:text-[#1E6FD9] transition-colors">
+                  {client.name}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  {client.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Industries Served */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
-              Industries
-            </span>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
-              Industries We Serve
-            </h2>
-            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Our cross-industry experience means we bring best practices from diverse verticals into every project.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            {industries.map((industry) => (
-              <span
-                key={industry}
-                className="bg-white border border-gray-200 text-[#0B0C0D] px-5 py-2.5 rounded-full text-sm font-medium hover:border-[#1E6FD9] hover:bg-[#1E6FD9]/5 transition-all cursor-default"
-              >
-                {industry}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* CTA Footer */}
       <CTASection
         title="Join Our Growing Client Portfolio"
         description="Let us show you why leading organizations trust DeepLearnHQ to build their most critical digital products."
-        primaryCTA={{ label: 'Start a Conversation', href: '/contact' }}
-        secondaryCTA={{ label: 'View Case Studies', href: '/work' }}
+        primaryCTA={{ label: "Start a Conversation", href: "/contact" }}
+        secondaryCTA={{ label: "View Our Work", href: "/work" }}
       />
     </>
   );

@@ -1,101 +1,97 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import PageHero from '@/components/shared/PageHero';
 import CTASection from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
-  title: 'DeepLearnHQ Academy | Internship & Training Program',
+  title: 'University | DeepLearnHQ',
   description:
-    'DeepLearnHQ Academy is our flagship internship and training program that prepares the next generation of software engineers, designers, and product managers for real-world success.',
+    'Begin your professional journey at DeepLearnHQ. We defy norms, embrace risks, and create influence through our internship and training programs.',
 };
 
+const programDetails = [
+  {
+    title: 'Learn From the Best',
+    description:
+      'Our mentors are seasoned professionals with years of industry experience. They guide you through real-world projects, not textbook exercises, helping you build skills that matter in the professional world.',
+    icon: (
+      <svg className="w-8 h-8 text-[#1E6FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Work on Real Projects',
+    description:
+      'From day one, you will be contributing to live projects for real clients. This hands-on approach ensures you graduate with a portfolio of work that demonstrates genuine capability and professional experience.',
+    icon: (
+      <svg className="w-8 h-8 text-[#1E6FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Build Your Network',
+    description:
+      'Connect with fellow interns, mentors, and industry leaders. The relationships you build at DeepLearnHQ extend far beyond the program, providing a professional network that supports your career growth.',
+    icon: (
+      <svg className="w-8 h-8 text-[#1E6FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Career Launchpad',
+    description:
+      'Top-performing participants receive full-time employment offers. Our program has a strong track record of converting talented interns into permanent team members who go on to lead key projects.',
+    icon: (
+      <svg className="w-8 h-8 text-[#1E6FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+      </svg>
+    ),
+  },
+];
+
+const applicationSteps = [
+  {
+    step: '01',
+    title: 'Submit Application',
+    description: 'Fill out the online application form with your resume, cover letter, and portfolio links.',
+  },
+  {
+    step: '02',
+    title: 'Technical Assessment',
+    description: 'Complete a skills assessment tailored to the role you are applying for.',
+  },
+  {
+    step: '03',
+    title: 'Interview',
+    description: 'Meet with our team leads for a conversation about your experience, goals, and culture fit.',
+  },
+  {
+    step: '04',
+    title: 'Offer & Onboarding',
+    description: 'Successful candidates receive an offer letter and begin the onboarding journey.',
+  },
+];
+
 const tracks = [
-  {
-    title: 'Software Engineering',
-    duration: '12 weeks',
-    description:
-      'Learn full-stack development with React, Node.js, and cloud services. Build production-grade features under the mentorship of senior engineers.',
-    skills: ['React & Next.js', 'Node.js & Express', 'PostgreSQL & MongoDB', 'AWS & CI/CD', 'Git & Code Review'],
-  },
-  {
-    title: 'Mobile Development',
-    duration: '12 weeks',
-    description:
-      'Master cross-platform mobile development with React Native and Flutter. Ship a real feature to the app store by the end of the program.',
-    skills: ['React Native', 'Flutter & Dart', 'iOS & Android Basics', 'Mobile UI/UX', 'App Store Deployment'],
-  },
-  {
-    title: 'UI/UX Design',
-    duration: '10 weeks',
-    description:
-      'Go from user research to high-fidelity prototypes. Learn design thinking, interaction design, and design systems used in professional teams.',
-    skills: ['User Research', 'Wireframing', 'Figma & Prototyping', 'Design Systems', 'Usability Testing'],
-  },
-  {
-    title: 'Quality Assurance',
-    duration: '10 weeks',
-    description:
-      'Develop both manual and automated testing skills. Learn to write test plans, build Cypress and Selenium suites, and run performance tests.',
-    skills: ['Test Planning', 'Manual Testing', 'Cypress & Selenium', 'API Testing', 'Performance Testing'],
-  },
-  {
-    title: 'Data Science & AI',
-    duration: '12 weeks',
-    description:
-      'Explore machine learning, NLP, and data engineering. Work with real datasets and deploy models into production applications.',
-    skills: ['Python & Pandas', 'Machine Learning', 'TensorFlow & PyTorch', 'Data Pipelines', 'Model Deployment'],
-  },
-];
-
-const programHighlights = [
-  {
-    title: 'Real Projects',
-    description: 'Work on actual client projects alongside experienced engineers — not toy exercises or theoretical assignments.',
-  },
-  {
-    title: 'Dedicated Mentors',
-    description: 'Every intern is paired with a senior mentor who provides weekly one-on-one guidance and career coaching.',
-  },
-  {
-    title: 'Structured Curriculum',
-    description: 'Follow a proven curriculum that balances technical depth with professional skills development.',
-  },
-  {
-    title: 'Demo Day',
-    description: 'Present your capstone project to company leadership and external guests at our end-of-program showcase.',
-  },
-  {
-    title: 'Full-Time Offers',
-    description: 'Top-performing interns receive full-time offers. Over 60% of our interns convert to permanent roles.',
-  },
-  {
-    title: 'Global Community',
-    description: 'Join a network of DeepLearnHQ Academy alumni working at leading tech companies around the world.',
-  },
-];
-
-const stats = [
-  { value: '500+', label: 'Graduates' },
-  { value: '60%', label: 'Conversion to Full-Time' },
-  { value: '8', label: 'Cohorts Per Year' },
-  { value: '4.9/5', label: 'Intern Satisfaction' },
-];
-
-const timeline = [
-  { step: 'Apply', description: 'Submit your application with resume and a short motivation statement.' },
-  { step: 'Assessment', description: 'Complete a technical assessment tailored to your chosen track.' },
-  { step: 'Interview', description: 'Meet with our team for a culture-fit and technical discussion.' },
-  { step: 'Onboarding', description: 'Receive your equipment, mentor assignment, and program schedule.' },
-  { step: 'Program', description: 'Dive into 10-12 weeks of hands-on learning and real project work.' },
-  { step: 'Demo Day', description: 'Showcase your capstone project and celebrate your achievements.' },
+  'Software Engineering',
+  'Mobile Development',
+  'UI/UX Design',
+  'Quality Assurance',
+  'Data Science & AI',
+  'Project Management',
 ];
 
 export default function UniversityPage() {
   return (
     <>
+      {/* Hero Section */}
       <PageHero
-        title="DeepLearnHQ Academy"
-        description="Our flagship internship and training program that transforms ambitious students and early-career professionals into industry-ready engineers, designers, and product builders."
+        title="Begin your Professional Journey here"
+        description="If it's broken, fix it. If it doesn't exist, invent it. At DeepLearnHQ, we defy norms, embrace risks, and create influence."
         bgColor="#fdf8f6"
         breadcrumbs={[
           { label: 'Home', href: '/' },
@@ -103,91 +99,77 @@ export default function UniversityPage() {
         ]}
       />
 
-      {/* Stats */}
-      <section className="py-16 bg-[#0B0C0D]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#1E6FD9] mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-400 text-sm">{stat.label}</div>
+      {/* Full-width Team Photo */}
+      <section className="relative w-full">
+        <div className="w-full h-[300px] md:h-[450px] lg:h-[550px] bg-gradient-to-br from-gray-200 to-gray-300 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1E6FD9]/10 to-[#0B0C0D]/20" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
               </div>
-            ))}
+              <p className="text-white/80 text-sm font-medium tracking-wider uppercase">Our Young Team</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Program Tracks */}
+      {/* Program Description */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
-              Program Tracks
+              Our Program
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
-              Choose Your Path
+              Why DeepLearnHQ University?
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Select the track that aligns with your passion and career goals. Each track provides hands-on experience with industry-standard tools and practices.
+              We do not just train interns. We build professionals who are ready to take on the challenges of the modern tech industry from day one.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tracks.map((track) => (
+          <div className="grid sm:grid-cols-2 gap-8">
+            {programDetails.map((item) => (
               <div
-                key={track.title}
+                key={item.title}
                 className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-[#0B0C0D]">{track.title}</h3>
-                  <span className="bg-[#1E6FD9]/10 text-[#1E6FD9] text-xs font-semibold px-3 py-1 rounded-full">
-                    {track.duration}
-                  </span>
-                </div>
-                <p className="text-gray-600 leading-relaxed mb-6">{track.description}</p>
-                <div>
-                  <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                    Skills You Will Learn
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {track.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="bg-gray-100 text-gray-700 text-xs px-2.5 py-1 rounded font-medium"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                <div className="mb-5">{item.icon}</div>
+                <h3 className="text-xl font-bold text-[#0B0C0D] mb-3">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why DeepLearnHQ Academy */}
+      {/* Available Tracks */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
-              Why Join
+              Tracks
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
-              More Than an Internship
+              Available Programs
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {programHighlights.map((item) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tracks.map((track) => (
               <div
-                key={item.title}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-md transition-all"
+                key={track}
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#1E6FD9] hover:shadow-md transition-all flex items-center gap-4"
               >
-                <h3 className="text-lg font-bold text-[#0B0C0D] mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                <div className="flex-shrink-0 w-12 h-12 bg-[#1E6FD9]/10 rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-[#1E6FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-bold text-[#0B0C0D]">{track}</h3>
               </div>
             ))}
           </div>
@@ -206,66 +188,26 @@ export default function UniversityPage() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {timeline.map((item, index) => (
-              <div key={item.step} className="relative">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 bg-[#0B0C0D] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-[#1E6FD9] font-bold text-sm">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-[#0B0C0D]">{item.step}</h3>
+          <div className="grid sm:grid-cols-2 gap-8">
+            {applicationSteps.map((item) => (
+              <div key={item.step} className="relative flex gap-5">
+                <div className="flex-shrink-0 w-14 h-14 bg-[#0B0C0D] rounded-2xl flex items-center justify-center">
+                  <span className="text-[#1E6FD9] font-bold text-lg">{item.step}</span>
                 </div>
-                <p className="text-gray-600 leading-relaxed ml-[52px]">{item.description}</p>
+                <div>
+                  <h3 className="text-lg font-bold text-[#0B0C0D] mb-2">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Eligibility */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D]">Who Should Apply</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-6">
-            {[
-              'University students in CS, Design, or related fields',
-              'Recent graduates looking for their first industry experience',
-              'Career switchers with foundational technical skills',
-              'Self-taught developers ready to level up in a structured environment',
-            ].map((item) => (
-              <div
-                key={item}
-                className="flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-200"
-              >
-                <div className="flex-shrink-0 w-8 h-8 bg-[#1E6FD9]/10 rounded-lg flex items-center justify-center mt-0.5">
-                  <svg
-                    className="w-4 h-4 text-[#1E6FD9]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2.5}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                </div>
-                <span className="text-gray-700 font-medium">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* CTA Footer */}
       <CTASection
-        title="Launch Your Tech Career"
-        description="Applications are open for the next cohort. Take the first step toward building world-class digital products."
+        title="Ready to Start Your Journey?"
+        description="Applications are open for the next cohort. Take the first step toward building world-class digital products with DeepLearnHQ."
         primaryCTA={{ label: 'Apply Now', href: '/contact' }}
         secondaryCTA={{ label: 'View Open Positions', href: '/careers' }}
       />

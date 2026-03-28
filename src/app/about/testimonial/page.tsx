@@ -5,13 +5,13 @@ import CTASection from '@/components/shared/CTASection';
 export const metadata: Metadata = {
   title: 'Client Testimonials | DeepLearnHQ',
   description:
-    'Read what our clients say about working with DeepLearnHQ. Testimonials from startups, enterprises, and industry leaders across healthcare, fintech, logistics, and more.',
+    'Excellence is our minimum bar for client delivery. Read what our clients say about working with DeepLearnHQ.',
 };
 
 const testimonials = [
   {
     quote:
-      'DeepLearnHQ has delivered fast, high quality builds for us for almost a year now. I continue to be amazed by the excellent work that has come out of their shop \u2014 the attention to detail, and especially the quick turnaround is just stellar.',
+      'DeepLearnHQ has delivered fast, high quality builds for us for almost a year now. I continue to be amazed by the excellent work that has come out of their shop.',
     name: 'Verified Client',
     role: 'CEO, Technology Company',
     company: 'Technology Company',
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     quote:
-      'The team stood out because of their swift response time and patience. DeepLearnHQ provided one contact person, which helped streamline project management and coordination. Not only did they follow the budget and timeline, the team even offered additional services at no extra charge.',
+      'The team stood out because of their swift response time and patience. DeepLearnHQ provided one contact person, which helped streamline project management and coordination.',
     name: 'Verified Client',
     role: 'Project Manager, Enterprise',
     company: 'Enterprise Client',
@@ -29,7 +29,7 @@ const testimonials = [
   },
   {
     quote:
-      'We worked with DeepLearnHQ for the development of our video game app and the experience far exceeded our expectations. They were professional, knowledgeable, and very accommodating to our timeline and goals.',
+      'We worked with DeepLearnHQ for the development of our app and the experience far exceeded our expectations. They were professional, knowledgeable, and very accommodating.',
     name: 'Swatch Group Representative',
     role: 'Product Manager, Swatch Group',
     company: 'Swatch Group',
@@ -38,7 +38,7 @@ const testimonials = [
   },
   {
     quote:
-      'DeepLearnHQ understood my vision from the beginning of the project, collaborated and gave feedback on goal objectives, was consistent with scheduled meetings and punctual despite time zone differences. The team was educated, professional, determined, motivated, and truly cared about the success of the app build.',
+      'DeepLearnHQ understood my vision from the beginning of the project, collaborated and gave feedback on goal objectives, was consistent with scheduled meetings and punctual despite time zone differences.',
     name: 'Kimberly A. Dalius',
     role: 'Founder & CEO, Pauseitive LLC',
     company: 'Pauseitive',
@@ -47,7 +47,7 @@ const testimonials = [
   },
   {
     quote:
-      'DeepLearnHQ has been an excellent partner to our organization for 5+ years. Their dedicated team understands our environment, needs, and workflows well. The quality of work is consistently high and the efforts are collaborative.',
+      'DeepLearnHQ has been an excellent partner to our organization for 5+ years. Their dedicated team understands our environment, needs, and workflows well.',
     name: 'Verified Client',
     role: 'Director, Long-Term Partner',
     company: 'Enterprise Partner',
@@ -56,7 +56,7 @@ const testimonials = [
   },
   {
     quote:
-      'They helped see an idea through from a small prototype to the smallest details. They were friendly and professional, completed the product on time and within budget. I would highly recommend DeepLearnHQ.',
+      'They helped see an idea through from a small prototype to the smallest details. They were friendly and professional, completed the product on time and within budget.',
     name: 'Verified Client',
     role: 'Founder, Startup',
     company: 'Startup',
@@ -65,7 +65,7 @@ const testimonials = [
   },
   {
     quote:
-      'I would recommend DeepLearnHQ to anyone. They are a very talented group of software engineers and designers. The app they built was intuitive, modern, and sleek. It performed well in beta tests and received enthusiastic user feedback.',
+      'I would recommend DeepLearnHQ to anyone. They are a very talented group of software engineers and designers. The app they built was intuitive, modern, and sleek.',
     name: 'Verified Client',
     role: 'Product Lead',
     company: 'Mobile App Company',
@@ -74,7 +74,7 @@ const testimonials = [
   },
   {
     quote:
-      'A collaborative partner, DeepLearnHQ complied with the timeline and delivered value. Very responsive and professional! Well prepared for each meeting, and willing to provide advice as you move along in your project. Also willing to push the limits for your project.',
+      'A collaborative partner, DeepLearnHQ complied with the timeline and delivered value. Very responsive and professional! Well prepared for each meeting.',
     name: 'Verified Client',
     role: 'CTO, SaaS Company',
     company: 'SaaS Company',
@@ -90,12 +90,31 @@ const clutchStats = [
   { value: '#1', label: 'Top App Developer' },
 ];
 
+const videoTestimonials = [
+  {
+    name: 'Pauseitive',
+    person: 'Kimberly Dalius',
+    role: 'Founder & CEO',
+  },
+  {
+    name: 'OOMCO',
+    person: 'Client Representative',
+    role: 'Product Director',
+  },
+  {
+    name: 'Swatch Group',
+    person: 'Product Manager',
+    role: 'Gaming Division',
+  },
+];
+
 export default function TestimonialPage() {
   return (
     <>
+      {/* Hero Section */}
       <PageHero
-        title="What Our Clients Say"
-        description="Hear directly from the founders, CTOs, and product leaders who trusted DeepLearnHQ to build their most important digital products."
+        title="Excellence. Our Minimum Bar for Client Delivery"
+        description="We deliver winning experiences that delight users and drive measurable business outcomes. But don't just take our word for it — hear what our clients have to say."
         bgColor="#fdf8f6"
         breadcrumbs={[
           { label: 'Home', href: '/' },
@@ -177,7 +196,7 @@ export default function TestimonialPage() {
         </div>
       </section>
 
-      {/* Video Testimonials Placeholder */}
+      {/* Video Testimonials */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -192,9 +211,9 @@ export default function TestimonialPage() {
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {['Pauseitive', 'OOMCO', 'Swatch Group'].map((name) => (
+            {videoTestimonials.map((video) => (
               <div
-                key={name}
+                key={video.name}
                 className="group bg-gradient-to-br from-[#0B0C0D] to-[#1a1d20] rounded-2xl overflow-hidden aspect-video flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-[#1E6FD9] transition-all"
               >
                 <div className="text-center">
@@ -203,7 +222,8 @@ export default function TestimonialPage() {
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  <p className="text-white font-semibold">{name} Story</p>
+                  <p className="text-white font-semibold">{video.name}</p>
+                  <p className="text-gray-400 text-sm mt-1">{video.person} &middot; {video.role}</p>
                 </div>
               </div>
             ))}
@@ -211,6 +231,7 @@ export default function TestimonialPage() {
         </div>
       </section>
 
+      {/* CTA Footer */}
       <CTASection
         title="Ready to Write Your Success Story?"
         description="Join the growing list of companies that trust DeepLearnHQ to build their most critical digital products."

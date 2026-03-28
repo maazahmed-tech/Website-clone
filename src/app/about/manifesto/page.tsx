@@ -1,108 +1,127 @@
-import type { Metadata } from 'next';
-import PageHero from '@/components/shared/PageHero';
-import CTASection from '@/components/shared/CTASection';
+import type { Metadata } from "next";
+import PageHero from "@/components/shared/PageHero";
+import CTASection from "@/components/shared/CTASection";
 
 export const metadata: Metadata = {
-  title: 'Our Manifesto | DeepLearnHQ',
+  title: "Our Manifesto | DeepLearnHQ",
   description:
-    'The DeepLearnHQ Manifesto — the principles, beliefs, and commitments that guide how we build technology, serve clients, and grow as a company.',
+    "The DeepLearnHQ Manifesto — the principles, beliefs, and commitments that guide how we build technology, serve clients, and grow as a company.",
 };
 
 const principles = [
   {
-    number: '01',
-    title: 'Continuous Improvement (Kaizen)',
+    number: "01",
+    title: "Continuous Improvement (Kaizen)",
     description:
-      'We try our best to ensure that our software development approach does not stagnate. We count on our entire developer workforce to keep looking for methods that allow the betterment of our work and practices, in both the smallest and largest details. Any fresh idea that adheres to our principles will be tested on small-level preliminary projects and thoroughly assessed, and if successful, adopted throughout the organization.',
+      "We ensure our software development approach never stagnates. Our entire workforce keeps looking for methods that allow betterment of our work and practices, in both the smallest and largest details. Any fresh idea that adheres to our principles will be tested on small-level preliminary projects and thoroughly assessed, and if successful, adopted throughout the organization.",
   },
   {
-    number: '02',
-    title: 'Review by Management',
+    number: "02",
+    title: "Review by Management",
     description:
-      'Project management needs to be conducted in a manner that paves the way for routine visibility into project state, helping in selecting the best candidates and reviewing overall development. General project documentation is considered the most viable practice for ensuring transparency and accountability at every stage.',
+      "Project management is conducted in a manner that paves the way for routine visibility into project state, helping select the best candidates and review overall development. General project documentation is considered the most viable practice for ensuring transparency and accountability at every stage.",
   },
   {
-    number: '03',
-    title: 'Review by Peer',
+    number: "03",
+    title: "Review by Peer",
     description:
-      'Regular code and design peer reviews are a must, aiding in guaranteeing that every task stays at the highest level and ensuring a feasible way to pass on ideas and techniques. This process ensures engagement and creates a sense of growth and learning across the entire team.',
+      "Regular code and design peer reviews are a must, guaranteeing that every task stays at the highest level and ensuring a feasible way to pass on ideas and techniques. This process drives engagement and creates a culture of growth and learning across the entire team.",
   },
   {
-    number: '04',
-    title: 'Review by Automation',
+    number: "04",
+    title: "Review by Automation",
     description:
-      'Every code should be made so it can be tested. A standard testing structure eases the code creation process, ensures robustness, and enables design upgrades while avoiding regression errors. Automated testing is not optional \u2014 it is foundational to our engineering culture.',
+      "Every code should be made so it can be tested. A standard testing structure eases the code creation process, ensures robustness, and enables design upgrades while avoiding regression errors. Automated testing is foundational to our engineering culture.",
   },
   {
-    number: '05',
-    title: 'Quality Assurance',
+    number: "05",
+    title: "Quality Assurance",
     description:
-      'It is imperative that personnel outside the development team comprehensively exercise the project before the client is permitted to review the created code. Dedicated QA ensures that our standards are met consistently and that every deliverable reflects our commitment to excellence.',
+      "Personnel outside the development team comprehensively exercise the project before the client reviews the created code. Dedicated QA ensures that our standards are met consistently and that every deliverable reflects our commitment to excellence.",
   },
   {
-    number: '06',
-    title: 'Flexibility & Adaptability',
+    number: "06",
+    title: "Flexibility & Adaptability",
     description:
-      'Our employees and projects have a great deal of sophistication and complexity. Beyond essential practices like coding style and source management, the methodological approach should be unique to the client and the project. One size does not fit all \u2014 we adapt our processes to serve each engagement optimally.',
+      "Beyond essential practices like coding style and source management, the methodological approach should be unique to the client and the project. One size does not fit all. We adapt our processes to serve each engagement optimally.",
   },
   {
-    number: '07',
-    title: 'Talent & Quality',
+    number: "07",
+    title: "Talent & Quality",
     description:
-      'We take great care in our recruitment process, with our procedure crafted to save job offers for talented programmers who can showcase exceptional performance. Our development processes are based on the core belief that our programmers are of the utmost quality, and we have faith in our personnel to do the best possible things for the project and the client.',
+      "We take great care in our recruitment process, reserving offers for talented programmers who showcase exceptional performance. Our development processes are built on the belief that our programmers are of the highest quality, and we trust our personnel to do the best possible work for every project and client.",
   },
   {
-    number: '08',
-    title: 'People & Passion',
+    number: "08",
+    title: "People & Passion",
     description:
-      'Our manifesto is not only part of our core principles; it is also what makes for a team of smart, energetic, and motivated people who know that working here is never just a job. Their passion and willingness translate into great customer relationships and cutting-edge solutions.',
+      "Our manifesto makes for a team of smart, energetic, and motivated people who know that working here is never just a job. Their passion and willingness translate into great customer relationships and cutting-edge solutions.",
   },
-];
-
-const values = [
-  { title: 'Creativity', description: 'We are driven by a passion for creativity, constantly seeking fresh ideas. Imagination and bringing new-age ideas to reality set our team apart.' },
-  { title: 'Inquisitiveness', description: 'It is a culture of inquisitiveness \u2014 we question assumptions, explore possibilities, and dig deeper to find the best solutions.' },
-  { title: 'Experimentation', description: 'We test new approaches on preliminary projects and thoroughly assess them. If successful, we adopt them throughout the organization.' },
-  { title: 'Courage', description: 'We have the courage to breach frontiers, challenge the status quo, and push boundaries in pursuit of innovation.' },
-  { title: 'Integrity', description: 'Our teams embody integrity at all levels, serving as role models and ambassadors of our valued principles.' },
-  { title: 'Trust', description: 'We put clients at the center to build trust and innovative software that exceeds expectations. Trust is the foundation of every relationship.' },
 ];
 
 export default function ManifestoPage() {
   return (
     <>
+      {/* Hero Section */}
       <PageHero
-        title="The DeepLearnHQ Manifesto"
-        description="DeepLearnHQ always strives for long-term relationships with clients based on trust and value. Our manifesto reflects a team of smart, energetic, and motivated people. These are not aspirational statements \u2014 they are non-negotiable commitments."
+        title="Manifesto"
+        description="For us, success means a satisfied and happy client. We always strive for long-term relationships with our clients based on trust and value."
         bgColor="#fdf8f6"
         breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'About', href: '/about' },
-          { label: 'Manifesto' },
+          { label: "Home", href: "/" },
+          { label: "About", href: "/about" },
+          { label: "Manifesto" },
         ]}
       />
 
-      {/* Principles */}
+      {/* Team Collaboration Photo Placeholder */}
+      <section className="w-full">
+        <div className="w-full h-[300px] md:h-[450px] lg:h-[500px] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+          <div className="text-center">
+            <svg
+              className="w-16 h-16 text-gray-400 mx-auto mb-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1}
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            <p className="text-gray-500 text-lg font-medium">
+              Team Collaboration
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Manifesto Principles */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D]">
               Our Principles
-            </span>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
-              What We Believe
             </h2>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-16">
             {principles.map((p) => (
-              <div key={p.number} className="flex gap-6">
+              <div key={p.number} className="flex gap-6 md:gap-10">
                 <div className="flex-shrink-0">
-                  <span className="text-5xl font-bold text-[#1E6FD9]/20">{p.number}</span>
+                  <span className="text-5xl md:text-6xl font-bold text-[#1E6FD9]/15 leading-none">
+                    {p.number}
+                  </span>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-[#0B0C0D] mb-3">{p.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">{p.description}</p>
+                <div className="pt-1">
+                  <h3 className="text-xl md:text-2xl font-bold text-[#0B0C0D] mb-3">
+                    {p.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+                    {p.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -110,56 +129,12 @@ export default function ManifestoPage() {
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="py-20 bg-[#0B0C0D]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
-              Core Values
-            </span>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white">
-              The Values That Drive Us
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {values.map((v) => (
-              <div
-                key={v.title}
-                className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-[#1E6FD9]/50 transition-colors"
-              >
-                <h3 className="text-xl font-bold text-white mb-3">{v.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{v.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Commitment */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-6">
-            Our Commitment to You
-          </h2>
-          <p className="text-gray-600 text-lg leading-relaxed mb-4">
-            When you choose DeepLearnHQ, you are not hiring a vendor — you are gaining a technology partner
-            committed to your success. Our creative mindset helps us conceive innovative products that
-            change the dynamics of industries and exceed expected levels.
-          </p>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            To us, creativity is a skillset and an outlook on life that steers us toward a future filled
-            with possibilities. We hold ourselves to these standards every day, because accountability
-            is not just a value we preach — it is how we operate.
-          </p>
-        </div>
-      </section>
-
+      {/* CTA Footer */}
       <CTASection
         title="Partner With a Team That Cares"
         description="Experience what it means to work with a company that puts principles before profit."
-        primaryCTA={{ label: 'Get in Touch', href: '/contact' }}
-        secondaryCTA={{ label: 'View Our Process', href: '/about/process' }}
+        primaryCTA={{ label: "Get in Touch", href: "/contact" }}
+        secondaryCTA={{ label: "View Our Process", href: "/about/process" }}
       />
     </>
   );
