@@ -11,81 +11,81 @@ export const metadata: Metadata = {
 const testimonials = [
   {
     quote:
-      'DeepLearnHQ delivered our mobile banking platform three weeks ahead of schedule. Their team felt like an extension of ours, and the quality of code was exceptional. We have renewed our partnership for the next two years.',
-    name: 'Richard Kensington',
-    role: 'CTO, NovaPay Financial',
-    company: 'NovaPay Financial',
-    industry: 'Fintech',
+      'DeepLearnHQ has delivered fast, high quality builds for us for almost a year now. I continue to be amazed by the excellent work that has come out of their shop \u2014 the attention to detail, and especially the quick turnaround is just stellar.',
+    name: 'Verified Client',
+    role: 'CEO, Technology Company',
+    company: 'Technology Company',
+    industry: 'Technology',
     rating: 5,
   },
   {
     quote:
-      'From the first discovery workshop to post-launch support, DeepLearnHQ demonstrated a level of professionalism and technical depth that is rare in this industry. Our e-commerce platform handles 10x the traffic we originally planned for.',
-    name: 'Amira Al-Farsi',
-    role: 'VP of Digital, Gulf Retail Group',
-    company: 'Gulf Retail Group',
-    industry: 'E-Commerce',
+      'The team stood out because of their swift response time and patience. DeepLearnHQ provided one contact person, which helped streamline project management and coordination. Not only did they follow the budget and timeline, the team even offered additional services at no extra charge.',
+    name: 'Verified Client',
+    role: 'Project Manager, Enterprise',
+    company: 'Enterprise Client',
+    industry: 'Enterprise',
     rating: 5,
   },
   {
     quote:
-      'We interviewed seven agencies before choosing DeepLearnHQ. They were the only team that asked the hard questions and challenged our assumptions—exactly what we needed. The product they built has become our primary revenue driver.',
-    name: 'Jason Rivera',
-    role: 'Founder, PartyShark LLC',
-    company: 'PartyShark',
-    industry: 'Events',
+      'We worked with DeepLearnHQ for the development of our video game app and the experience far exceeded our expectations. They were professional, knowledgeable, and very accommodating to our timeline and goals.',
+    name: 'Swatch Group Representative',
+    role: 'Product Manager, Swatch Group',
+    company: 'Swatch Group',
+    industry: 'Luxury & Gaming',
     rating: 5,
   },
   {
     quote:
-      'Our healthcare compliance requirements are strict, and DeepLearnHQ navigated them flawlessly. They built a HIPAA-compliant telehealth platform that our patients love and our compliance team trusts.',
-    name: 'Dr. Sarah Mitchell',
-    role: 'Co-Founder & CEO, Pauseitive Inc.',
+      'DeepLearnHQ understood my vision from the beginning of the project, collaborated and gave feedback on goal objectives, was consistent with scheduled meetings and punctual despite time zone differences. The team was educated, professional, determined, motivated, and truly cared about the success of the app build.',
+    name: 'Kimberly A. Dalius',
+    role: 'Founder & CEO, Pauseitive LLC',
     company: 'Pauseitive',
-    industry: 'Healthcare',
+    industry: 'Mental Wellness',
     rating: 5,
   },
   {
     quote:
-      'DeepLearnHQ took our paper-based logistics operation and turned it into a real-time, data-driven machine. Fleet utilization is up 40%, and our customers finally have the visibility they have been asking for.',
-    name: 'Ahmed Al-Rashidi',
-    role: 'Chief Digital Officer, Oomco Petroleum',
-    company: 'Oomco',
-    industry: 'Logistics',
+      'DeepLearnHQ has been an excellent partner to our organization for 5+ years. Their dedicated team understands our environment, needs, and workflows well. The quality of work is consistently high and the efforts are collaborative.',
+    name: 'Verified Client',
+    role: 'Director, Long-Term Partner',
+    company: 'Enterprise Partner',
+    industry: 'Enterprise',
     rating: 5,
   },
   {
     quote:
-      'We needed a team that could handle AI, IoT, and geospatial data processing at scale. DeepLearnHQ not only had the skills but also the passion for our environmental mission. The result speaks for itself.',
-    name: 'Dr. Elena Vasquez',
-    role: 'Executive Director, Forest Fusion Foundation',
-    company: 'Forest Fusion',
-    industry: 'Environment',
+      'They helped see an idea through from a small prototype to the smallest details. They were friendly and professional, completed the product on time and within budget. I would highly recommend DeepLearnHQ.',
+    name: 'Verified Client',
+    role: 'Founder, Startup',
+    company: 'Startup',
+    industry: 'Startup',
     rating: 5,
   },
   {
     quote:
-      'The DeepLearnHQ design team transformed our outdated enterprise dashboard into something our employees actually enjoy using. User adoption went from 30% to 89% within four months of the redesign.',
-    name: 'Mark Gallagher',
-    role: 'Head of Product, Pinnacle Systems',
-    company: 'Pinnacle Systems',
-    industry: 'Enterprise SaaS',
+      'I would recommend DeepLearnHQ to anyone. They are a very talented group of software engineers and designers. The app they built was intuitive, modern, and sleek. It performed well in beta tests and received enthusiastic user feedback.',
+    name: 'Verified Client',
+    role: 'Product Lead',
+    company: 'Mobile App Company',
+    industry: 'Mobile',
     rating: 5,
   },
   {
     quote:
-      'What impressed us most was DeepLearnHQ\'s ability to scale. We started with a three-person team and grew to fifteen engineers within a month when our timeline accelerated. Zero compromise on quality.',
-    name: 'Priya Sharma',
-    role: 'CTO, Foodly Technologies',
-    company: 'Foodly',
-    industry: 'Food & Beverage',
+      'A collaborative partner, DeepLearnHQ complied with the timeline and delivered value. Very responsive and professional! Well prepared for each meeting, and willing to provide advice as you move along in your project. Also willing to push the limits for your project.',
+    name: 'Verified Client',
+    role: 'CTO, SaaS Company',
+    company: 'SaaS Company',
+    industry: 'SaaS',
     rating: 5,
   },
 ];
 
 const clutchStats = [
   { value: '4.9/5', label: 'Clutch Rating' },
-  { value: '200+', label: 'Verified Reviews' },
+  { value: '55+', label: 'Verified Reviews' },
   { value: '98%', label: 'Would Recommend' },
   { value: '#1', label: 'Top App Developer' },
 ];
@@ -192,7 +192,7 @@ export default function TestimonialPage() {
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {['Pauseitive', 'Oomco', 'Foodly'].map((name) => (
+            {['Pauseitive', 'OOMCO', 'Swatch Group'].map((name) => (
               <div
                 key={name}
                 className="group bg-gradient-to-br from-[#0B0C0D] to-[#1a1d20] rounded-2xl overflow-hidden aspect-video flex items-center justify-center cursor-pointer hover:ring-2 hover:ring-[#1E6FD9] transition-all"

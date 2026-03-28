@@ -6,47 +6,56 @@ import CTASection from '@/components/shared/CTASection';
 export const metadata: Metadata = {
   title: 'Our Clients | DeepLearnHQ',
   description:
-    'DeepLearnHQ has partnered with startups, enterprises, and Fortune 500 companies across healthcare, fintech, logistics, entertainment, and more.',
+    'DeepLearnHQ has partnered with startups, enterprises, and Fortune 500 companies including Sony, Walmart, Canon, DreamWorks, Unilever, Estee Lauder, and more.',
 };
 
 const clientCategories = [
   {
-    category: 'Enterprise & Fortune 500',
+    category: 'Fortune 500 & Global Brands',
     clients: [
+      { name: 'Sony', industry: 'Electronics' },
+      { name: 'Walmart', industry: 'Retail' },
       { name: 'Canon', industry: 'Technology' },
+      { name: 'Unilever', industry: 'Consumer Goods' },
+      { name: 'PayPal', industry: 'Fintech' },
+      { name: 'Estee Lauder', industry: 'Beauty' },
+    ],
+  },
+  {
+    category: 'Entertainment & Media',
+    clients: [
+      { name: 'DreamWorks', industry: 'Animation' },
+      { name: 'Politico', industry: 'Digital Media' },
+      { name: 'Nintendo', industry: 'Gaming' },
+    ],
+  },
+  {
+    category: 'Luxury & Fashion',
+    clients: [
+      { name: 'Tissot', industry: 'Luxury Watches' },
+      { name: 'Swatch Group', industry: 'Luxury Watches' },
+      { name: 'Ray-Ban', industry: 'Eyewear' },
+      { name: 'Clinique', industry: 'Beauty' },
+    ],
+  },
+  {
+    category: 'Consulting & Enterprise',
+    clients: [
       { name: 'Sapient', industry: 'Consulting' },
-      { name: 'Fujitsu', industry: 'Technology' },
-      { name: 'Emirates NBD', industry: 'Banking' },
-      { name: 'Etisalat', industry: 'Telecom' },
-      { name: 'ADNOC', industry: 'Energy' },
+      { name: 'Engro Corporation', industry: 'Conglomerate' },
+      { name: 'Suzuki', industry: 'Automotive' },
+      { name: 'Quaker', industry: 'Food & Beverage' },
     ],
   },
   {
     category: 'Startups & Scale-Ups',
     clients: [
-      { name: 'Pauseitive', industry: 'Healthcare' },
+      { name: 'Pauseitive', industry: 'Mental Wellness' },
       { name: 'PartyShark', industry: 'Events' },
-      { name: 'Foodly', industry: 'Food & Beverage' },
+      { name: 'Foodly', industry: 'Food Delivery' },
       { name: 'Goobr', industry: 'Social Networking' },
-      { name: 'Forest Fusion', industry: 'Environment' },
-      { name: 'WAGMI', industry: 'Gaming' },
-    ],
-  },
-  {
-    category: 'Government & Non-Profit',
-    clients: [
-      { name: 'Tulsa Airport Authority', industry: 'Transportation' },
-      { name: 'Dubai Health Authority', industry: 'Healthcare' },
-      { name: 'KPMG Foundation', industry: 'Non-Profit' },
-      { name: 'Ministry of Education UAE', industry: 'Education' },
-    ],
-  },
-  {
-    category: 'Oil & Gas',
-    clients: [
-      { name: 'Oomco Petroleum', industry: 'Energy' },
-      { name: 'BAPCO', industry: 'Energy' },
-      { name: 'Gulf Petrochem', industry: 'Energy' },
+      { name: 'WAGMI', industry: 'Blockchain Gaming' },
+      { name: 'OOMCO', industry: 'Energy & Fuel' },
     ],
   },
 ];
@@ -64,13 +73,17 @@ const industries = [
   'Social Media',
   'Food & Beverage',
   'Travel & Hospitality',
+  'Blockchain & Web3',
+  'Gaming',
+  'Beauty & Fashion',
+  'Automotive',
 ];
 
 const stats = [
-  { value: '200+', label: 'Clients Worldwide' },
+  { value: '600+', label: 'Companies Transformed' },
   { value: '500+', label: 'Projects Delivered' },
   { value: '35+', label: 'Countries Served' },
-  { value: '95%', label: 'Client Retention Rate' },
+  { value: '17+', label: 'Years of Experience' },
 ];
 
 export default function ClientsPage() {
@@ -78,7 +91,7 @@ export default function ClientsPage() {
     <>
       <PageHero
         title="Our Clients"
-        description="From ambitious startups to Fortune 500 enterprises, we partner with organizations that believe technology can transform their business."
+        description="We take pride in our rich portfolio of working with global brands and turning hundreds of ideas into advanced solutions. From ambitious startups to Fortune 500 enterprises."
         bgColor="#fdf8f6"
         breadcrumbs={[
           { label: 'Home', href: '/' },

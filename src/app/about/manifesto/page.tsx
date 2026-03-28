@@ -11,61 +11,61 @@ export const metadata: Metadata = {
 const principles = [
   {
     number: '01',
-    title: 'Craft Over Code',
+    title: 'Continuous Improvement (Kaizen)',
     description:
-      'We do not just write code — we craft solutions. Every architecture decision, naming convention, and abstraction layer is deliberate. We believe that software is a medium of expression, and the best products emerge when engineers treat their work as a craft rather than a commodity.',
+      'We try our best to ensure that our software development approach does not stagnate. We count on our entire developer workforce to keep looking for methods that allow the betterment of our work and practices, in both the smallest and largest details. Any fresh idea that adheres to our principles will be tested on small-level preliminary projects and thoroughly assessed, and if successful, adopted throughout the organization.',
   },
   {
     number: '02',
-    title: 'Client Outcomes Above All',
+    title: 'Review by Management',
     description:
-      'Features are meaningless without outcomes. We measure our success not by lines of code deployed or sprints completed, but by the business results our clients achieve. If a feature does not move the needle for the client, we challenge whether it should exist.',
+      'Project management needs to be conducted in a manner that paves the way for routine visibility into project state, helping in selecting the best candidates and reviewing overall development. General project documentation is considered the most viable practice for ensuring transparency and accountability at every stage.',
   },
   {
     number: '03',
-    title: 'Radical Transparency',
+    title: 'Review by Peer',
     description:
-      'We share the good, the bad, and the uncomfortable. Clients see our sprint boards, attend our retrospectives, and receive honest assessments of technical risk. Trust is built through transparency, not through polished status reports that hide problems.',
+      'Regular code and design peer reviews are a must, aiding in guaranteeing that every task stays at the highest level and ensuring a feasible way to pass on ideas and techniques. This process ensures engagement and creates a sense of growth and learning across the entire team.',
   },
   {
     number: '04',
-    title: 'Relentless Curiosity',
+    title: 'Review by Automation',
     description:
-      'Technology evolves daily, and so do we. Every engineer at DeepLearnHQ dedicates time to learning new frameworks, attending conferences, contributing to open source, and sharing knowledge with colleagues. Curiosity is not encouraged — it is expected.',
+      'Every code should be made so it can be tested. A standard testing structure eases the code creation process, ensures robustness, and enables design upgrades while avoiding regression errors. Automated testing is not optional \u2014 it is foundational to our engineering culture.',
   },
   {
     number: '05',
-    title: 'People Build Products',
+    title: 'Quality Assurance',
     description:
-      'Great products are not built by processes — they are built by people who care. We invest in our team through mentorship, competitive compensation, flexible work arrangements, and a culture that values individual growth as much as company growth.',
+      'It is imperative that personnel outside the development team comprehensively exercise the project before the client is permitted to review the created code. Dedicated QA ensures that our standards are met consistently and that every deliverable reflects our commitment to excellence.',
   },
   {
     number: '06',
-    title: 'Ship Early, Learn Fast',
+    title: 'Flexibility & Adaptability',
     description:
-      'Perfection is the enemy of progress. We believe in getting working software into real users\' hands as early as possible, collecting feedback, and iterating rapidly. Every sprint should produce a shippable increment that teaches us something new.',
+      'Our employees and projects have a great deal of sophistication and complexity. Beyond essential practices like coding style and source management, the methodological approach should be unique to the client and the project. One size does not fit all \u2014 we adapt our processes to serve each engagement optimally.',
   },
   {
     number: '07',
-    title: 'Security Is Not Optional',
+    title: 'Talent & Quality',
     description:
-      'Security is baked into our process from day one — not bolted on as an afterthought. Every pull request undergoes security review, every architecture includes threat modeling, and every deployment follows the principle of least privilege.',
+      'We take great care in our recruitment process, with our procedure crafted to save job offers for talented programmers who can showcase exceptional performance. Our development processes are based on the core belief that our programmers are of the utmost quality, and we have faith in our personnel to do the best possible things for the project and the client.',
   },
   {
     number: '08',
-    title: 'Global Mindset, Local Heart',
+    title: 'People & Passion',
     description:
-      'With offices across four countries, we embrace diverse perspectives and cultural nuances. We design products that work across languages, currencies, and regulations while staying deeply connected to the local communities we serve.',
+      'Our manifesto is not only part of our core principles; it is also what makes for a team of smart, energetic, and motivated people who know that working here is never just a job. Their passion and willingness translate into great customer relationships and cutting-edge solutions.',
   },
 ];
 
 const values = [
-  { title: 'Integrity', description: 'We do what we say we will do, even when nobody is watching.' },
-  { title: 'Excellence', description: 'We set high standards and hold ourselves accountable to them.' },
-  { title: 'Empathy', description: 'We build for real people with real problems, and we never forget that.' },
-  { title: 'Courage', description: 'We speak up when something is wrong, even when it is uncomfortable.' },
-  { title: 'Collaboration', description: 'The best ideas emerge when diverse minds work toward a shared goal.' },
-  { title: 'Ownership', description: 'Every team member owns their work, their mistakes, and their growth.' },
+  { title: 'Creativity', description: 'We are driven by a passion for creativity, constantly seeking fresh ideas. Imagination and bringing new-age ideas to reality set our team apart.' },
+  { title: 'Inquisitiveness', description: 'It is a culture of inquisitiveness \u2014 we question assumptions, explore possibilities, and dig deeper to find the best solutions.' },
+  { title: 'Experimentation', description: 'We test new approaches on preliminary projects and thoroughly assess them. If successful, we adopt them throughout the organization.' },
+  { title: 'Courage', description: 'We have the courage to breach frontiers, challenge the status quo, and push boundaries in pursuit of innovation.' },
+  { title: 'Integrity', description: 'Our teams embody integrity at all levels, serving as role models and ambassadors of our valued principles.' },
+  { title: 'Trust', description: 'We put clients at the center to build trust and innovative software that exceeds expectations. Trust is the foundation of every relationship.' },
 ];
 
 export default function ManifestoPage() {
@@ -73,7 +73,7 @@ export default function ManifestoPage() {
     <>
       <PageHero
         title="The DeepLearnHQ Manifesto"
-        description="These are the principles we live by. They shape how we build technology, how we treat our clients, and how we grow as a company. They are not aspirational statements — they are non-negotiable commitments."
+        description="DeepLearnHQ always strives for long-term relationships with clients based on trust and value. Our manifesto reflects a team of smart, energetic, and motivated people. These are not aspirational statements \u2014 they are non-negotiable commitments."
         bgColor="#fdf8f6"
         breadcrumbs={[
           { label: 'Home', href: '/' },
@@ -144,12 +144,13 @@ export default function ManifestoPage() {
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-4">
             When you choose DeepLearnHQ, you are not hiring a vendor — you are gaining a technology partner
-            committed to your success. We will challenge your thinking, protect your interests, and
-            build products that create lasting value.
+            committed to your success. Our creative mindset helps us conceive innovative products that
+            change the dynamics of industries and exceed expected levels.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed">
-            We hold ourselves to these standards every day. If we ever fall short, we want to hear
-            about it — because accountability is not just a value we preach, it is how we operate.
+            To us, creativity is a skillset and an outlook on life that steers us toward a future filled
+            with possibilities. We hold ourselves to these standards every day, because accountability
+            is not just a value we preach — it is how we operate.
           </p>
         </div>
       </section>

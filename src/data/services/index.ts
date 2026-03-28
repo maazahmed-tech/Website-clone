@@ -4,74 +4,76 @@ const services: ServicePageData[] = [
   {
     slug: 'mobile-app-development',
     title: 'Mobile App Development',
-    metaTitle: 'Mobile App Development Services | DeepLearnHQ',
-    metaDescription: 'DeepLearnHQ delivers custom mobile app development services for iOS and Android. Build scalable, user-friendly mobile applications with our expert team.',
-    heroHeading: 'Mobile App Development Services',
-    heroDescription: 'We design and develop high-performance mobile applications for iOS and Android that engage users and drive business growth. From native to cross-platform, we cover every mobile need.',
-    overviewTitle: 'About Our Mobile App Development Services',
-    overviewDescription: 'DeepLearnHQ is a leading mobile app development company with a track record of building successful apps across industries. Our team of skilled developers, designers, and strategists work together to create mobile experiences that stand out in competitive app stores.',
+    metaTitle: 'Mobile App Development Company | Cubix',
+    metaDescription: 'Cubix empowers global businesses with cutting-edge mobile apps to expand their digital reach and stay ahead of the curve. iOS, Android, cross-platform, Flutter, and wearable app development.',
+    heroHeading: 'Mobile App Development Company',
+    heroDescription: 'We empower global businesses with cutting-edge mobile apps to expand their digital reach and stay ahead of the curve. Our mobile app development company ensures every project runs stress-free from start to finish.',
+    overviewTitle: 'Why Choose Our Mobile App Development Services',
+    overviewDescription: 'We develop and create strong iOS and Android applications using Swift, Kotlin, Flutter, and React Native. Writing in React Native and Flutter with a unified codebase, our mobile app developers build highly resilient, unified iOS and Android mobile apps exercising cross-platform consistency.',
     overviewPoints: [
-      'Native iOS and Android app development',
-      'Cross-platform solutions with React Native and Flutter',
-      'End-to-end services from ideation to launch',
-      'Post-launch support and maintenance',
-      'App store optimization and deployment'
+      'iPhone and Android app development with Swift, Kotlin, and Java',
+      'Cross-platform development with React Native and Flutter',
+      'Wearable app development for Apple Watch, Fitbit, and AR/VR headsets',
+      'Post-launch services ensuring apps thrive, scale, and stay secure',
+      'App store optimization with keyword research and conversion optimization'
     ],
     features: [
-      { title: 'Native App Development', description: 'Build high-performance apps using Swift for iOS and Kotlin for Android, leveraging platform-specific capabilities.' },
-      { title: 'Cross-Platform Development', description: 'Develop apps that run seamlessly on both iOS and Android using React Native or Flutter for cost-effective deployment.' },
-      { title: 'UI/UX Design', description: 'Create intuitive, engaging interfaces with user-centered design principles that maximize retention and satisfaction.' },
-      { title: 'API Integration', description: 'Connect your app with third-party services, payment gateways, and backend systems through robust API integration.' },
-      { title: 'App Testing & QA', description: 'Comprehensive testing across devices and OS versions to ensure your app works flawlessly for every user.' },
-      { title: 'App Maintenance & Support', description: 'Ongoing updates, performance monitoring, and feature enhancements to keep your app competitive and secure.' }
+      { title: 'iPhone App Development', description: 'We leverage Apple\'s cutting-edge SDKs to craft exceptional iOS experiences that delight users and keep them engaged, developing solutions that satisfy the premium user base of iOS devices.' },
+      { title: 'Android App Development', description: 'We build high-performing Android apps that users love using inventive, diverse technologies, programming languages, and frameworks with cutting-edge tools like Java, Kotlin, and Android Studio.' },
+      { title: 'Cross-Platform App Development', description: 'We provide consistently brilliant user experiences with the same features and design elements on both iOS and Android, offering futuristic cross-platform development for quicker market penetration.' },
+      { title: 'Flutter App Development', description: 'We develop apps for both iOS and Android using a single codebase, saving time and reducing costs while ensuring consistent user experiences with Flutter\'s pre-built widgets and fast refresh capabilities.' },
+      { title: 'Wearable App Development', description: 'We create apps for Apple Watch, Fitbit, Samsung Gear, AR/VR headsets, and other wearables, blending cutting-edge tech with visionary wearable development practices.' },
+      { title: 'React Native App Development', description: 'As a leading React Native app development company, we build intuitive, cross-platform apps that offer native-like experiences in half the development time.' }
     ],
-    technologies: ['Swift', 'Kotlin', 'React Native', 'Flutter', 'Firebase', 'AWS Amplify', 'GraphQL', 'Node.js'],
+    technologies: ['Swift', 'Kotlin', 'React Native', 'Flutter', 'Java', 'Android Studio', 'Xcode', 'Firebase'],
     process: [
-      { step: '01', title: 'Discovery & Strategy', description: 'We analyze your business goals, target audience, and market landscape to define a clear app strategy and feature roadmap.' },
-      { step: '02', title: 'Design & Prototyping', description: 'Our designers create wireframes and interactive prototypes that bring your app concept to life before any code is written.' },
-      { step: '03', title: 'Development & Testing', description: 'Agile development sprints with continuous testing ensure high-quality code and rapid iteration based on feedback.' },
-      { step: '04', title: 'Deployment & Launch', description: 'We handle app store submissions, deployment configuration, and launch strategy to maximize your app visibility.' },
-      { step: '05', title: 'Support & Optimization', description: 'Post-launch monitoring, analytics review, and continuous improvements keep your app performing at its best.' }
+      { step: '01', title: 'Discovery', description: 'We understand your goals, users, and market to shape a focused roadmap for your mobile app project.' },
+      { step: '02', title: 'UI Design', description: 'We craft visually stunning, modern interfaces that look appealing on every screen size and device.' },
+      { step: '03', title: 'UX Design', description: 'We create intuitive user flows ensuring ease of use and seamless interactions throughout the app experience.' },
+      { step: '04', title: 'Development', description: 'Using the latest frameworks and best coding practices, we build scalable, secure, and high-performance apps.' },
+      { step: '05', title: 'Post-Launch', description: 'Ongoing services ensuring your app continues to thrive, scale, and stay secure long after it hits the stores.' }
     ],
     caseStudies: [],
     faqs: [
       { question: 'How long does it take to develop a mobile app?', answer: 'Development timelines vary based on complexity. A simple app takes 3-4 months, while complex apps can take 6-12 months. We provide detailed timelines during the discovery phase.' },
       { question: 'Should I build a native or cross-platform app?', answer: 'Native apps offer the best performance and access to device features, while cross-platform apps reduce development time and cost. We help you choose based on your requirements and budget.' },
       { question: 'How much does mobile app development cost?', answer: 'Costs depend on app complexity, features, platforms, and design requirements. We provide transparent estimates after understanding your project scope during our initial consultation.' },
-      { question: 'Do you provide post-launch support?', answer: 'Yes, we offer comprehensive post-launch support packages including bug fixes, performance monitoring, OS updates, feature additions, and ongoing maintenance.' }
+      { question: 'Do you provide post-launch support?', answer: 'Yes, we don\'t stop at delivery. Our post-launch services ensure apps continue to thrive, scale, and stay secure long after hitting the stores, including bug fixes, performance monitoring, and feature additions.' }
     ],
     relatedServices: ['cross-platform-app-development', 'iphone-app-development', 'android-app-development', 'flutter-app-development']
   },
   {
     slug: 'software-development',
     title: 'Software Development',
-    metaTitle: 'Custom Software Development Services | DeepLearnHQ',
-    metaDescription: 'DeepLearnHQ provides custom software development services tailored to your business needs. Build scalable, secure enterprise software solutions.',
-    heroHeading: 'Software Development Services',
-    heroDescription: 'We build custom software solutions that streamline operations, drive efficiency, and give your business a competitive edge. From enterprise platforms to SaaS products, we deliver software that scales.',
-    overviewTitle: 'About Our Software Development Services',
-    overviewDescription: 'DeepLearnHQ specializes in building bespoke software solutions that solve complex business challenges. Our experienced team follows agile methodologies to deliver reliable, maintainable software on time and within budget.',
+    metaTitle: 'Custom Software Development Services | Cubix',
+    metaDescription: 'Cubix provides custom software development services delivering high-performance software from planning to deployment. Consulting, full-cycle development, UI/UX design, MVP, and API integration.',
+    heroHeading: 'Custom Software Development Services',
+    heroDescription: 'Our end-to-end software development services deliver high-performance software that solves unique challenges from planning to deployment. We combine experience and a focus on innovation to deliver solutions that meet your business needs.',
+    overviewTitle: 'About Our Custom Software Development Services',
+    overviewDescription: 'We develop end-to-end solutions with a focus on feasibility assessment, architecture design, and agile processes to ensure rapid, high-quality delivery. Our experts create detailed project roadmaps to ensure the finished product complements existing technology and boosts ROI.',
     overviewPoints: [
-      'Custom enterprise software development',
-      'SaaS product development and architecture',
-      'Legacy system modernization',
-      'Cloud-native application development',
-      'Ongoing support and evolution'
+      'Custom software consulting and strategy',
+      'Full-cycle development from planning to deployment',
+      'UI/UX design with custom wireframes and user flows',
+      'MVP development to be first-to-market',
+      'API integration for a unified business ecosystem'
     ],
     features: [
-      { title: 'Enterprise Software', description: 'Build robust enterprise applications that automate workflows, integrate systems, and support organizational growth.' },
-      { title: 'SaaS Development', description: 'Design and develop multi-tenant SaaS platforms with subscription management, analytics, and scalable architecture.' },
-      { title: 'System Integration', description: 'Connect disparate systems and data sources into unified platforms that improve visibility and decision-making.' },
-      { title: 'Legacy Modernization', description: 'Migrate legacy systems to modern architectures while preserving business logic and ensuring zero downtime.' },
-      { title: 'Custom CRM & ERP', description: 'Build tailored CRM and ERP systems that match your exact business processes and operational requirements.' }
+      { title: 'Consulting & Strategy', description: 'Our experts create detailed project roadmaps to ensure the finished product complements existing technology and boosts ROI.' },
+      { title: 'Full-Cycle Development', description: 'Our end-to-end software development services deliver high-performance software that solves unique challenges from planning to deployment.' },
+      { title: 'UI/UX Design', description: 'Our leading design teams ensure your custom digital solution looks good, is user-friendly, and is technically sound to deliver maximum value.' },
+      { title: 'MVP Development', description: 'Be first-to-market with your new product with our end-to-end MVP development services, balancing design with core functionality.' },
+      { title: 'API Integration', description: 'We help you integrate your software with third-party systems through fully vetted API integrations for a unified and efficient business ecosystem.' },
+      { title: 'Staff Augmentation', description: 'Hire experts from our custom software development company for effective software solutions, aligned with your project timeline and needs.' }
     ],
     technologies: ['Java', 'Python', '.NET', 'Node.js', 'PostgreSQL', 'MongoDB', 'Docker', 'Kubernetes'],
     process: [
-      { step: '01', title: 'Requirements Analysis', description: 'We conduct thorough stakeholder interviews, process mapping, and requirements gathering to define project scope.' },
-      { step: '02', title: 'Architecture & Design', description: 'Our architects design scalable, secure system architectures and our designers create intuitive user interfaces.' },
-      { step: '03', title: 'Agile Development', description: 'We develop in iterative sprints with regular demos and feedback loops to ensure alignment with your vision.' },
-      { step: '04', title: 'QA & Testing', description: 'Comprehensive testing including unit, integration, performance, and security testing ensures software reliability.' },
-      { step: '05', title: 'Deployment & Support', description: 'Smooth deployment with CI/CD pipelines and ongoing support to keep your software running optimally.' }
+      { step: '01', title: 'Discovery & Planning', description: 'We start with thorough discovery sessions to understand the project\'s specific needs, goals, and technical feasibility, laying a timeline for success.' },
+      { step: '02', title: 'Architecture Design', description: 'Our technical teams develop robust, scalable architecture designs that ensure system reliability, flexibility, and maintainability.' },
+      { step: '03', title: 'Code Development', description: 'Our experts follow best practices and coding standards to write clean, efficient, scalable code using the latest languages and frameworks.' },
+      { step: '04', title: 'QA & Testing', description: 'Our QA teams conduct thorough testing, including unit testing, integration testing, and user acceptance testing (UAT).' },
+      { step: '05', title: 'Deployment', description: 'We deploy custom software solutions to desired environments, whether on-premise, cloud-based, or hybrid, ensuring seamless transition.' },
+      { step: '06', title: 'Maintenance & Support', description: 'We provide regular security patches, bug fixes, and new feature development to keep solutions running at their best.' }
     ],
     caseStudies: [],
     faqs: [
@@ -125,33 +127,34 @@ const services: ServicePageData[] = [
   {
     slug: 'game-development',
     title: 'Game Development',
-    metaTitle: 'Game Development Services | DeepLearnHQ',
-    metaDescription: 'DeepLearnHQ offers end-to-end game development services across mobile, PC, and console platforms. Build immersive gaming experiences with our expert team.',
-    heroHeading: 'Game Development Services',
-    heroDescription: 'We create immersive gaming experiences across mobile, PC, console, and VR platforms. From casual games to AAA-quality titles, our team brings your game concepts to life.',
-    overviewTitle: 'About Our Game Development Services',
-    overviewDescription: 'DeepLearnHQ is a full-service game development company with expertise across all major platforms and game engines. Our designers, developers, and artists collaborate to create games that captivate audiences and generate revenue.',
+    metaTitle: 'Game Development Company | Game Dev Studio | Cubix Games',
+    metaDescription: 'Cubix brings 10+ years of experience and proficiency in Unity, Unreal, and AR/VR technologies to deliver high-definition games with cutting-edge features across mobile, PC, and console.',
+    heroHeading: 'Game Development Company',
+    heroDescription: 'We bring 10+ years of experience and a proven track record of developing engaging and interactive games that exceed expectations, with proficiency in Unity, Unreal, and AR/VR technologies to deliver high-definition games with cutting-edge features.',
+    overviewTitle: 'Why Choose Our Game Development Studio',
+    overviewDescription: 'With over 200+ games successfully developed and launched, we have shown versatility in multiple genres like Hyper-Casual, MMORPG, Multiplayer, and more. Our diverse team of 350+ passionate artists, designers, and developers has delivered games of all scales.',
     overviewPoints: [
-      'Multi-platform game development',
-      'Unity and Unreal Engine expertise',
-      '2D, 3D, AR, and VR game development',
-      'Multiplayer and social gaming features',
-      'Game monetization and analytics'
+      'Mobile, desktop, and console game development',
+      'Unity and Unreal Engine proficiency',
+      '2D and 3D game art and animation',
+      'AI integration for dynamic NPC behaviors',
+      'Cross-platform optimization and performance tuning'
     ],
     features: [
-      { title: 'Mobile Game Development', description: 'Create addictive mobile games for iOS and Android with engaging gameplay mechanics and monetization strategies.' },
-      { title: 'PC & Console Games', description: 'Develop high-fidelity games for PC and major console platforms with stunning visuals and smooth performance.' },
-      { title: 'AR/VR Game Development', description: 'Build immersive augmented and virtual reality gaming experiences that push the boundaries of entertainment.' },
-      { title: 'Multiplayer Systems', description: 'Design and implement real-time multiplayer gameplay with matchmaking, leaderboards, and social features.' },
-      { title: 'Game Art & Animation', description: 'Professional 2D and 3D art production including character design, environment art, and motion capture animation.' }
+      { title: 'Mobile Game Development', description: 'We specialize in developing mobile games that are visually stunning and highly responsive, driving millions of downloads and boosting revenue.' },
+      { title: '2D & 3D Game Development', description: 'Our teams excel at creating dynamic 2D and 3D games, combining artistic designs with engaging mechanics to create unforgettable experiences.' },
+      { title: 'Desktop Game Development', description: 'With expertise in C# and C++, our teams craft immersive desktop games that deliver stunning graphics and smooth gameplay on PCs.' },
+      { title: 'Console Game Development', description: 'Our proficiency in Unreal Engine and custom SDKs allows us to develop console games that captivate players with high-quality visuals and responsive controls.' },
+      { title: 'AI & Game Logic', description: 'We integrate intelligent AI systems that make NPCs and game environments react dynamically to player actions, enhancing depth and challenge.' },
+      { title: 'QA & Performance', description: 'Our QA team thoroughly tests, identifying and fixing bugs, glitches, and performance issues, ensuring the game is polished, bug-free, and ready for launch.' }
     ],
     technologies: ['Unity', 'Unreal Engine', 'C#', 'C++', 'Blender', 'Maya', 'Photon', 'PlayFab'],
     process: [
-      { step: '01', title: 'Concept & Game Design', description: 'We develop game concepts, mechanics, storylines, and design documents that form the foundation of your game.' },
-      { step: '02', title: 'Art & Asset Production', description: 'Our artists create characters, environments, UI elements, and animations that bring your game world to life.' },
-      { step: '03', title: 'Game Development', description: 'Experienced game developers build gameplay mechanics, physics, AI, and multiplayer systems using industry-standard engines.' },
-      { step: '04', title: 'QA & Playtesting', description: 'Extensive playtesting and QA cycles ensure balanced gameplay, bug-free experiences, and optimal performance.' },
-      { step: '05', title: 'Launch & Live Ops', description: 'We handle store submissions, launch marketing support, and post-launch content updates to keep players engaged.' }
+      { step: '01', title: 'Brainstorming & Roadmap', description: 'We develop game concepts, mechanics, and a comprehensive roadmap that sets creative and technical standards.' },
+      { step: '02', title: 'Game Design Document', description: 'We create detailed game design documents including storyboards, concept art, and gameplay specifications.' },
+      { step: '03', title: 'Asset Creation & Art', description: 'Our artists produce characters, environments, UI elements, and animations that bring your game world to life.' },
+      { step: '04', title: 'Core Mechanics & AI', description: 'We build gameplay mechanics, physics, AI systems, and multiplayer features using industry-standard engines.' },
+      { step: '05', title: 'QA Testing & Launch', description: 'Extensive playtesting and QA cycles ensure balanced gameplay, optimal performance, and a polished launch.' }
     ],
     caseStudies: [],
     faqs: [
@@ -165,32 +168,33 @@ const services: ServicePageData[] = [
   {
     slug: 'blockchain-development',
     title: 'Blockchain Development',
-    metaTitle: 'Blockchain Development Services | DeepLearnHQ',
-    metaDescription: 'DeepLearnHQ provides blockchain development services including smart contracts, DApps, DeFi platforms, and token development. Build decentralized solutions.',
+    metaTitle: 'Blockchain Development Services Company | Cubix',
+    metaDescription: 'Cubix is one of the top-tier blockchain app development companies that designs and develops feature-rich DApps, smart contracts, tokenization, and web3 solutions.',
     heroHeading: 'Blockchain Development Services',
-    heroDescription: 'We build secure, transparent blockchain solutions including smart contracts, decentralized applications, and token ecosystems. Harness the power of decentralization for your business.',
-    overviewTitle: 'About Our Blockchain Development Services',
-    overviewDescription: 'DeepLearnHQ is a trusted blockchain development company that helps businesses leverage distributed ledger technology. We build custom blockchain solutions across Ethereum, Solana, Polygon, and other leading chains.',
+    heroDescription: 'We are one of the top-tier blockchain app development companies that designs and develops feature-rich DApps, using smart contracts and web3. With 15+ years in the industry, we helped shape the evolving blockchain landscape.',
+    overviewTitle: 'Why Choose Our Blockchain Development Services',
+    overviewDescription: 'With a diverse team of 350+ passionate artists, designers, and developers, we provide highly scalable and interoperable blockchain assets. Our in-depth protocol expertise enables us to craft tailored protocols for unique use cases, including customized consensus algorithms and advanced cryptography.',
     overviewPoints: [
-      'Smart contract development and auditing',
-      'DApp and DeFi platform development',
-      'Token and NFT creation',
-      'Blockchain consulting and strategy',
-      'Cross-chain integration solutions'
+      'DApp development with smart contracts and web3',
+      'Blockchain protocol development with custom consensus algorithms',
+      'Smart contract development, auditing, and deployment',
+      'Asset tokenization for real-world assets',
+      'Blockchain integration and upgrade services'
     ],
     features: [
-      { title: 'Smart Contract Development', description: 'Develop, test, and deploy secure smart contracts on Ethereum, Solana, and other blockchain networks.' },
-      { title: 'DeFi Platforms', description: 'Build decentralized finance applications including DEXs, lending protocols, yield farming, and staking platforms.' },
-      { title: 'NFT Marketplaces', description: 'Create NFT minting platforms, marketplaces, and gallery experiences with wallet integration and trading features.' },
-      { title: 'Private Blockchain Solutions', description: 'Deploy enterprise-grade private blockchain networks for supply chain, identity management, and data integrity.' },
-      { title: 'Wallet Development', description: 'Build secure cryptocurrency wallets with multi-chain support, staking, swapping, and portfolio tracking.' }
+      { title: 'DApp Development', description: 'We design and develop feature-rich decentralized applications using smart contracts and web3, building secure and interoperable blockchain foundations.' },
+      { title: 'Smart Contract Development', description: 'We develop optimized, secure smart contracts with expertise spanning requirements, auditing, and deployment, ensuring contractual integrity.' },
+      { title: 'Asset Tokenization', description: 'We develop tailor-made solutions for the tokenization of real-world assets, allowing issuing, listing, and trading of digital representations with backed value.' },
+      { title: 'NFT & Digital Assets', description: 'Engage your customers with unique digital assets, collectibles, and blockchain-based virtual goods through NFT creation and management.' },
+      { title: 'Crypto Exchange Development', description: 'We build full-fledged cryptocurrency exchanges, including brokerage platforms and advanced DEXs for asset tokenization and global market access.' },
+      { title: 'Blockchain Integration', description: 'Our blockchain integration and upgrade services ensure solutions remain cutting edge, integrating blockchain technology with existing systems seamlessly.' }
     ],
     technologies: ['Solidity', 'Rust', 'Ethereum', 'Solana', 'Polygon', 'Hyperledger', 'Web3.js', 'IPFS'],
     process: [
       { step: '01', title: 'Blockchain Consulting', description: 'We evaluate your use case and recommend the optimal blockchain platform, consensus mechanism, and architecture.' },
-      { step: '02', title: 'Smart Contract Design', description: 'Our blockchain engineers design and develop smart contracts with thorough documentation and testing.' },
-      { step: '03', title: 'DApp Development', description: 'We build intuitive frontends with wallet connectivity and integrate them with your smart contracts.' },
-      { step: '04', title: 'Security Auditing', description: 'Comprehensive smart contract audits and penetration testing to identify and resolve vulnerabilities.' },
+      { step: '02', title: 'Protocol & Contract Design', description: 'We craft tailored protocols and develop optimized smart contracts with thorough documentation and testing.' },
+      { step: '03', title: 'DApp Development', description: 'We build intuitive frontends with wallet connectivity and integrate them with your smart contracts and web3 infrastructure.' },
+      { step: '04', title: 'QA & Security Auditing', description: 'Full lifecycle blockchain QA and testing covering everything from initial audits to final stress tests.' },
       { step: '05', title: 'Deployment & Monitoring', description: 'Mainnet deployment with ongoing monitoring, upgrade support, and community management tools.' }
     ],
     caseStudies: [],
@@ -205,26 +209,26 @@ const services: ServicePageData[] = [
   {
     slug: 'artificial-intelligence',
     title: 'Artificial Intelligence',
-    metaTitle: 'AI Development Services | DeepLearnHQ',
-    metaDescription: 'DeepLearnHQ delivers AI development services including machine learning, NLP, computer vision, and predictive analytics. Transform your business with intelligent solutions.',
-    heroHeading: 'Artificial Intelligence Services',
-    heroDescription: 'We build intelligent AI solutions that automate processes, extract insights from data, and create personalized experiences. From machine learning models to conversational AI, we deliver transformative technology.',
-    overviewTitle: 'About Our Artificial Intelligence Services',
-    overviewDescription: 'DeepLearnHQ helps businesses unlock the potential of artificial intelligence with custom AI solutions. Our data scientists and ML engineers build models that solve real business problems and deliver measurable ROI.',
+    metaTitle: 'AI Development Services - Artificial Intelligence Company | Cubix',
+    metaDescription: 'Cubix offers artificial intelligence services to reinvent business processes, create interactive experiences, and unlock the potential of business data with custom AI solutions.',
+    heroHeading: 'AI Development Services',
+    heroDescription: 'We offer artificial intelligence services to reinvent business processes, create interactive experiences, and unlock the potential of your business data. We build customized AI software optimized for specific business needs and data.',
+    overviewTitle: 'About Our AI Development Services',
+    overviewDescription: 'As a leading AI software development services company, we deliver custom AI solutions for businesses to transform ideas into intelligent applications. We leverage the power of AI and machine learning to build apps with advanced capabilities like predictive analytics, intelligent assistants, and adaptive user interfaces.',
     overviewPoints: [
-      'Machine learning model development',
-      'Natural language processing solutions',
+      'Custom AI software optimized for specific business needs',
+      'Machine learning and deep learning model development',
+      'Natural language processing and automation',
       'Computer vision and image recognition',
-      'Predictive analytics and forecasting',
-      'AI chatbots and virtual assistants'
+      'Generative AI and AI agent development'
     ],
     features: [
-      { title: 'Machine Learning', description: 'Develop custom ML models for classification, regression, clustering, and recommendation systems using your business data.' },
-      { title: 'Natural Language Processing', description: 'Build NLP solutions for sentiment analysis, text classification, language translation, and document processing.' },
-      { title: 'Computer Vision', description: 'Implement image and video analysis solutions for object detection, facial recognition, and quality inspection.' },
-      { title: 'Conversational AI', description: 'Create intelligent chatbots and virtual assistants that understand context and provide human-like interactions.' },
-      { title: 'Predictive Analytics', description: 'Leverage historical data to forecast trends, predict outcomes, and make data-driven business decisions.' },
-      { title: 'AI Integration', description: 'Integrate AI capabilities into existing applications and workflows with APIs and microservice architectures.' }
+      { title: 'Custom AI Software', description: 'We build customized AI software optimized for specific business needs and data, delivering pre-built AI models customized to industry and use case.' },
+      { title: 'NLP & Automation', description: 'We harness the power of NLP to boost operational efficiency, sentiment analysis, and content moderation for your business processes.' },
+      { title: 'Computer Vision', description: 'We excel in integrating leading-edge computer vision capabilities into digital assets, driving innovation across use cases including facial recognition and object tracking.' },
+      { title: 'Generative AI', description: 'Our system generates content, simulates scenarios, writes code, and produces images for various business purposes through generative AI solutions.' },
+      { title: 'AI Chatbots & Agents', description: 'Our AI chatbot and agent development provides human-like interactions to automate operational intelligence and handle customer inquiries with personalized responses.' },
+      { title: 'Drones & Robotics', description: 'We build intelligent drones and robots with computer vision, speech recognition, and autonomous capabilities powered by AI.' }
     ],
     technologies: ['Python', 'TensorFlow', 'PyTorch', 'OpenAI', 'AWS SageMaker', 'Hugging Face', 'LangChain', 'scikit-learn'],
     process: [
@@ -236,7 +240,7 @@ const services: ServicePageData[] = [
     ],
     caseStudies: [],
     faqs: [
-      { question: 'What types of AI solutions do you build?', answer: 'We build machine learning models, NLP systems, computer vision solutions, recommendation engines, chatbots, and predictive analytics platforms tailored to your business needs.' },
+      { question: 'What types of AI solutions do you build?', answer: 'We build machine learning models, NLP systems, computer vision solutions, recommendation engines, chatbots, generative AI systems, and predictive analytics platforms tailored to your business needs.' },
       { question: 'Do we need a lot of data to start with AI?', answer: 'Data requirements depend on the use case. Some solutions work with smaller datasets using transfer learning, while others require larger datasets. We assess your data and recommend the best approach.' },
       { question: 'How long does AI development take?', answer: 'Simple AI integrations take 4-8 weeks, while complex custom models can take 3-6 months. We provide realistic timelines based on your specific use case and data readiness.' },
       { question: 'Can you integrate AI into our existing systems?', answer: 'Yes, we specialize in integrating AI capabilities into existing applications through APIs, microservices, and cloud-based inference endpoints.' }

@@ -21,6 +21,9 @@ const categoryOptions = [
   "Logistics & Transportation",
   "Food & Beverage",
   "Environment & Sustainability",
+  "Blockchain & Gaming",
+  "Social Networking",
+  "Luxury & Gaming",
 ];
 
 const technologyOptions = [
@@ -34,6 +37,8 @@ const technologyOptions = [
   "AWS",
   "Firebase",
   "Unity",
+  "Solidity",
+  "TensorFlow",
 ];
 
 export default function WorkPage() {
@@ -80,9 +85,9 @@ export default function WorkPage() {
 
           {/* Subtitle */}
           <p className="text-gray-600 text-lg max-w-3xl mb-12">
-            Discover how we help clients across industries achieve their goals
-            through innovative technology solutions and expert digital
-            craftsmanship.
+            From award-winning iOS and Android app development to seamless web
+            development, discover how we help clients grow their businesses and
+            achieve their vision of digital innovation.
           </p>
 
           {/* Filter Dropdowns */}

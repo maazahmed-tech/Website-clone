@@ -14,50 +14,43 @@ const steps = [
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      'We begin every engagement by deeply understanding your business objectives, target audience, and competitive landscape. Through stakeholder workshops, user research, and technical feasibility assessments, we define a clear product roadmap that aligns technology decisions with business goals.',
-    deliverables: ['Product Vision Document', 'User Personas', 'Competitive Analysis', 'Technical Feasibility Report'],
+      'We prioritize intellectual property protection, commencing every project with an NDA to safeguard crucial client information. In-depth discussions refine the scope, timelines, and resource allocation to align with project requirements and objectives.',
+    deliverables: ['NDA & IP Protection', 'Scope Definition', 'Timeline Planning', 'Resource Allocation'],
   },
   {
     number: '02',
-    title: 'UX Research & Design',
+    title: 'Planning & Risk Assessment',
     description:
-      'Our design team transforms insights into intuitive user experiences. We create information architecture, wireframes, and interactive prototypes that are validated through usability testing before a single line of code is written.',
-    deliverables: ['Information Architecture', 'Wireframes', 'Interactive Prototype', 'UI Design System'],
+      'We identify the optimal development approach, evaluate risks, and prepare a detailed Level of Effort (LOE) document. This phase ensures that every potential challenge is anticipated and addressed before development begins.',
+    deliverables: ['LOE Document', 'Risk Assessment Report', 'Development Approach', 'Project Roadmap'],
   },
   {
     number: '03',
-    title: 'Architecture & Planning',
+    title: 'UI/UX Design',
     description:
-      'Senior engineers define the system architecture, technology stack, and infrastructure strategy. We plan sprints, establish coding standards, set up CI/CD pipelines, and create a detailed technical specification that guides the development team.',
-    deliverables: ['System Architecture Diagram', 'Technology Stack Decision', 'Sprint Plan', 'Technical Specification'],
+      'Our seasoned UI/UX architects craft visually captivating and user-centric designs that seamlessly integrate with your brand identity. We validate designs through usability testing and iterative feedback loops.',
+    deliverables: ['Wireframes & Mockups', 'Interactive Prototypes', 'Design System', 'Usability Testing Results'],
   },
   {
     number: '04',
-    title: 'Agile Development',
+    title: 'Sprint-Based Development',
     description:
-      'Our development teams work in two-week sprints with daily stand-ups, code reviews, and continuous integration. You receive a working build at the end of every sprint, ensuring transparency and the ability to provide feedback throughout the process.',
+      'The project is methodically broken down into sprints, enabling continuous feedback, rapid iteration, and efficient execution. Our agile methodology permits the team to work in sprints, encouraging nimbleness throughout the development cycle.',
     deliverables: ['Sprint Demos', 'Working Builds', 'Code Repository', 'Progress Reports'],
   },
   {
     number: '05',
     title: 'Quality Assurance',
     description:
-      'QA is not a phase—it runs in parallel with development. Our testing engineers execute functional, regression, performance, and security tests using both automated and manual approaches to ensure your product is rock-solid before launch.',
+      'Our dedicated quality assurance team conducts comprehensive testing to ensure high performance, reliability, and a flawless user experience. Both manual and automated testing approaches are applied across all user touchpoints.',
     deliverables: ['Test Plans & Cases', 'Automated Test Suites', 'Performance Benchmarks', 'Security Audit Report'],
   },
   {
     number: '06',
-    title: 'Launch & Deployment',
+    title: 'Deployment & Maintenance',
     description:
-      'We handle everything from app store submissions and server provisioning to DNS configuration and CDN setup. A detailed launch checklist ensures nothing is missed, and a dedicated team monitors the rollout in real time.',
-    deliverables: ['Deployment Runbook', 'App Store Listings', 'Infrastructure Setup', 'Launch Monitoring'],
-  },
-  {
-    number: '07',
-    title: 'Post-Launch Support',
-    description:
-      'Our relationship does not end at launch. We provide ongoing maintenance, performance monitoring, bug fixes, and feature enhancements. Dedicated support tiers ensure your product continues to evolve and perform at its best.',
-    deliverables: ['SLA-Backed Support', 'Performance Monitoring', 'Feature Roadmap Updates', 'Monthly Health Reports'],
+      'After deployment, DeepLearnHQ provides comprehensive maintenance and responsive support to guarantee lasting project success. We handle everything from app store submissions and server provisioning to ongoing monitoring and updates.',
+    deliverables: ['Deployment Runbook', 'App Store Listings', 'Post-Launch Monitoring', 'Ongoing Maintenance & Support'],
   },
 ];
 
@@ -131,15 +124,17 @@ export default function ProcessPage() {
               Built on Agile Principles
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Our process is flexible enough to adapt to your unique needs while structured enough to deliver consistent results.
+              Agile project management paves the way for swift and feature-driven
+              software development. Our agile methodology permits the team to work
+              in sprints, encouraging nimbleness throughout the project cycle.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: 'Transparency', description: 'Daily updates, sprint demos, and shared dashboards keep you informed at every step.' },
-              { title: 'Flexibility', description: 'Agile sprints let you reprioritize features and pivot based on real user feedback.' },
-              { title: 'Quality First', description: 'Continuous testing and code reviews ensure defects are caught early, not after launch.' },
-              { title: 'Speed to Market', description: 'Parallel workstreams and automation cut time-to-launch without compromising quality.' },
+              { title: 'IP Protection First', description: 'Every project starts with an NDA. We prioritize safeguarding your crucial information from day one.' },
+              { title: 'Sprint-Based Delivery', description: 'Continuous feedback, rapid iteration, and efficient execution through methodical sprint breakdowns.' },
+              { title: 'Comprehensive QA', description: 'Dedicated QA teams conduct comprehensive testing to ensure high performance and flawless user experience.' },
+              { title: 'Post-Launch Support', description: 'Comprehensive maintenance and responsive support to guarantee lasting project success after deployment.' },
             ].map((item) => (
               <div
                 key={item.title}
