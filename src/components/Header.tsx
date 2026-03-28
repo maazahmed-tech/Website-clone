@@ -510,11 +510,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 font-[Manrope,sans-serif] ${
-          scrolled
-            ? "bg-[#0d0d0d]/95 backdrop-blur-md shadow-lg"
-            : "bg-transparent"
-        }`}
+        className="fixed top-0 left-0 w-full z-[100] transition-all duration-300 font-[Manrope,sans-serif] bg-[#0B0C0D] shadow-lg"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[72px]">
