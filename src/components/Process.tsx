@@ -185,7 +185,7 @@ export default function Process() {
 
                       {/* Step title */}
                       <h3
-                        className={`text-2xl sm:text-3xl lg:text-4xl font-bold mt-2 mb-3 transition-colors duration-500 ${
+                        className={`text-2xl sm:text-3xl lg:text-4xl font-bold italic mt-2 mb-3 transition-colors duration-500 ${
                           isActive ? "text-[#1E6FD9]" : "text-[#1E6FD9]/40"
                         }`}
                       >

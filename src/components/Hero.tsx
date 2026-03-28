@@ -25,19 +25,19 @@ export default function Hero() {
       {/* Main content */}
       <div className="relative flex-1 flex items-center w-full px-4 sm:px-6 lg:px-8 pt-24 pb-12" style={{ zIndex: 10 }}>
         <div className="w-full max-w-7xl mx-auto">
-          {/* Heading — centered on desktop like original */}
-          <h1 className="lg:text-center" style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+          {/* Heading — left-aligned like original */}
+          <h1 style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
             <span style={{ color: '#ffffff' }}>We are a </span>
-            <span style={{ color: '#1E6FD9' }}>Software</span>
+            <span style={{ color: '#1E6FD9', fontStyle: 'italic' }}>Software</span>
             <br />
-            <span style={{ color: '#1E6FD9' }}>Development</span>
+            <span style={{ color: '#1E6FD9', fontStyle: 'italic' }}>Development</span>
             <br />
-            <span style={{ color: '#1E6FD9' }}>Company</span>
+            <span style={{ color: '#ffffff' }}>Company</span>
           </h1>
 
           {/* Subtitle */}
           <p
-            className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl leading-relaxed lg:text-center lg:mx-auto"
+            className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl leading-relaxed"
             style={{ color: '#9ca3af', maxWidth: '600px' }}
           >
             We are your trusted development partner with just one goal in focus

@@ -31,7 +31,7 @@ const Footer = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-14">
             {/* Company */}
             <div>
-              <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">Company</h4>
+              {/* No header — matches original */}
               <ul className="space-y-3">
                 {[
                   { label: "About Us", href: "/about" },
@@ -50,7 +50,7 @@ const Footer = () => {
 
             {/* Resources */}
             <div>
-              <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">Resources</h4>
+              {/* No header */}
               <ul className="space-y-3">
                 {[
                   { label: "Blog", href: "/blog" },
@@ -69,7 +69,7 @@ const Footer = () => {
 
             {/* Services */}
             <div>
-              <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">Services</h4>
+              {/* No header */}
               <ul className="space-y-3">
                 {[
                   { label: "Mobile App", href: "/mobile-app-development" },
@@ -88,7 +88,7 @@ const Footer = () => {
 
             {/* Insights */}
             <div>
-              <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">Insights</h4>
+              {/* No header */}
               <ul className="space-y-3">
                 {[
                   { label: "University", href: "/university" },
@@ -113,7 +113,7 @@ const Footer = () => {
           <div className="mb-14">
             {/* Locations Label with green dot */}
             <div className="flex items-center gap-3 mb-8">
-              <span className="w-3 h-3 rounded-full bg-[#1E6FD9] inline-block" />
+              <span className="w-2 h-2 rounded-full bg-[#1E6FD9] inline-block" />
               <span className="text-white text-sm font-semibold uppercase tracking-widest">
                 Locations
               </span>
@@ -187,7 +187,7 @@ const Footer = () => {
             {/* Left: Contact label + info */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-3 h-3 rounded-full bg-[#1E6FD9] inline-block" />
+                <span className="w-2 h-2 rounded-full bg-[#1E6FD9] inline-block" />
                 <span className="text-white text-sm font-semibold uppercase tracking-widest">
                   Contact
                 </span>
@@ -233,6 +233,9 @@ const Footer = () => {
               </Link>
               <p className="text-xs text-gray-500 mt-3">
                 &copy; 2026 DeepLearnHQ. All Rights Reserved
+              </p>
+              <p className="text-xs text-gray-600 mt-1">
+                Content protected by DMCA
               </p>
             </div>
 

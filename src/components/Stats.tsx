@@ -9,9 +9,9 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { end: 290, suffix: "+", label: "Completed Projects" },
-  { end: 227, suffix: "+", label: "Talented DeepLearners" },
-  { end: 388, suffix: "+", label: "Satisfied Clients" },
+  { end: 290, suffix: "+", label: "Projects Completed" },
+  { end: 227, suffix: "+", label: "DeepLearners" },
+  { end: 388, suffix: "+", label: "Clients Served" },
 ];
 
 function useCountUp(end: number, shouldStart: boolean, duration = 2000) {
@@ -50,7 +50,7 @@ function StatCard({ stat, isVisible }: { stat: Stat; isVisible: boolean }) {
         {count}
         {stat.suffix}
       </div>
-      <div className="text-gray-500 text-base sm:text-lg">
+      <div className="text-gray-500 text-sm sm:text-base tracking-wide uppercase">
         {stat.label}
       </div>
     </div>
