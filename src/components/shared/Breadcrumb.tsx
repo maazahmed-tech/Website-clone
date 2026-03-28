@@ -22,7 +22,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
             ) : (
               <Link
                 href={item.href}
-                className="text-gray-400 transition-colors hover:text-[#00b67a]"
+                className="text-gray-400 transition-colors hover:text-[#1E6FD9]"
               >
                 {item.label}
               </Link>

@@ -44,7 +44,7 @@ export default function Pagination({
       {currentPage > 1 && (
         <Link
           href={getHref(currentPage - 1)}
-          className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:border-[#00b67a] hover:text-[#00b67a]"
+          className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:border-[#1E6FD9] hover:text-[#1E6FD9]"
         >
           Prev
         </Link>
@@ -61,8 +61,8 @@ export default function Pagination({
             href={getHref(page)}
             className={`flex h-10 w-10 items-center justify-center rounded-lg text-sm font-medium transition-colors ${
               page === currentPage
-                ? "bg-[#00b67a] text-white"
-                : "border border-gray-200 text-gray-600 hover:border-[#00b67a] hover:text-[#00b67a]"
+                ? "bg-[#1E6FD9] text-white"
+                : "border border-gray-200 text-gray-600 hover:border-[#1E6FD9] hover:text-[#1E6FD9]"
             }`}
           >
             {page}
@@ -73,7 +73,7 @@ export default function Pagination({
       {currentPage < totalPages && (
         <Link
           href={getHref(currentPage + 1)}
-          className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:border-[#00b67a] hover:text-[#00b67a]"
+          className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:border-[#1E6FD9] hover:text-[#1E6FD9]"
         >
           Next
         </Link>

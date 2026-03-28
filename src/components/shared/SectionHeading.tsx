@@ -26,7 +26,7 @@ export default function SectionHeading({
     return (
       <>
         {parts[0]}
-        <span className="text-[#00b67a]">{titleHighlight}</span>
+        <span className="text-[#1E6FD9]">{titleHighlight}</span>
         {parts.slice(1).join(titleHighlight)}
       </>
     );
@@ -35,7 +35,7 @@ export default function SectionHeading({
   return (
     <div className={`mb-12 max-w-3xl ${alignmentClass}`}>
       {label && (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#00b67a]">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#1E6FD9]">
           {label}
         </p>
       )}

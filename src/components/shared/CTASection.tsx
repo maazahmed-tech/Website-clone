@@ -21,7 +21,7 @@ export default function CTASection({
   return (
     <section className="bg-[#1a1a1a] px-4 py-20 md:px-8 lg:px-16">
       <div className="mx-auto max-w-4xl text-center">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#00b67a]">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#1E6FD9]">
           Pull the Trigger!
         </p>
         <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
@@ -33,7 +33,7 @@ export default function CTASection({
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href={primaryCTA.href}
-            className="inline-block rounded-full bg-[#00b67a] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#00a06a]"
+            className="inline-block rounded-full bg-[#1E6FD9] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#1859B3]"
           >
             {primaryCTA.label}
           </Link>

@@ -27,7 +27,7 @@ export default function AuthorCard({ name, role, avatar, slug }: AuthorCardProps
           className="h-12 w-12 rounded-full object-cover"
         />
       ) : (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#00b67a] text-sm font-bold text-white">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1E6FD9] text-sm font-bold text-white">
           {initials}
         </div>
       )}

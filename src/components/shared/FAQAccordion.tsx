@@ -40,7 +40,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
                     {faq.question}
                   </span>
                   <span
-                    className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-xl text-[#00b67a] transition-transform duration-300 ${
+                    className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-xl text-[#1E6FD9] transition-transform duration-300 ${
                       isOpen ? "rotate-45" : ""
                     }`}
                   >

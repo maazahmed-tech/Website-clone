@@ -23,9 +23,9 @@ export default function FeatureGrid({
       {features.map((feature, index) => (
         <div
           key={index}
-          className="group rounded-lg border border-gray-200 bg-white p-6 transition-all hover:border-[#00b67a] hover:shadow-lg"
+          className="group rounded-lg border border-gray-200 bg-white p-6 transition-all hover:border-[#1E6FD9] hover:shadow-lg"
         >
-          <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#00b67a]/10 text-lg font-bold text-[#00b67a]">
+          <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#1E6FD9]/10 text-lg font-bold text-[#1E6FD9]">
             {String(index + 1).padStart(2, "0")}
           </div>
           <h3 className="mb-3 text-xl font-bold text-[#1a1a1a]">
