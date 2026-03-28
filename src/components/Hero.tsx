@@ -1,6 +1,58 @@
 "use client";
 
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+
+const services = [
+  "Software\nDevelopment",
+  "Mobile App\nDevelopment",
+  "Game\nDevelopment",
+  "Blockchain\nDevelopment",
+  "AI\nDevelopment",
+  "Cloud\nSolutions",
+  "Web\nDevelopment",
+  "UI/UX\nDesign",
+];
+
+function useTypewriter(words: string[], typingSpeed = 80, deletingSpeed = 40, pauseDuration = 2000) {
+  const [displayText, setDisplayText] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const tick = useCallback(() => {
+    const currentWord = words[wordIndex];
+
+    if (!isDeleting) {
+      // Typing
+      const next = currentWord.slice(0, displayText.length + 1);
+      setDisplayText(next);
+
+      if (next === currentWord) {
+        // Finished typing — pause then start deleting
+        setTimeout(() => setIsDeleting(true), pauseDuration);
+        return;
+      }
+    } else {
+      // Deleting
+      const next = currentWord.slice(0, displayText.length - 1);
+      setDisplayText(next);
+
+      if (next === "") {
+        setIsDeleting(false);
+        setWordIndex((prev) => (prev + 1) % words.length);
+        return;
+      }
+    }
+  }, [displayText, isDeleting, wordIndex, words, pauseDuration]);
+
+  useEffect(() => {
+    const speed = isDeleting ? deletingSpeed : typingSpeed;
+    const timer = setTimeout(tick, speed);
+    return () => clearTimeout(timer);
+  }, [tick, isDeleting, typingSpeed, deletingSpeed]);
+
+  return displayText;
+}
 
 const clientLogos = [
   { name: "Tissot", src: null },
@@ -18,19 +70,34 @@ const clientLogos = [
 ];
 
 export default function Hero() {
-  const fadeIn = true; // Always visible — no animation delay
+  const typedText = useTypewriter(services, 80, 40, 2000);
+  const lines = typedText.split("\n");
 
   return (
     <section className="relative w-full flex flex-col justify-center overflow-hidden" style={{ backgroundColor: '#0B0C0D', minHeight: '100vh' }}>
       {/* Main content */}
       <div className="relative flex-1 flex items-center w-full px-4 sm:px-6 lg:px-8 pt-24 pb-12" style={{ zIndex: 10 }}>
         <div className="w-full max-w-7xl mx-auto">
-          {/* Heading — left-aligned like original */}
-          <h1 style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+          {/* Heading with typewriter animation */}
+          <h1 style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)', fontWeight: 800, lineHeight: 1.1, letterSpacing: '-0.02em', minHeight: 'clamp(10rem, 25vw, 20rem)' }}>
             <span style={{ color: '#ffffff' }}>We are a </span>
-            <span style={{ color: '#1E6FD9', fontStyle: 'italic' }}>Software</span>
-            <br />
-            <span style={{ color: '#1E6FD9', fontStyle: 'italic' }}>Development</span>
+            {lines.map((line, i) => (
+              <span key={i}>
+                {i > 0 && <br />}
+                <span style={{ color: '#1E6FD9', fontStyle: 'italic' }}>{line}</span>
+              </span>
+            ))}
+            <span
+              className="animate-blink"
+              style={{
+                color: '#1E6FD9',
+                fontStyle: 'normal',
+                fontWeight: 300,
+                marginLeft: '2px',
+              }}
+            >
+              |
+            </span>
             <br />
             <span style={{ color: '#ffffff' }}>Company</span>
           </h1>
@@ -84,7 +151,7 @@ export default function Hero() {
       <div
         className="relative z-10 w-full overflow-hidden border-t border-white/10 py-6 sm:py-8"
         style={{
-          opacity: fadeIn ? 1 : 0,
+          opacity: 1,
           transition: 'opacity 1s ease 0.7s',
         }}
       >
