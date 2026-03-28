@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import type { PressReleaseData, NewsData } from '@/data/types';
 import RichContent from '@/components/shared/RichContent';
-import CTASection from '@/components/shared/CTASection';
 
 interface ArticleTemplateProps {
   data: PressReleaseData | NewsData;
@@ -9,8 +8,8 @@ interface ArticleTemplateProps {
 }
 
 export default function ArticleTemplate({ data, type }: ArticleTemplateProps) {
-  const sectionLabel = type === 'press-release' ? 'Press Releases' : 'News';
-  const sectionPath = type === 'press-release' ? '/press-releases' : '/news';
+  const sectionLabel = type === 'press-release' ? 'Press Releases' : 'News & Updates';
+  const sectionPath = type === 'press-release' ? '/press-release' : '/news';
 
   const formattedDate = new Date(data.publishDate).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -20,10 +19,11 @@ export default function ArticleTemplate({ data, type }: ArticleTemplateProps) {
 
   return (
     <>
-      {/* Breadcrumb */}
-      <div className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <nav className="flex items-center gap-2 text-sm text-gray-500">
+      {/* Light Hero */}
+      <section className="bg-[#fdf8f6] pt-32 pb-16 px-4 md:px-8 lg:px-16">
+        <div className="mx-auto max-w-4xl">
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
             <Link href="/" className="hover:text-[#1E6FD9] transition-colors">
               Home
             </Link>
@@ -31,38 +31,20 @@ export default function ArticleTemplate({ data, type }: ArticleTemplateProps) {
             <Link href={sectionPath} className="hover:text-[#1E6FD9] transition-colors">
               {sectionLabel}
             </Link>
-            <span>/</span>
-            <span className="text-gray-900 truncate max-w-xs">{data.title}</span>
           </nav>
-        </div>
-      </div>
 
-      {/* Article */}
-      <article className="bg-white py-12 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Type Badge */}
-          <span className="inline-block bg-gray-100 text-gray-600 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full mb-6">
-            {sectionLabel}
-          </span>
-
-          {/* Title */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B0C0D] leading-tight mb-4">
             {data.title}
           </h1>
+          <p className="text-gray-500 text-base">
+            Published on <time dateTime={data.publishDate}>{formattedDate}</time>
+          </p>
+        </div>
+      </section>
 
-          {/* Date */}
-          <div className="flex items-center gap-3 text-gray-500 text-sm mb-10 pb-8 border-b border-gray-200">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-              />
-            </svg>
-            <time dateTime={data.publishDate}>{formattedDate}</time>
-          </div>
-
+      {/* Article Content */}
+      <article className="bg-white py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Featured Image */}
           {data.featuredImage && (
             <div className="aspect-video rounded-2xl overflow-hidden bg-gray-100 mb-12">
@@ -79,13 +61,34 @@ export default function ArticleTemplate({ data, type }: ArticleTemplateProps) {
         </div>
       </article>
 
-      {/* CTA */}
-      <CTASection
-        title="Want to Learn More?"
-        description="Stay updated with the latest news and developments from DeepLearnHQ."
-        primaryCTA={{ label: 'Contact Us', href: '/contact' }}
-        secondaryCTA={{ label: `View All ${sectionLabel}`, href: sectionPath }}
-      />
+      {/* CTA Footer */}
+      <section className="bg-[#0B0C0D] px-4 py-20 md:px-8 lg:px-16">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#1E6FD9]">
+            Pull the Trigger!
+          </p>
+          <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            Let&apos;s bring your vision to life
+          </h2>
+          <p className="mb-8 text-lg text-gray-400 max-w-2xl mx-auto">
+            Partner with DeepLearnHQ to transform your ideas into powerful digital solutions.
+          </p>
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-block rounded-full bg-[#1E6FD9] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#1759b3]"
+            >
+              Get in Touch
+            </Link>
+            <Link
+              href={sectionPath}
+              className="inline-block rounded-full border-2 border-white/30 px-8 py-4 text-lg font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+            >
+              View All {sectionLabel}
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

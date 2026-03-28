@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Events | DeepLearnHQ',
-  description: 'Discover upcoming and past events where DeepLearnHQ participates, speaks, and showcases technology solutions.',
+  description: 'Discover upcoming and past events where DeepLearnHQ participates.',
 };
 
 export default function EventsPage() {
@@ -12,12 +12,12 @@ export default function EventsPage() {
   return (
     <ListingTemplate
       title="Events"
+      subtitle="Discover upcoming and past events where DeepLearnHQ participates."
       basePath="/events"
-      items={events.map(e => ({
+      items={events.map((e) => ({
         slug: e.slug,
         title: e.title,
         date: e.date,
-        image: e.image,
         excerpt: e.description,
       }))}
     />

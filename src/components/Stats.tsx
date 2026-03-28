@@ -1,24 +1,17 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 
 interface Stat {
   end: number;
   suffix: string;
   label: string;
-  href: string;
 }
 
 const stats: Stat[] = [
-  { end: 500, suffix: "+", label: "Completed Projects", href: "/work/" },
-  { end: 350, suffix: "+", label: "Talented Cubixians", href: "/about/" },
-  {
-    end: 200,
-    suffix: "+",
-    label: "Satisfied Clients",
-    href: "/about/clients/",
-  },
+  { end: 290, suffix: "+", label: "Completed Projects" },
+  { end: 227, suffix: "+", label: "Talented DeepLearners" },
+  { end: 388, suffix: "+", label: "Satisfied Clients" },
 ];
 
 function useCountUp(end: number, shouldStart: boolean, duration = 2000) {
@@ -52,16 +45,15 @@ function StatCard({ stat, isVisible }: { stat: Stat; isVisible: boolean }) {
   const count = useCountUp(stat.end, isVisible);
 
   return (
-    <Link href={stat.href} className="group block text-center">
-      <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#1E6FD9] mb-3 transition-transform duration-300 group-hover:scale-110">
+    <div className="text-center">
+      <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#0B0C0D] mb-2">
         {count}
         {stat.suffix}
       </div>
-      <div className="text-gray-400 text-lg sm:text-xl font-medium group-hover:text-white transition-colors duration-300">
+      <div className="text-gray-500 text-base sm:text-lg">
         {stat.label}
       </div>
-      <div className="mt-3 w-12 h-0.5 bg-[#1E6FD9]/30 mx-auto group-hover:w-20 group-hover:bg-[#1E6FD9] transition-all duration-500" />
-    </Link>
+    </div>
   );
 }
 
@@ -88,24 +80,8 @@ export default function Stats() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 lg:py-28 bg-[#0B0C0D]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[#1E6FD9] text-sm font-semibold uppercase tracking-widest">
-            our journey
-          </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            our journey of building success
-          </h2>
-          <p className="mt-5 text-gray-400 text-lg leading-relaxed">
-            Full-cycle product development company providing end-to-end
-            solutions from ideation to launch and beyond, delivering measurable
-            results for businesses worldwide.
-          </p>
-        </div>
-
-        {/* Stats grid */}
+    <section ref={sectionRef} className="py-20 lg:py-28 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8">
           {stats.map((stat) => (
             <StatCard key={stat.label} stat={stat} isVisible={isVisible} />

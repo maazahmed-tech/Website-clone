@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import PageHero from '@/components/shared/PageHero';
 
 interface ListingItem {
   slug: string;
@@ -15,6 +14,7 @@ interface ListingItem {
 
 interface ListingTemplateProps {
   title: string;
+  subtitle?: string;
   items: ListingItem[];
   basePath: string;
   categories?: string[];
@@ -24,6 +24,7 @@ const ITEMS_PER_PAGE = 12;
 
 export default function ListingTemplate({
   title,
+  subtitle,
   items,
   basePath,
   categories = [],
@@ -49,8 +50,19 @@ export default function ListingTemplate({
 
   return (
     <>
-      {/* Hero */}
-      <PageHero title={title} />
+      {/* Light Hero */}
+      <section className="bg-[#fdf8f6] pt-32 pb-16 px-4 md:px-8 lg:px-16">
+        <div className="mx-auto max-w-7xl">
+          <h1 className="text-4xl font-bold text-[#0B0C0D] md:text-5xl lg:text-6xl leading-tight">
+            {title}
+          </h1>
+          {subtitle && (
+            <p className="mt-4 text-lg text-gray-500 md:text-xl max-w-2xl">
+              {subtitle}
+            </p>
+          )}
+        </div>
+      </section>
 
       {/* Category Filter */}
       {categories.length > 0 && (
@@ -85,21 +97,16 @@ export default function ListingTemplate({
         </section>
       )}
 
-      {/* Cards Grid */}
-      <section className="py-16 bg-gray-50">
+      {/* Article Cards */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Results count */}
-          <p className="text-gray-500 text-sm mb-8">
-            Showing {paginatedItems.length} of {filteredItems.length} results
-          </p>
-
           {paginatedItems.length > 0 ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="space-y-0 divide-y divide-gray-200">
               {paginatedItems.map((item) => {
                 const formattedDate = item.date
                   ? new Date(item.date).toLocaleDateString('en-US', {
                       year: 'numeric',
-                      month: 'short',
+                      month: 'long',
                       day: 'numeric',
                     })
                   : null;
@@ -108,45 +115,40 @@ export default function ListingTemplate({
                   <Link
                     key={item.slug}
                     href={`${basePath}/${item.slug}`}
-                    className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-[#1E6FD9] hover:shadow-lg transition-all duration-300"
+                    className="group block py-8 first:pt-0 last:pb-0"
                   >
-                    {/* Card Image */}
-                    {item.image ? (
-                      <div className="aspect-video bg-gray-100 overflow-hidden">
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                      </div>
-                    ) : (
-                      <div className="aspect-video bg-gradient-to-br from-[#0B0C0D] to-[#1a1d20] flex items-center justify-center">
-                        <span className="text-[#1E6FD9] text-4xl font-bold opacity-30">
-                          {item.title[0]}
-                        </span>
-                      </div>
-                    )}
-
-                    {/* Card Content */}
-                    <div className="p-6">
-                      <div className="flex items-center gap-3 mb-3">
-                        {item.category && (
-                          <span className="inline-block bg-[#1E6FD9]/10 text-[#1E6FD9] text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full">
-                            {item.category}
-                          </span>
+                    <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
+                      {/* Text Content */}
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-xl font-bold text-[#0B0C0D] group-hover:text-[#1E6FD9] transition-colors leading-snug mb-2 md:text-2xl">
+                          {item.title}
+                        </h3>
+                        {item.excerpt && (
+                          <p className="text-gray-500 text-base leading-relaxed line-clamp-2 mb-3">
+                            {item.excerpt}
+                          </p>
                         )}
                         {formattedDate && (
-                          <time className="text-gray-400 text-xs">{formattedDate}</time>
+                          <time className="text-sm text-gray-400">{formattedDate}</time>
                         )}
                       </div>
-                      <h3 className="text-lg font-bold text-[#0B0C0D] group-hover:text-[#1E6FD9] transition-colors line-clamp-2 mb-2">
-                        {item.title}
-                      </h3>
-                      {item.excerpt && (
-                        <p className="text-gray-500 text-sm line-clamp-2">
-                          {item.excerpt}
-                        </p>
-                      )}
+
+                      {/* Arrow */}
+                      <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full border border-gray-200 group-hover:border-[#1E6FD9] group-hover:bg-[#1E6FD9] transition-all flex-shrink-0 mt-1">
+                        <svg
+                          className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </Link>
                 );
@@ -160,7 +162,7 @@ export default function ListingTemplate({
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-2 mt-12">
+            <div className="flex items-center justify-center gap-2 mt-12 pt-8 border-t border-gray-200">
               <button
                 onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                 disabled={currentPage === 1}
@@ -172,14 +174,12 @@ export default function ListingTemplate({
               </button>
 
               {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
-                // Show first, last, current, and neighbors
                 const showPage =
                   page === 1 ||
                   page === totalPages ||
                   Math.abs(page - currentPage) <= 1;
 
                 if (!showPage) {
-                  // Show ellipsis once between gaps
                   const prevShown =
                     page - 1 === 1 ||
                     page - 1 === totalPages ||
@@ -220,6 +220,27 @@ export default function ListingTemplate({
               </button>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* CTA Footer */}
+      <section className="bg-[#0B0C0D] px-4 py-20 md:px-8 lg:px-16">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#1E6FD9]">
+            Pull the Trigger!
+          </p>
+          <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            Let&apos;s bring your vision to life
+          </h2>
+          <p className="mb-8 text-lg text-gray-400 max-w-2xl mx-auto">
+            Partner with DeepLearnHQ to transform your ideas into powerful digital solutions.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block rounded-full bg-[#1E6FD9] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#1759b3]"
+          >
+            Get in Touch
+          </Link>
         </div>
       </section>
     </>

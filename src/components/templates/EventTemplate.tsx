@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import type { EventData } from '@/data/types';
-import PageHero from '@/components/shared/PageHero';
 import RichContent from '@/components/shared/RichContent';
-import CTASection from '@/components/shared/CTASection';
 
 interface EventTemplateProps {
   data: EventData;
@@ -18,26 +16,38 @@ export default function EventTemplate({ data }: EventTemplateProps) {
 
   return (
     <>
-      {/* Hero */}
-      <PageHero
-        title={data.title}
-        description={data.description}
-        breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'Events', href: '/events' },
-          { label: data.title },
-        ]}
-      />
+      {/* Light Hero */}
+      <section className="bg-[#fdf8f6] pt-32 pb-16 px-4 md:px-8 lg:px-16">
+        <div className="mx-auto max-w-4xl">
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
+            <Link href="/" className="hover:text-[#1E6FD9] transition-colors">
+              Home
+            </Link>
+            <span>/</span>
+            <Link href="/events" className="hover:text-[#1E6FD9] transition-colors">
+              Events
+            </Link>
+          </nav>
+
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0B0C0D] leading-tight mb-4">
+            {data.title}
+          </h1>
+          <p className="text-gray-500 text-base">
+            Published on <time dateTime={data.date}>{formattedDate}</time>
+          </p>
+        </div>
+      </section>
 
       {/* Event Details */}
-      <section className="py-20 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Date & Location Info Cards */}
+          {/* Date & Location Info */}
           <div className="grid sm:grid-cols-2 gap-6 mb-12">
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-[#1E6FD9]/10 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-[#1E6FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-[#fdf8f6] rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-9 h-9 bg-[#1E6FD9]/10 rounded-lg flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[#1E6FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -46,16 +56,16 @@ export default function EventTemplate({ data }: EventTemplateProps) {
                     />
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
                   Date
-                </h3>
+                </span>
               </div>
-              <p className="text-[#0B0C0D] font-bold text-lg">{formattedDate}</p>
+              <p className="text-[#0B0C0D] font-bold text-lg ml-12">{formattedDate}</p>
             </div>
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 bg-[#1E6FD9]/10 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-[#1E6FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-[#fdf8f6] rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-9 h-9 bg-[#1E6FD9]/10 rounded-lg flex items-center justify-center">
+                  <svg className="w-4 h-4 text-[#1E6FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -70,11 +80,11 @@ export default function EventTemplate({ data }: EventTemplateProps) {
                     />
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+                <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
                   Location
-                </h3>
+                </span>
               </div>
-              <p className="text-[#0B0C0D] font-bold text-lg">{data.location}</p>
+              <p className="text-[#0B0C0D] font-bold text-lg ml-12">{data.location}</p>
             </div>
           </div>
 
@@ -90,19 +100,38 @@ export default function EventTemplate({ data }: EventTemplateProps) {
           )}
 
           {/* Event Content */}
-          <div className="prose prose-lg max-w-none">
-            <RichContent content={data.content} />
-          </div>
+          <RichContent content={data.content} />
         </div>
       </section>
 
-      {/* CTA */}
-      <CTASection
-        title="Interested in This Event?"
-        description="Get in touch to learn more about this and other upcoming events."
-        primaryCTA={{ label: 'Contact Us', href: '/contact' }}
-        secondaryCTA={{ label: 'View All Events', href: '/events' }}
-      />
+      {/* CTA Footer */}
+      <section className="bg-[#0B0C0D] px-4 py-20 md:px-8 lg:px-16">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#1E6FD9]">
+            Pull the Trigger!
+          </p>
+          <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            Let&apos;s bring your vision to life
+          </h2>
+          <p className="mb-8 text-lg text-gray-400 max-w-2xl mx-auto">
+            Partner with DeepLearnHQ to transform your ideas into powerful digital solutions.
+          </p>
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-block rounded-full bg-[#1E6FD9] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#1759b3]"
+            >
+              Get in Touch
+            </Link>
+            <Link
+              href="/events"
+              className="inline-block rounded-full border-2 border-white/30 px-8 py-4 text-lg font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+            >
+              View All Events
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
