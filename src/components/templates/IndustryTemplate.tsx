@@ -44,7 +44,7 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
         </div>
       </div>
 
-      {/* Hero - Light background matching cubix.co industry pages */}
+      {/* Hero - Light background matching deeplearnhq.com industry pages */}
       <section className="relative bg-[#fdf8f6] px-4 pb-16 pt-28 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="mb-6">

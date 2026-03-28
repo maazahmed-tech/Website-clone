@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Cubix",
+  title: "Privacy Policy | DeepLearnHQ",
   description:
-    "Read our privacy policy to understand how Cubix collects, uses, and protects your personal information.",
+    "Read our privacy policy to understand how DeepLearnHQ collects, uses, and protects your personal information.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -37,10 +37,10 @@ export default function PrivacyPolicyPage() {
                   1. Introduction
                 </h2>
                 <p className="text-gray-600 leading-relaxed">
-                  Cubix (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is
+                  DeepLearnHQ (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is
                   committed to protecting your privacy. This Privacy Policy
                   explains how we collect, use, disclose, and safeguard your
-                  information when you visit our website cubix.co, use our
+                  information when you visit our website deeplearnhq.com, use our
                   services, or interact with us in any way. Please read this
                   policy carefully. If you do not agree with the terms of this
                   privacy policy, please do not access our website or use our
@@ -202,7 +202,7 @@ export default function PrivacyPolicyPage() {
                   please contact us at:
                 </p>
                 <div className="mt-4 bg-gray-50 rounded-xl p-6">
-                  <p className="text-[#0B0C0D] font-semibold">Cubix</p>
+                  <p className="text-[#0B0C0D] font-semibold">DeepLearnHQ</p>
                   <p className="text-gray-600 text-sm mt-1">
                     1645 Palm Beach Lakes Blvd, Suite 1200
                   </p>
@@ -210,7 +210,7 @@ export default function PrivacyPolicyPage() {
                     West Palm Beach, FL 33401
                   </p>
                   <p className="text-gray-600 text-sm mt-2">
-                    Email: info@cubix.co
+                    Email: info@deeplearnhq.com
                   </p>
                   <p className="text-gray-600 text-sm">
                     Phone: 866-978-2220

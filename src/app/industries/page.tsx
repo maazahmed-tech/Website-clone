@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | Cubix",
+  title: "Industries We Serve | DeepLearnHQ",
   description:
-    "Cubix delivers tailored technology solutions across 16+ industries including healthcare, finance, education, ecommerce, and more.",
+    "DeepLearnHQ delivers tailored technology solutions across 16+ industries including healthcare, finance, education, ecommerce, and more.",
 };
 
 const industries = [
@@ -109,7 +109,7 @@ const industries = [
 export default function IndustriesPage() {
   return (
     <>
-      {/* Hero Section - Light background matching cubix.co */}
+      {/* Hero Section - Light background matching deeplearnhq.com */}
       <section className="bg-[#fdf8f6] pt-28 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">

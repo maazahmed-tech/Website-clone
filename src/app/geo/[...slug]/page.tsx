@@ -110,7 +110,7 @@ export default async function GeoPage({ params }: PageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why {data.location} Businesses Choose Cubix
+              Why {data.location} Businesses Choose DeepLearnHQ
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               We combine global development expertise with local market understanding to deliver results that matter.

@@ -12,23 +12,23 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Software Development Company | App Development | Cubix",
+  title: "Software Development Company | App Development | DeepLearnHQ",
   description:
-    "Cubix is a digital transformation company that provides software development, mobile app development, product development, and game development services.",
+    "DeepLearnHQ is a digital transformation company that provides software development, mobile app development, product development, and game development services.",
   openGraph: {
-    title: "Software Development Company | App Development | Cubix",
+    title: "Software Development Company | App Development | DeepLearnHQ",
     description:
-      "Cubix is a digital transformation company that provides software development, mobile app development, product development, and game development services.",
-    url: "https://www.cubix.co/",
-    siteName: "Cubix",
+      "DeepLearnHQ is a digital transformation company that provides software development, mobile app development, product development, and game development services.",
+    url: "https://www.deeplearnhq.com/",
+    siteName: "DeepLearnHQ",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary",
-    title: "Software Development Company | App Development | Cubix",
+    title: "Software Development Company | App Development | DeepLearnHQ",
     description:
-      "Cubix is a digital transformation company that provides software development, mobile app development, product development, and game development services.",
+      "DeepLearnHQ is a digital transformation company that provides software development, mobile app development, product development, and game development services.",
   },
   robots: "index, follow",
 };

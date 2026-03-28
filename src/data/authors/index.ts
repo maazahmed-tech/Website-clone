@@ -177,7 +177,7 @@ export const authors: AuthorData[] = [
     postSlugs: [],
   },
   {
-    slug: 'raghib-khesalcubixlabs-com',
+    slug: 'raghib-khesaldeeplearnhqlabs-com',
     name: 'Raghib Khesal',
     role: 'Senior Editor',
     bio: 'Raghib is a senior editor with extensive experience in technology publishing. He oversees content quality and drives editorial strategy across multiple verticals.',
@@ -219,10 +219,10 @@ export const authors: AuthorData[] = [
     postSlugs: [],
   },
   {
-    slug: 'cubix-co',
-    name: 'Cubix Editorial',
+    slug: 'deeplearnhq-co',
+    name: 'DeepLearnHQ Editorial',
     role: 'Editorial Team',
-    bio: 'The Cubix Editorial team delivers curated insights on software development, technology trends, and digital innovation from industry experts and thought leaders.',
+    bio: 'The DeepLearnHQ Editorial team delivers curated insights on software development, technology trends, and digital innovation from industry experts and thought leaders.',
     postSlugs: [],
   },
   {

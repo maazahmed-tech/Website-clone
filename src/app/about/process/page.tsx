@@ -4,9 +4,9 @@ import PageHero from '@/components/shared/PageHero';
 import CTASection from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Our Development Process | Cubix',
+  title: 'Our Development Process | DeepLearnHQ',
   description:
-    'Discover the proven development process Cubix follows to deliver world-class digital products — from discovery and strategy through design, development, testing, and launch.',
+    'Discover the proven development process DeepLearnHQ follows to deliver world-class digital products — from discovery and strategy through design, development, testing, and launch.',
 };
 
 const steps = [

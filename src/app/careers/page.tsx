@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Careers at Cubix | Join Our Team",
+  title: "Careers at DeepLearnHQ | Join Our Team",
   description:
-    "Join the Cubix team. Explore exciting career opportunities in software development, mobile app development, game development, AI, and more.",
+    "Join the DeepLearnHQ team. Explore exciting career opportunities in software development, mobile app development, game development, AI, and more.",
 };
 
 const benefits = [
@@ -163,7 +163,7 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-4">
-              Why Work at Cubix?
+              Why Work at DeepLearnHQ?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We offer more than just a job. Join a team where your growth,
@@ -277,7 +277,7 @@ export default function CareersPage() {
               Our Culture
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              At Cubix, we foster a culture of innovation, collaboration, and
+              At DeepLearnHQ, we foster a culture of innovation, collaboration, and
               continuous growth.
             </p>
           </div>

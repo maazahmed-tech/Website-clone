@@ -40,7 +40,7 @@ export default function BlogPostTemplate({ data, relatedPosts = [] }: BlogPostTe
         </div>
       </div>
 
-      {/* Article Header — centered like original cubix.co */}
+      {/* Article Header — centered like original deeplearnhq.com */}
       <article className="bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 text-center">
           {/* Title — large centered */}

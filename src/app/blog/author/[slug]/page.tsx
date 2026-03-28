@@ -17,14 +17,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const author = getAuthorBySlug(slug);
 
   if (!author) {
-    return { title: 'Author Not Found | Cubix Blog' };
+    return { title: 'Author Not Found | DeepLearnHQ Blog' };
   }
 
   return {
-    title: `${author.name} - ${author.role} | Cubix Blog`,
+    title: `${author.name} - ${author.role} | DeepLearnHQ Blog`,
     description: author.bio,
     openGraph: {
-      title: `${author.name} - ${author.role} | Cubix Blog`,
+      title: `${author.name} - ${author.role} | DeepLearnHQ Blog`,
       description: author.bio,
       type: 'profile',
     },

@@ -3,9 +3,9 @@ import Link from "next/link";
 import ClutchBadge from "@/components/shared/ClutchBadge";
 
 export const metadata: Metadata = {
-  title: "About Cubix | Full-Cycle Product Development Company",
+  title: "About DeepLearnHQ | Full-Cycle Product Development Company",
   description:
-    "Learn about Cubix, a full-cycle product development company with 500+ projects delivered, 350+ team members, and offices across the globe.",
+    "Learn about DeepLearnHQ, a full-cycle product development company with 500+ projects delivered, 350+ team members, and offices across the globe.",
 };
 
 const stats = [
@@ -99,7 +99,7 @@ export default function AboutPage() {
       <section className="w-full">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <div className="w-full h-[300px] md:h-[450px] bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl overflow-hidden flex items-center justify-center">
-            <p className="text-gray-500 text-lg font-medium">Cubix Office / Team Photo</p>
+            <p className="text-gray-500 text-lg font-medium">DeepLearnHQ Office / Team Photo</p>
           </div>
         </div>
       </section>
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 We are a full-cycle product development company
               </h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Since our inception, Cubix has been at the forefront of digital
+                Since our inception, DeepLearnHQ has been at the forefront of digital
                 innovation, helping businesses across the globe turn their ideas
                 into reality. We combine cutting-edge technology with creative
                 excellence to deliver solutions that drive growth.
@@ -195,7 +195,7 @@ export default function AboutPage() {
               Leadership Team
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Meet the visionaries driving Cubix forward with their expertise
+              Meet the visionaries driving DeepLearnHQ forward with their expertise
               and passion for technology.
             </p>
           </div>
@@ -292,7 +292,7 @@ export default function AboutPage() {
             Ready to Build Something Amazing?
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-            Partner with Cubix to bring your digital vision to life. Let&apos;s
+            Partner with DeepLearnHQ to bring your digital vision to life. Let&apos;s
             create something extraordinary together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

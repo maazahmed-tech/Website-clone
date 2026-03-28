@@ -38,7 +38,7 @@ export default function ServiceTemplate({ data }: ServiceTemplateProps) {
         </div>
       </div>
 
-      {/* Hero - Light background matching cubix.co service pages */}
+      {/* Hero - Light background matching deeplearnhq.com service pages */}
       <section className="relative bg-[#fdf8f6] px-4 pb-16 pt-28 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           {/* Clutch badge */}

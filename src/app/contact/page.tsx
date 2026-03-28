@@ -238,7 +238,7 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12 pt-8 border-t border-gray-100">
             <a
-              href="mailto:info@cubix.co"
+              href="mailto:info@deeplearnhq.com"
               className="text-gray-600 hover:text-black transition-colors flex items-center gap-2"
             >
               <svg
@@ -254,7 +254,7 @@ export default function ContactPage() {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              info@cubix.co
+              info@deeplearnhq.com
             </a>
             <span className="hidden sm:inline text-gray-300">|</span>
             <a

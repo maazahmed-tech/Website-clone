@@ -3,8 +3,8 @@ import ListingTemplate from '@/components/templates/ListingTemplate';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Press Releases | Cubix',
-  description: 'Latest press releases and announcements from Cubix.',
+  title: 'Press Releases | DeepLearnHQ',
+  description: 'Latest press releases and announcements from DeepLearnHQ.',
 };
 
 export default function PressReleasesPage() {

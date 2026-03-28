@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = getBlogPostBySlug(slug);
 
   if (!post) {
-    return { title: 'Post Not Found | Cubix Blog' };
+    return { title: 'Post Not Found | DeepLearnHQ Blog' };
   }
 
   return {

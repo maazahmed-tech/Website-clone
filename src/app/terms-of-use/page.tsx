@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | Cubix",
+  title: "Terms of Use | DeepLearnHQ",
   description:
-    "Read the terms and conditions governing your use of the Cubix website and services.",
+    "Read the terms and conditions governing your use of the DeepLearnHQ website and services.",
 };
 
 export default function TermsOfUsePage() {
@@ -36,7 +36,7 @@ export default function TermsOfUsePage() {
                 1. Agreement to Terms
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                By accessing and using the Cubix website (cubix.co) and our
+                By accessing and using the DeepLearnHQ website (deeplearnhq.com) and our
                 services, you agree to be bound by these Terms of Use. If you
                 do not agree to all of the terms and conditions set forth
                 herein, then you should not use our website or services. These
@@ -54,7 +54,7 @@ export default function TermsOfUsePage() {
                 features, and functionality thereof, including but not limited
                 to all information, software, text, displays, images, video,
                 and audio, and the design, selection, and arrangement thereof,
-                are owned by Cubix, its licensors, or other providers of such
+                are owned by DeepLearnHQ, its licensors, or other providers of such
                 material and are protected by copyright, trademark, patent,
                 trade secret, and other intellectual property or proprietary
                 rights laws. You must not reproduce, distribute, modify, create
@@ -103,11 +103,11 @@ export default function TermsOfUsePage() {
                 4. Services and Projects
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                All services provided by Cubix are subject to separate service
+                All services provided by DeepLearnHQ are subject to separate service
                 agreements, statements of work, or contracts that will be
-                agreed upon between Cubix and the client. The scope,
+                agreed upon between DeepLearnHQ and the client. The scope,
                 deliverables, timeline, and pricing for any project will be
-                defined in the applicable service agreement. Cubix reserves the
+                defined in the applicable service agreement. DeepLearnHQ reserves the
                 right to refuse service to anyone for any reason at any time.
                 Project timelines and deliverables are estimates and may vary
                 based on project complexity and client responsiveness.
@@ -163,7 +163,7 @@ export default function TermsOfUsePage() {
                 6. Limitation of Liability
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                In no event shall Cubix, its directors, employees, partners,
+                In no event shall DeepLearnHQ, its directors, employees, partners,
                 agents, suppliers, or affiliates be liable for any indirect,
                 incidental, special, consequential, or punitive damages,
                 including without limitation, loss of profits, data, use,
@@ -229,7 +229,7 @@ export default function TermsOfUsePage() {
                 contact us:
               </p>
               <div className="mt-4 bg-gray-50 rounded-xl p-6">
-                <p className="text-[#0B0C0D] font-semibold">Cubix</p>
+                <p className="text-[#0B0C0D] font-semibold">DeepLearnHQ</p>
                 <p className="text-gray-600 text-sm mt-1">
                   1645 Palm Beach Lakes Blvd, Suite 1200
                 </p>
@@ -237,7 +237,7 @@ export default function TermsOfUsePage() {
                   West Palm Beach, FL 33401
                 </p>
                 <p className="text-gray-600 text-sm mt-2">
-                  Email: info@cubix.co
+                  Email: info@deeplearnhq.com
                 </p>
                 <p className="text-gray-600 text-sm">Phone: 866-978-2220</p>
               </div>

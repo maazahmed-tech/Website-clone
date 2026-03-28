@@ -3,9 +3,9 @@ import PageHero from '@/components/shared/PageHero';
 import CTASection from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Our Manifesto | Cubix',
+  title: 'Our Manifesto | DeepLearnHQ',
   description:
-    'The Cubix Manifesto — the principles, beliefs, and commitments that guide how we build technology, serve clients, and grow as a company.',
+    'The DeepLearnHQ Manifesto — the principles, beliefs, and commitments that guide how we build technology, serve clients, and grow as a company.',
 };
 
 const principles = [
@@ -31,7 +31,7 @@ const principles = [
     number: '04',
     title: 'Relentless Curiosity',
     description:
-      'Technology evolves daily, and so do we. Every engineer at Cubix dedicates time to learning new frameworks, attending conferences, contributing to open source, and sharing knowledge with colleagues. Curiosity is not encouraged — it is expected.',
+      'Technology evolves daily, and so do we. Every engineer at DeepLearnHQ dedicates time to learning new frameworks, attending conferences, contributing to open source, and sharing knowledge with colleagues. Curiosity is not encouraged — it is expected.',
   },
   {
     number: '05',
@@ -72,7 +72,7 @@ export default function ManifestoPage() {
   return (
     <>
       <PageHero
-        title="The Cubix Manifesto"
+        title="The DeepLearnHQ Manifesto"
         description="These are the principles we live by. They shape how we build technology, how we treat our clients, and how we grow as a company. They are not aspirational statements — they are non-negotiable commitments."
         bgColor="#fdf8f6"
         breadcrumbs={[
@@ -143,7 +143,7 @@ export default function ManifestoPage() {
             Our Commitment to You
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-4">
-            When you choose Cubix, you are not hiring a vendor — you are gaining a technology partner
+            When you choose DeepLearnHQ, you are not hiring a vendor — you are gaining a technology partner
             committed to your success. We will challenge your thinking, protect your interests, and
             build products that create lasting value.
           </p>

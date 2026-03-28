@@ -207,7 +207,7 @@ const Footer = () => {
                   866-978-2220
                 </a>
                 <a
-                  href="mailto:info@cubix.co"
+                  href="mailto:info@deeplearnhq.com"
                   className="flex items-center gap-2 text-sm text-gray-400 hover:text-[#2ED06E] transition-colors"
                 >
                   <svg
@@ -217,36 +217,22 @@ const Footer = () => {
                   >
                     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                   </svg>
-                  info@cubix.co
+                  info@deeplearnhq.com
                 </a>
               </div>
             </div>
 
             {/* Center: Logo + Copyright */}
             <div className="flex flex-col items-center text-center">
-              <Link href="/" aria-label="Cubix Home">
-                <svg
-                  width="120"
-                  height="36"
-                  viewBox="0 0 120 36"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <text
-                    x="10"
-                    y="26"
-                    fill="#2ED06E"
-                    fontFamily="Manrope, sans-serif"
-                    fontWeight="800"
-                    fontSize="28"
-                    letterSpacing="-1"
-                  >
-                    cubix.
-                  </text>
-                </svg>
+              <Link href="/" aria-label="DeepLearnHQ Home">
+                <img
+                  src="/images/brand/logo-white.png"
+                  alt="DeepLearnHQ"
+                  className="h-8 w-auto"
+                />
               </Link>
               <p className="text-xs text-gray-500 mt-3">
-                &copy; 2026 Cubix. All Rights Reserved
+                &copy; 2026 DeepLearnHQ. All Rights Reserved
               </p>
             </div>
 

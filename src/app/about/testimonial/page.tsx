@@ -3,15 +3,15 @@ import PageHero from '@/components/shared/PageHero';
 import CTASection from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Client Testimonials | Cubix',
+  title: 'Client Testimonials | DeepLearnHQ',
   description:
-    'Read what our clients say about working with Cubix. Testimonials from startups, enterprises, and industry leaders across healthcare, fintech, logistics, and more.',
+    'Read what our clients say about working with DeepLearnHQ. Testimonials from startups, enterprises, and industry leaders across healthcare, fintech, logistics, and more.',
 };
 
 const testimonials = [
   {
     quote:
-      'Cubix delivered our mobile banking platform three weeks ahead of schedule. Their team felt like an extension of ours, and the quality of code was exceptional. We have renewed our partnership for the next two years.',
+      'DeepLearnHQ delivered our mobile banking platform three weeks ahead of schedule. Their team felt like an extension of ours, and the quality of code was exceptional. We have renewed our partnership for the next two years.',
     name: 'Richard Kensington',
     role: 'CTO, NovaPay Financial',
     company: 'NovaPay Financial',
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     quote:
-      'From the first discovery workshop to post-launch support, Cubix demonstrated a level of professionalism and technical depth that is rare in this industry. Our e-commerce platform handles 10x the traffic we originally planned for.',
+      'From the first discovery workshop to post-launch support, DeepLearnHQ demonstrated a level of professionalism and technical depth that is rare in this industry. Our e-commerce platform handles 10x the traffic we originally planned for.',
     name: 'Amira Al-Farsi',
     role: 'VP of Digital, Gulf Retail Group',
     company: 'Gulf Retail Group',
@@ -29,7 +29,7 @@ const testimonials = [
   },
   {
     quote:
-      'We interviewed seven agencies before choosing Cubix. They were the only team that asked the hard questions and challenged our assumptions—exactly what we needed. The product they built has become our primary revenue driver.',
+      'We interviewed seven agencies before choosing DeepLearnHQ. They were the only team that asked the hard questions and challenged our assumptions—exactly what we needed. The product they built has become our primary revenue driver.',
     name: 'Jason Rivera',
     role: 'Founder, PartyShark LLC',
     company: 'PartyShark',
@@ -38,7 +38,7 @@ const testimonials = [
   },
   {
     quote:
-      'Our healthcare compliance requirements are strict, and Cubix navigated them flawlessly. They built a HIPAA-compliant telehealth platform that our patients love and our compliance team trusts.',
+      'Our healthcare compliance requirements are strict, and DeepLearnHQ navigated them flawlessly. They built a HIPAA-compliant telehealth platform that our patients love and our compliance team trusts.',
     name: 'Dr. Sarah Mitchell',
     role: 'Co-Founder & CEO, Pauseitive Inc.',
     company: 'Pauseitive',
@@ -47,7 +47,7 @@ const testimonials = [
   },
   {
     quote:
-      'Cubix took our paper-based logistics operation and turned it into a real-time, data-driven machine. Fleet utilization is up 40%, and our customers finally have the visibility they have been asking for.',
+      'DeepLearnHQ took our paper-based logistics operation and turned it into a real-time, data-driven machine. Fleet utilization is up 40%, and our customers finally have the visibility they have been asking for.',
     name: 'Ahmed Al-Rashidi',
     role: 'Chief Digital Officer, Oomco Petroleum',
     company: 'Oomco',
@@ -56,7 +56,7 @@ const testimonials = [
   },
   {
     quote:
-      'We needed a team that could handle AI, IoT, and geospatial data processing at scale. Cubix not only had the skills but also the passion for our environmental mission. The result speaks for itself.',
+      'We needed a team that could handle AI, IoT, and geospatial data processing at scale. DeepLearnHQ not only had the skills but also the passion for our environmental mission. The result speaks for itself.',
     name: 'Dr. Elena Vasquez',
     role: 'Executive Director, Forest Fusion Foundation',
     company: 'Forest Fusion',
@@ -65,7 +65,7 @@ const testimonials = [
   },
   {
     quote:
-      'The Cubix design team transformed our outdated enterprise dashboard into something our employees actually enjoy using. User adoption went from 30% to 89% within four months of the redesign.',
+      'The DeepLearnHQ design team transformed our outdated enterprise dashboard into something our employees actually enjoy using. User adoption went from 30% to 89% within four months of the redesign.',
     name: 'Mark Gallagher',
     role: 'Head of Product, Pinnacle Systems',
     company: 'Pinnacle Systems',
@@ -74,7 +74,7 @@ const testimonials = [
   },
   {
     quote:
-      'What impressed us most was Cubix\'s ability to scale. We started with a three-person team and grew to fifteen engineers within a month when our timeline accelerated. Zero compromise on quality.',
+      'What impressed us most was DeepLearnHQ\'s ability to scale. We started with a three-person team and grew to fifteen engineers within a month when our timeline accelerated. Zero compromise on quality.',
     name: 'Priya Sharma',
     role: 'CTO, Foodly Technologies',
     company: 'Foodly',
@@ -95,7 +95,7 @@ export default function TestimonialPage() {
     <>
       <PageHero
         title="What Our Clients Say"
-        description="Hear directly from the founders, CTOs, and product leaders who trusted Cubix to build their most important digital products."
+        description="Hear directly from the founders, CTOs, and product leaders who trusted DeepLearnHQ to build their most important digital products."
         bgColor="#fdf8f6"
         breadcrumbs={[
           { label: 'Home', href: '/' },
@@ -188,7 +188,7 @@ export default function TestimonialPage() {
               Watch Their Stories
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Our clients share their experiences working with Cubix in their own words.
+              Our clients share their experiences working with DeepLearnHQ in their own words.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -213,7 +213,7 @@ export default function TestimonialPage() {
 
       <CTASection
         title="Ready to Write Your Success Story?"
-        description="Join the growing list of companies that trust Cubix to build their most critical digital products."
+        description="Join the growing list of companies that trust DeepLearnHQ to build their most critical digital products."
         primaryCTA={{ label: 'Start Your Project', href: '/contact' }}
         secondaryCTA={{ label: 'View Case Studies', href: '/work' }}
       />

@@ -4,9 +4,9 @@ import PageHero from '@/components/shared/PageHero';
 import CTASection from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Cubix University | Internship & Training Program',
+  title: 'DeepLearnHQ Academy | Internship & Training Program',
   description:
-    'Cubix University is our flagship internship and training program that prepares the next generation of software engineers, designers, and product managers for real-world success.',
+    'DeepLearnHQ Academy is our flagship internship and training program that prepares the next generation of software engineers, designers, and product managers for real-world success.',
 };
 
 const tracks = [
@@ -70,7 +70,7 @@ const programHighlights = [
   },
   {
     title: 'Global Community',
-    description: 'Join a network of Cubix University alumni working at leading tech companies around the world.',
+    description: 'Join a network of DeepLearnHQ Academy alumni working at leading tech companies around the world.',
   },
 ];
 
@@ -94,7 +94,7 @@ export default function UniversityPage() {
   return (
     <>
       <PageHero
-        title="Cubix University"
+        title="DeepLearnHQ Academy"
         description="Our flagship internship and training program that transforms ambitious students and early-career professionals into industry-ready engineers, designers, and product builders."
         bgColor="#fdf8f6"
         breadcrumbs={[
@@ -168,7 +168,7 @@ export default function UniversityPage() {
         </div>
       </section>
 
-      {/* Why Cubix University */}
+      {/* Why DeepLearnHQ Academy */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

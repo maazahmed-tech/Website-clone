@@ -156,15 +156,15 @@ const companyMenuFlat: NavLink[] = [
 ];
 
 const solutionsMenu: NavLink[] = [
-  { label: "Cubix HappyForce", href: "/solutions/cubix-happyforce" },
-  { label: "Cubix Hero", href: "/solutions/cubix-hero" },
-  { label: "Cubix Shop", href: "/solutions/cubix-shop" },
-  { label: "Cubix Messenger", href: "/solutions/messenger-app" },
+  { label: "DeepLearnHQ HappyForce", href: "/solutions/deeplearnhq-happyforce" },
+  { label: "DeepLearnHQ Hero", href: "/solutions/deeplearnhq-hero" },
+  { label: "DeepLearnHQ Shop", href: "/solutions/deeplearnhq-shop" },
+  { label: "DeepLearnHQ Messenger", href: "/solutions/messenger-app" },
   { label: "On-Demand Delivery", href: "/solutions/on-demand-delivery-platform" },
   { label: "Chat Bot", href: "/solutions/chat-bot" },
-  { label: "Cubix Chain", href: "/solutions/cubix-chain" },
+  { label: "DeepLearnHQ Chain", href: "/solutions/deeplearnhq-chain" },
   { label: "Social Platform", href: "/solutions/social-platform" },
-  { label: "Cubix Insight Machine", href: "/solutions/cubix-insight-machine" },
+  { label: "DeepLearnHQ Insight Machine", href: "/solutions/deeplearnhq-insight-machine" },
   { label: "Event Management", href: "/solutions/event-management-platform" },
 ];
 
@@ -174,28 +174,13 @@ type DropdownKey = "services" | "industries" | "company" | "solutions";
 /*  SVG ICONS                                                          */
 /* ------------------------------------------------------------------ */
 
-function CubixLogo() {
+function DeepLearnLogo() {
   return (
-    <svg
-      width="120"
-      height="32"
-      viewBox="0 0 120 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="Cubix"
-    >
-      <text
-        x="0"
-        y="26"
-        fill="#2ED06E"
-        fontFamily="Manrope, sans-serif"
-        fontWeight="800"
-        fontSize="28"
-        letterSpacing="-1"
-      >
-        cubix.
-      </text>
-    </svg>
+    <img
+      src="/images/brand/logo-white.png"
+      alt="DeepLearnHQ"
+      className="h-8 w-auto"
+    />
   );
 }
 
@@ -535,7 +520,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-[72px]">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
-              <CubixLogo />
+              <DeepLearnLogo />
             </Link>
 
             {/* Desktop Nav */}
@@ -686,7 +671,7 @@ export default function Header() {
         {/* Mobile header */}
         <div className="flex items-center justify-between px-4 h-[72px] border-b border-white/10">
           <Link href="/" onClick={() => setMobileOpen(false)}>
-            <CubixLogo />
+            <DeepLearnLogo />
           </Link>
           <button
             className="text-white p-2"

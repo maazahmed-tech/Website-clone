@@ -82,7 +82,7 @@ export default function ArticleTemplate({ data, type }: ArticleTemplateProps) {
       {/* CTA */}
       <CTASection
         title="Want to Learn More?"
-        description="Stay updated with the latest news and developments from Cubix."
+        description="Stay updated with the latest news and developments from DeepLearnHQ."
         primaryCTA={{ label: 'Contact Us', href: '/contact' }}
         secondaryCTA={{ label: `View All ${sectionLabel}`, href: sectionPath }}
       />

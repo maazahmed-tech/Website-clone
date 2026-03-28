@@ -4,9 +4,9 @@ import PageHero from '@/components/shared/PageHero';
 import CTASection from '@/components/shared/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Our Clients | Cubix',
+  title: 'Our Clients | DeepLearnHQ',
   description:
-    'Cubix has partnered with startups, enterprises, and Fortune 500 companies across healthcare, fintech, logistics, entertainment, and more.',
+    'DeepLearnHQ has partnered with startups, enterprises, and Fortune 500 companies across healthcare, fintech, logistics, entertainment, and more.',
 };
 
 const clientCategories = [
@@ -111,7 +111,7 @@ export default function ClientsPage() {
               Trusted By
             </span>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0B0C0D]">
-              Companies That Choose Cubix
+              Companies That Choose DeepLearnHQ
             </h2>
           </div>
 
@@ -174,7 +174,7 @@ export default function ClientsPage() {
 
       <CTASection
         title="Join Our Growing Client Portfolio"
-        description="Let us show you why leading organizations trust Cubix to build their most critical digital products."
+        description="Let us show you why leading organizations trust DeepLearnHQ to build their most critical digital products."
         primaryCTA={{ label: 'Start a Conversation', href: '/contact' }}
         secondaryCTA={{ label: 'View Case Studies', href: '/work' }}
       />

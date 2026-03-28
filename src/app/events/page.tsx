@@ -3,8 +3,8 @@ import ListingTemplate from '@/components/templates/ListingTemplate';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Events | Cubix',
-  description: 'Discover upcoming and past events where Cubix participates, speaks, and showcases technology solutions.',
+  title: 'Events | DeepLearnHQ',
+  description: 'Discover upcoming and past events where DeepLearnHQ participates, speaks, and showcases technology solutions.',
 };
 
 export default function EventsPage() {

@@ -4,9 +4,9 @@ import ClutchBadge from "@/components/shared/ClutchBadge";
 import { getAllServices } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Our Services | Cubix - Software & App Development",
+  title: "Our Services | DeepLearnHQ - Software & App Development",
   description:
-    "Explore Cubix's comprehensive range of services including mobile app development, software development, web development, game development, AI, blockchain, and more.",
+    "Explore DeepLearnHQ's comprehensive range of services including mobile app development, software development, web development, game development, AI, blockchain, and more.",
 };
 
 /* ------------------------------------------------------------------ */
@@ -294,12 +294,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ─── Cubix Guarantees ─── */}
+      {/* ─── DeepLearnHQ Guarantees ─── */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0B0C0D] mb-4">
-              The Cubix <span className="text-[#2ED06E]">Guarantee</span>
+              The DeepLearnHQ <span className="text-[#2ED06E]">Guarantee</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We combine technical expertise with a deep understanding of
@@ -358,7 +358,7 @@ export default function ServicesPage() {
             Pull the <span className="text-[#2ED06E]">Trigger!</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-            Initiate a conversation and let Cubix turn your ideas into reality.
+            Initiate a conversation and let DeepLearnHQ turn your ideas into reality.
             Tell us about your project, and we&apos;ll help you find the best
             approach to bring it to life.
           </p>
