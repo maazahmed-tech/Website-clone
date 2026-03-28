@@ -340,7 +340,7 @@ export default function Header() {
   /* ---- renderers ---- */
 
   const renderServicesMega = () => (
-    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-xl z-50 overflow-hidden">
+    <div className="absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-xl z-50 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 py-6 flex gap-6">
         {/* Left Sidebar */}
         <DropdownSidebar title="Services">
@@ -387,7 +387,7 @@ export default function Header() {
   );
 
   const renderIndustriesMega = () => (
-    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-xl z-50">
+    <div className="absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-xl z-50">
       <div className="max-w-7xl mx-auto px-6 py-8 flex gap-8">
         {/* Left Sidebar */}
         <DropdownSidebar title="Industries" />
@@ -409,7 +409,7 @@ export default function Header() {
   );
 
   const renderSolutionsMega = () => (
-    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-xl z-50">
+    <div className="absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-xl z-50">
       <div className="max-w-7xl mx-auto px-6 py-8 flex gap-8">
         {/* Left Sidebar */}
         <DropdownSidebar title="Solutions" />
@@ -431,7 +431,7 @@ export default function Header() {
   );
 
   const renderCompanyMega = () => (
-    <div className="absolute left-0 top-full w-screen bg-white border-t border-gray-200 shadow-xl z-50">
+    <div className="absolute left-0 right-0 top-full bg-white border-t border-gray-200 shadow-xl z-50">
       <div className="max-w-7xl mx-auto px-6 py-8 flex gap-8">
         {/* Left Sidebar */}
         <DropdownSidebar title="Company" />
@@ -542,7 +542,6 @@ export default function Header() {
             <nav className="hidden lg:flex items-center gap-1">
               {/* Services */}
               <div
-                className="relative"
                 onMouseEnter={() => showDropdown("services")}
                 onMouseLeave={hideDropdown}
               >
@@ -554,12 +553,10 @@ export default function Header() {
                     }`}
                   />
                 </button>
-                {activeDropdown === "services" && renderServicesMega()}
               </div>
 
               {/* Industries */}
               <div
-                className="relative"
                 onMouseEnter={() => showDropdown("industries")}
                 onMouseLeave={hideDropdown}
               >
@@ -571,7 +568,6 @@ export default function Header() {
                     }`}
                   />
                 </button>
-                {activeDropdown === "industries" && renderIndustriesMega()}
               </div>
 
               {/* Work */}
@@ -584,7 +580,6 @@ export default function Header() {
 
               {/* Company */}
               <div
-                className="relative"
                 onMouseEnter={() => showDropdown("company")}
                 onMouseLeave={hideDropdown}
               >
@@ -596,12 +591,10 @@ export default function Header() {
                     }`}
                   />
                 </button>
-                {activeDropdown === "company" && renderCompanyMega()}
               </div>
 
               {/* Solutions */}
               <div
-                className="relative"
                 onMouseEnter={() => showDropdown("solutions")}
                 onMouseLeave={hideDropdown}
               >
@@ -655,6 +648,28 @@ export default function Header() {
             </button>
           </div>
         </div>
+
+        {/* Edge-to-edge dropdown panels rendered at header level */}
+        {activeDropdown === "services" && (
+          <div onMouseEnter={() => showDropdown("services")} onMouseLeave={hideDropdown}>
+            {renderServicesMega()}
+          </div>
+        )}
+        {activeDropdown === "industries" && (
+          <div onMouseEnter={() => showDropdown("industries")} onMouseLeave={hideDropdown}>
+            {renderIndustriesMega()}
+          </div>
+        )}
+        {activeDropdown === "company" && (
+          <div onMouseEnter={() => showDropdown("company")} onMouseLeave={hideDropdown}>
+            {renderCompanyMega()}
+          </div>
+        )}
+        {activeDropdown === "solutions" && (
+          <div onMouseEnter={() => showDropdown("solutions")} onMouseLeave={hideDropdown}>
+            {renderSolutionsMega()}
+          </div>
+        )}
       </header>
 
       {/* ---- Mobile Overlay ---- */}
