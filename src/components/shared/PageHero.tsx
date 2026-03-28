@@ -1,12 +1,10 @@
 import { ReactNode } from "react";
 import Breadcrumb from "./Breadcrumb";
-import ClutchBadge from "./ClutchBadge";
 
 interface PageHeroProps {
   title: string;
   description?: string;
   breadcrumbs?: { label: string; href?: string }[];
-  clutchRating?: number;
   bgColor?: string;
   textColor?: string;
   children?: ReactNode;
@@ -16,7 +14,6 @@ export default function PageHero({
   title,
   description,
   breadcrumbs,
-  clutchRating,
   bgColor = "#faf9f8",
   textColor = "#1a1a1a",
   children,
@@ -49,11 +46,7 @@ export default function PageHero({
           </div>
 
           <div className="hidden lg:block">
-            {children ? (
-              children
-            ) : clutchRating !== undefined ? (
-              <ClutchBadge rating={clutchRating} />
-            ) : null}
+            {children || null}
           </div>
         </div>
       </div>

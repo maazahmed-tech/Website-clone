@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ClutchBadge from "@/components/shared/ClutchBadge";
 
 export const metadata: Metadata = {
   title: "Industries We Serve | DeepLearnHQ",
@@ -121,25 +120,6 @@ export default function IndustriesPage() {
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12">
             {/* Left content */}
             <div className="flex-1 max-w-2xl">
-              {/* Clutch TOP RATED badge */}
-              <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full px-4 py-2 mb-8 shadow-sm">
-                <div className="flex items-center gap-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <svg
-                      key={i}
-                      className="h-3.5 w-3.5 text-red-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-gray-700">
-                  Top Rated on Clutch
-                </span>
-              </div>
-
               <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-[#0B0C0D] mb-6 leading-[1.15]">
                 Industries We Empower &amp; Support
               </h1>
@@ -161,7 +141,6 @@ export default function IndustriesPage() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-pink-300/20 to-rose-200/10 blur-[2px]" />
               </div>
 
-              <ClutchBadge />
             </div>
           </div>
         </div>

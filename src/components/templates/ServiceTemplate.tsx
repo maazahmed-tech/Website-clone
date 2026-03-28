@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import type { ServicePageData } from '@/data/types';
-import ClutchBadge from '@/components/shared/ClutchBadge';
 
 interface ServiceTemplateProps {
   data: ServicePageData;
@@ -92,7 +91,6 @@ export default function ServiceTemplate({ data }: ServiceTemplateProps) {
         <div className="mx-auto max-w-7xl">
           {/* Clutch "TOP RATED" badge */}
           <div className="mb-6">
-            <ClutchBadge />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">

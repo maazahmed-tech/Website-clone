@@ -121,7 +121,7 @@ export default function TestimonialPage() {
           { label: 'About', href: '/about' },
           { label: 'Testimonials' },
         ]}
-        clutchRating={4.9}
+        
       />
 
       {/* Clutch Stats */}

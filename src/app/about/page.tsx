@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ClutchBadge from "@/components/shared/ClutchBadge";
 import CTASection from "@/components/shared/CTASection";
 
 export const metadata: Metadata = {
@@ -47,7 +46,6 @@ export default function AboutPage() {
 
             {/* Right: Clutch badge */}
             <div className="hidden lg:block flex-shrink-0">
-              <ClutchBadge rating={4.9} reviews={52} />
             </div>
           </div>
         </div>

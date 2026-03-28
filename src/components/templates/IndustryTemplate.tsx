@@ -3,7 +3,6 @@
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import type { IndustryPageData } from '@/data/types';
-import ClutchBadge from '@/components/shared/ClutchBadge';
 import TechStack from '@/components/shared/TechStack';
 import FAQAccordion from '@/components/shared/FAQAccordion';
 import CTASection from '@/components/shared/CTASection';
@@ -90,7 +89,6 @@ export default function IndustryTemplate({ data }: IndustryTemplateProps) {
 
             {/* Right: Clutch badge */}
             <div className="hidden flex-shrink-0 lg:block">
-              <ClutchBadge />
             </div>
           </div>
         </div>
