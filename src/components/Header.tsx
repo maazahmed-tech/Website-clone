@@ -174,10 +174,10 @@ type DropdownKey = "services" | "industries" | "company" | "solutions";
 /*  SVG ICONS                                                          */
 /* ------------------------------------------------------------------ */
 
-function DeepLearnLogo() {
+function DeepLearnLogo({ dark = false }: { dark?: boolean }) {
   return (
     <img
-      src="/images/brand/logo-white.png"
+      src={dark ? "/images/brand/logo-dark.png" : "/images/brand/logo-white.png"}
       alt="DeepLearnHQ"
       className="h-8 w-auto"
     />
@@ -510,13 +510,17 @@ export default function Header() {
   return (
     <>
       <header
-        className="fixed top-0 left-0 w-full z-[100] transition-all duration-300 font-[Manrope,sans-serif] bg-[#0B0C0D] shadow-lg"
+        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 font-[Manrope,sans-serif] shadow-lg ${
+          activeDropdown
+            ? "bg-white text-[#0B0C0D]"
+            : "bg-[#0B0C0D] text-white"
+        }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[72px]">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
-              <DeepLearnLogo />
+              <DeepLearnLogo dark={!!activeDropdown} />
             </Link>
 
             {/* Desktop Nav */}
@@ -526,7 +530,7 @@ export default function Header() {
                 onMouseEnter={() => showDropdown("services")}
                 onMouseLeave={hideDropdown}
               >
-                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium">
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm transition-colors duration-200 font-medium hover:text-[#1E6FD9]">
                   Services
                   <ChevronDown
                     className={`transition-transform duration-200 ${
@@ -541,7 +545,7 @@ export default function Header() {
                 onMouseEnter={() => showDropdown("industries")}
                 onMouseLeave={hideDropdown}
               >
-                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium">
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm transition-colors duration-200 font-medium hover:text-[#1E6FD9]">
                   Industries
                   <ChevronDown
                     className={`transition-transform duration-200 ${
@@ -554,7 +558,7 @@ export default function Header() {
               {/* Work */}
               <Link
                 href="/work"
-                className="px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium"
+                className="px-3 py-2 text-sm transition-colors duration-200 font-medium hover:text-[#1E6FD9]"
               >
                 Work
               </Link>
@@ -564,7 +568,7 @@ export default function Header() {
                 onMouseEnter={() => showDropdown("company")}
                 onMouseLeave={hideDropdown}
               >
-                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium">
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm transition-colors duration-200 font-medium hover:text-[#1E6FD9]">
                   Company
                   <ChevronDown
                     className={`transition-transform duration-200 ${
@@ -579,7 +583,7 @@ export default function Header() {
                 onMouseEnter={() => showDropdown("solutions")}
                 onMouseLeave={hideDropdown}
               >
-                <button className="flex items-center gap-1.5 px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium">
+                <button className="flex items-center gap-1.5 px-3 py-2 text-sm transition-colors duration-200 font-medium hover:text-[#1E6FD9]">
                   Solutions
                   <ChevronDown
                     className={`transition-transform duration-200 ${
@@ -593,7 +597,7 @@ export default function Header() {
               {/* Contact (nav link) */}
               <Link
                 href="/contact"
-                className="px-3 py-2 text-sm text-white hover:text-[#1E6FD9] transition-colors duration-200 font-medium"
+                className="px-3 py-2 text-sm transition-colors duration-200 font-medium hover:text-[#1E6FD9]"
               >
                 Contact
               </Link>
@@ -604,7 +608,7 @@ export default function Header() {
               {/* Phone */}
               <a
                 href="tel:8669782220"
-                className="flex items-center gap-2 text-white hover:text-[#1E6FD9] transition-colors text-sm font-medium"
+                className="flex items-center gap-2 hover:text-[#1E6FD9] transition-colors text-sm font-medium"
               >
                 <PhoneIcon />
                 <span>866-978-2220</span>
@@ -613,7 +617,11 @@ export default function Header() {
               {/* Contact Button */}
               <Link
                 href="/contact"
-                className="inline-flex items-center border border-white text-white hover:bg-white hover:text-black rounded-md px-5 py-2 font-semibold text-sm transition-colors duration-200"
+                className={`inline-flex items-center border rounded-md px-5 py-2 font-semibold text-sm transition-colors duration-200 ${
+                  activeDropdown
+                    ? "border-[#0B0C0D] text-[#0B0C0D] hover:bg-[#0B0C0D] hover:text-white"
+                    : "border-white text-white hover:bg-white hover:text-black"
+                }`}
               >
                 Get in Touch
               </Link>
@@ -621,7 +629,7 @@ export default function Header() {
 
             {/* Mobile hamburger */}
             <button
-              className="lg:hidden text-white p-2"
+              className="lg:hidden p-2"
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
             >
