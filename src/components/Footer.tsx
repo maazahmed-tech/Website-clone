@@ -3,25 +3,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer>
-      {/* Top CTA Section */}
-      <section className="bg-[#111214] py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <span className="inline-block text-[#1E6FD9] text-sm font-semibold tracking-widest uppercase mb-4">
-            Pull the Trigger!
-          </span>
-          <h2 className="text-white text-3xl md:text-5xl font-bold mb-8">
-            Let&apos;s bring your vision to life
-          </h2>
-          <Link
-            href="/contact/"
-            className="inline-block bg-[#1E6FD9] hover:bg-[#1859B3] text-white font-semibold px-10 py-4 rounded-full transition-colors duration-300 text-lg"
-          >
-            Get Started
-          </Link>
-        </div>
-      </section>
-
-      {/* Green Accent Divider */}
+      {/* Blue Accent Divider */}
       <div className="h-[3px] bg-[#1E6FD9]" />
 
       {/* Main Footer */}
